@@ -2102,6 +2102,9 @@ cite {
   body, input, select, textarea {
     font-size: 16pt; }
 
+  #title1line {
+    display: none; }
+    
   /* Header */
   #header {
     width: 215px; }
