@@ -95,7 +95,8 @@
     
   <!-- Footer -->
   <?php include('./footer.php'); ?>
-    
+  <!-- google -->
+  <?php include_once("analyticstracking.php") ?>    
   <!-- Scripts -->
   <script src="assets/js/jquery.min.js"></script>
   <script src="assets/js/skel.min.js"></script>

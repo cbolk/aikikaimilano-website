@@ -579,7 +579,10 @@ Proponendosi in primo luogo come via di educazione morale e di mutuo rispetto, l
     
     <!-- Footer -->
 	 <?php include('./footer.php'); ?>
-    
+
+  <!-- google -->
+  <?php include_once("analyticstracking.php") ?>
+      
     <!-- Scripts -->
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/jquery.scrolly.min.js"></script>
