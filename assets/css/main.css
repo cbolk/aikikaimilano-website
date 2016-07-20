@@ -2095,6 +2095,9 @@ cite {
       #footer .copyright li a {
         color: inherit; }
 
+#title1line {
+  display: none; }
+
 /* XLarge */
 @media screen and (max-width: 1680px) {
   /* 21em; */
@@ -2102,9 +2105,6 @@ cite {
   body, input, select, textarea {
     font-size: 16pt; }
 
-  #title1line {
-    display: none; }
-    
   /* Header */
   #header {
     width: 215px; }
@@ -2126,9 +2126,6 @@ cite {
   /* Header */
   #header {
     width: 225px; }
-
-  #title1line {
-    display: none; }
 
   /* Wrapper */
   #wrapper {
