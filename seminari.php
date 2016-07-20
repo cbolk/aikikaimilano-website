@@ -76,24 +76,30 @@
 							if($seminario->photo != null)
 								echo "<a href='#' class='image'><img width='140px' class='img-responsive' src='./seminars/" . $seminario->photo . "' /></a>";
 							echo "<div class='inner'>";
-							//echo "  <div class='seminarlist__type'>Seminario " . $seminario->seminartype  ."</div>";
 							echo "  <h4>";
 							echo $seminario->title;
 							if (strpos($seminario->title,"Maestro") == FALSE && strpos($seminario->title,"Shihan") == FALSE && strpos($seminario->title,"M&deg;") == FALSE && strpos($seminario->title,"M°") == FALSE ){
 								echo'<br/>' . $seminario->instructorlabel;								
 							}
-							$seminario->setGCal();
 							echo "  </h4>";
 							echo "<ul class='leftindent'>";
 							echo "<li class='itemli'><span class='itemhead'>Quando:</span><span class='itemval'>" .   $from . " <em>-</em> " . $to . "</span></li>";
-							echo "<li class='itemli'><span class='itemhead'>Dove:</span><span class='itemval'>" . $seminario->shortcity . "&nbsp;&#9671;&nbsp;" . str_replace("<br/>", " ", $seminario->location) . "</span></li>";
+							echo "<li class='itemli'><span class='itemhead'>Dove:</span><span class='itemval'>" . $seminario->shortcity ;
+							if($seminario->location != "") 
+								echo "&nbsp;&#9671;&nbsp;" . str_replace("<br/>", " ", $seminario->location);
+							if($seminario->location != $seminario->organizer  && $seminario->organizer!= "")
+								echo "&nbsp;&#9671;&nbsp;" . $seminario->organizer . "</span></li>";
 							echo "<li class='itemli'><span class='itemhead'>Locandina:</span><span class='itemval'>";
 							if($seminario->pdf != NULL)
 								echo "pdf <a class='noborder disable' title='scarica la locandina' href='./seminars/$seminario->pdf'><span class='icon fa-file-pdf-o fa-fw smallicon'></span></a>";
 							else
-								echo "<span class='icon fa-file-pdf-o fa-fw smallicon'></span>&nbsp;disponibile prossimamente";
+								echo "disponibile prossimamente";
+							echo "</li>";
+							echo "<li class='itemli'><span class='itemhead'>Note:</span><span class='itemval small'>" .   $seminario->seminartype . "</span>";
 							echo "</li>";
 							echo "</ul>";
+							if($seminario->description)
+								echo "<span class='itemval small'>" .   html_entity_decode($seminario->description) . "</span>";
 							echo "</div><!--inner-->";
 							echo "</article>";
 						}
@@ -119,23 +125,28 @@
 							}
 							echo "<div class='inner'>";
 							echo "  <h4>";
-							if (strpos($seminario->title,"Maestro") == FALSE && strpos($seminario->title,"M&deg;") == FALSE && strpos($seminario->title,"M°") == FALSE ){
-								echo $seminario->title . '<br/>' . $seminario->instructorlabel;
-							} else {
-								echo $seminario->title ;
+							echo $seminario->title;
+							if (strpos($seminario->title,"Maestro") == FALSE && strpos($seminario->title,"Shihan") == FALSE && strpos($seminario->title,"M&deg;") == FALSE && strpos($seminario->title,"M°") == FALSE ){
+								echo'<br/>' . $seminario->instructorlabel;								
 							}
-							$seminario->setGCal();
 							echo "  </h4>";
 							echo "<ul class='leftindent'>";
 							echo "<li class='itemli'><span class='itemhead'>Quando:</span><span class='itemval'>" .   $from . " <em>-</em> " . $to . "</span></li>";
-							echo "<li class='itemli'><span class='itemhead'>Dove:</span><span class='itemval'>" . $seminario->shortcity . "&nbsp;&#9671;&nbsp;" . str_replace("<br/>", " ", $seminario->location) . "</span></li>";
+							echo "<li class='itemli'><span class='itemhead'>Dove:</span><span class='itemval'>" . $seminario->shortcity ;
+							if($seminario->location != "") 
+								echo "&nbsp;&#9671;&nbsp;" . str_replace("<br/>", " ", $seminario->location);
+							if($seminario->location != $seminario->organizer && $seminario->organizer != "")
+								echo "&nbsp;&#9671;&nbsp;" . $seminario->organizer . "</span></li>";
 							echo "<li class='itemli'><span class='itemhead'>Locandina:</span><span class='itemval'>";
 							if($seminario->pdf != NULL)
 								echo "pdf <a class='noborder disable' title='scarica la locandina' href='./seminars/$seminario->pdf'><span class='icon fa-file-pdf-o fa-fw smallicon'></span></a>";
 							else
-								echo "<span class='icon fa-file-pdf-o fa-fw smallicon'></span>&nbsp;disponibile prossimamente";
+								echo "disponibile prossimamente";
 							echo "</li>";
+							echo "<li class='itemli'><span class='itemhead'>Note:</span><span class='itemval small'>" .   $seminario->seminartype . "</span></li>";
 							echo "</ul>";
+							if($seminario->description)
+								echo "<span class='itemval small'>" .   html_entity_decode($seminario->description) . "</span>";
 							echo "</div><!--inner-->";
 							echo "</article>";
 						}

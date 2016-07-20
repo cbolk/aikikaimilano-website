@@ -34,6 +34,7 @@
   	var $expires;
   	var $notes;
   	var $schedule;
+  	var $visible;
 
   	/* retrieves the info of a seminar */
   	function get($dbconn, $sid){
@@ -110,6 +111,7 @@
 		$this->pagelink = $sem[0]['link'];
 
 		$this->expires = $sem[0]['expires'];
+		$this->expires = $sem[0]['visible'];
 		return $this;
   	}
 
@@ -141,7 +143,7 @@
 	/* returns the data of the next seminar to be held*/
 	function getNextStage($dbconn)
 	{
-		$query = "SELECT s.*, st.description as semtype, l.name as locname, l.address as locaddress, l.city as loccity, l.shortcity as locshortcity, l.placeID as locplaceID, o.name as orgname, o.phone as orgphone, o.email as orgmail, o.website as orgurl, o.openinghours as orghours FROM seminar s LEFT JOIN seminartype st ON s.typefk=st.id LEFT JOIN location l ON s.locationfk = l.id LEFT JOIN location o ON s.organizerfk = o.id WHERE  s.enddate >= DATE(NOW()) order by s.startdate asc LIMIT 1;";
+		$query = "SELECT s.*, st.description as semtype, l.name as locname, l.address as locaddress, l.city as loccity, l.shortcity as locshortcity, l.placeID as locplaceID, o.name as orgname, o.phone as orgphone, o.email as orgmail, o.website as orgurl, o.openinghours as orghours FROM seminar s LEFT JOIN seminartype st ON s.typefk=st.id LEFT JOIN location l ON s.locationfk = l.id LEFT JOIN location o ON s.organizerfk = o.id WHERE s.visible=1 AND s.enddate >= DATE(NOW()) order by s.startdate asc LIMIT 1;";
 		$dbconn->dbconnect();
 		$result = $dbconn->qry($query);
 		$rownum = mysql_num_rows($result);
@@ -157,7 +159,7 @@
 	/* returns the ID of the next seminar to be held*/
 	function getNextStageID($dbconn)
 	{
-		$query = "SELECT id FROM seminar WHERE enddate >= DATE(NOW()) order by startdate asc LIMIT 1;";
+		$query = "SELECT id FROM seminar WHERE visible=1 AND enddate >= DATE(NOW()) order by startdate asc LIMIT 1;";
 		$dbconn->dbconnect();
 		$result = $dbconn->qry($query);
 		$rownum = mysql_num_rows($result);
@@ -172,7 +174,7 @@
 	COPIED ALSO TO UTILITIES */
 	function getNextStageMMDD($dbconn)
 	{
-		$query = "SELECT startdate FROM seminar WHERE startdate >= DATE(NOW()) order by startdate asc LIMIT 1;";
+		$query = "SELECT startdate FROM seminar WHERE visible=1 AND startdate >= DATE(NOW()) order by startdate asc LIMIT 1;";
 		$dbconn->dbconnect();
 		$result = $dbconn->qry($query);
 		$rownum = mysql_num_rows($result);
@@ -189,10 +191,10 @@
 
 		$query = "INSERT INTO seminar (startdate, enddate, month, year, title, description, ";
 		$query = $query . "locationfk, location, address, city, shortcity, schedule, tags, typefk, organizerfk, ";
-		$query = $query . "organizer, email, phone, url, link, notes, pdf, image, photo, expires) ";
+		$query = $query . "organizer, email, phone, url, link, notes, pdf, image, photo, expires, visible) ";
 		$query = $query . " values ('$this->fromdate','$this->todate',MONTH('$this->fromdate'),YEAR('$this->todate'), '$this->title', '$this->description', ";
 		$query = $query . " $this->locationfk, '$this->location', '$this->address', '$this->city', '$this->shortcity', '$this->schedule', '$this->tags', $this->seminartype, $this->organizerfk, ";
-		$query = $query . " '$this->organizer', '$this->email', '$this->phone', '$this->url', '$this->pagelink', '$this->notes', '$this->pdf', '$this->image', '$this->photo', '$this->expires');";
+		$query = $query . " '$this->organizer', '$this->email', '$this->phone', '$this->url', '$this->pagelink', '$this->notes', '$this->pdf', '$this->image', '$this->photo', '$this->expires', '$this->visible');";
 
 		//echo $query;
 
@@ -218,7 +220,7 @@
 		$query = $query . "year=YEAR('$this->todate'), description='$this->description', title='$this->title', ";
 		$query = $query . "locationfk=$this->locationfk, location='$this->location', address='$this->address', city='$this->city', shortcity='$this->shortcity',";
 		$query = $query . " schedule='$this->schedule', tags='$this->tags', typefk=$this->seminartype, organizerfk=$this->organizerfk, ";
-		$query = $query . "organizer='$this->organizer', email='$this->email', phone='$this->phone', url='$this->url', pdf='$this->pdf', link='$this->pagelink', notes='$this->notes', image='$this->image', photo='$this->photo', expires='$this->expires'";
+		$query = $query . "organizer='$this->organizer', email='$this->email', phone='$this->phone', url='$this->url', pdf='$this->pdf', link='$this->pagelink', notes='$this->notes', image='$this->image', photo='$this->photo', expires='$this->expires', visible='$this->visible'";
 		$query = $query . " WHERE id = " . $this->id . ";";
 
 		//echo $query;
@@ -253,8 +255,11 @@
 	}
 
 	/* retrieves the list of all seminar ids */
-	function getStageListID($dbconn){
-		$query = "SELECT id FROM seminar ORDER BY startdate DESC;";
+	function getStageListID($dbconn, $onlyvisible = true){
+		$query = "SELECT id FROM seminar ";
+		if ($onlyvisible)
+			$query = $query . " WHERE visible = 1 ";
+		$query = $query . " ORDER BY startdate DESC;";
 		$dbconn->dbconnect();
 		$result = $dbconn->qry($query);
         $data = array();
@@ -264,7 +269,7 @@
 	}
 
 	function getStagesMonthYear($dbconn, $month, $year){
-		$query = "SELECT s.*, st.description as semtype, l.name as locname, l.address as locaddress, l.city as loccity, l.placeID as locplaceID, o.name as orgname, o.phone as orgphone, o.email as orgmail, o.website as orgurl, o.openinghours as orghours FROM seminar s LEFT JOIN seminartype st ON s.typefk=st.id LEFT JOIN location l ON s.locationfk = l.id LEFT JOIN location o ON s.organizerfk = o.id WHERE (MONTH(startdate) = $month AND YEAR(startdate) = $year) OR (MONTH(enddate) = $month AND YEAR(enddate) = $year) ORDER BY startdate asc;";
+		$query = "SELECT s.*, st.description as semtype, l.name as locname, l.address as locaddress, l.city as loccity, l.placeID as locplaceID, o.name as orgname, o.phone as orgphone, o.email as orgmail, o.website as orgurl, o.openinghours as orghours FROM seminar s LEFT JOIN seminartype st ON s.typefk=st.id LEFT JOIN location l ON s.locationfk = l.id LEFT JOIN location o ON s.organizerfk = o.id WHERE s.visible = 1 AND (MONTH(startdate) = $month AND YEAR(startdate) = $year) OR (MONTH(enddate) = $month AND YEAR(enddate) = $year) ORDER BY startdate asc;";
 		$dbconn->dbconnect();
         $result = $dbconn->qry($query);
         if($result){
@@ -276,7 +281,7 @@
 	}
 
 	function getStagesStartedMonthYear($dbconn, $month, $year){
-		$query = "SELECT s.*, st.description as semtype, l.name as locname, l.address as locaddress, l.city as loccity, l.placeID as locplaceID, o.name as orgname, o.phone as orgphone, o.email as orgmail, o.website as orgurl, o.openinghours as orghours FROM seminar s LEFT JOIN seminartype st ON s.typefk=st.id LEFT JOIN location l ON s.locationfk = l.id LEFT JOIN location o ON s.organizerfk = o.id WHERE (MONTH(enddate) = $month AND YEAR(enddate) = $year) ORDER BY startdate asc;";
+		$query = "SELECT s.*, st.description as semtype, l.name as locname, l.address as locaddress, l.city as loccity, l.placeID as locplaceID, o.name as orgname, o.phone as orgphone, o.email as orgmail, o.website as orgurl, o.openinghours as orghours FROM seminar s LEFT JOIN seminartype st ON s.typefk=st.id LEFT JOIN location l ON s.locationfk = l.id LEFT JOIN location o ON s.organizerfk = o.id WHERE s.visible = 1 AND (MONTH(enddate) = $month AND YEAR(enddate) = $year) ORDER BY startdate asc;";
 		$dbconn->dbconnect();
         $result = $dbconn->qry($query);
         if($result){
@@ -311,7 +316,7 @@
 	/* returns the number of active seminars */
 	function numActiveSeminars($dbconn)
 	{
-		$query = "SELECT COUNT(*) FROM seminar WHERE DATE(enddate) > DATE(NOW());";
+		$query = "SELECT COUNT(*) FROM seminar WHERE visible = 1 AND DATE(enddate) > DATE(NOW());";
 		$dbconn->dbconnect();
         $result = $dbconn->qry($query);
         $row = mysql_fetch_array($result);
