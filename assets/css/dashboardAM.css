@@ -1,0 +1,105 @@
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css');
+
+
+/* override bootstrap dashboard */
+.navbar-inverse {
+    background-color: #282658;
+    border-color: #282658;
+}
+
+.navbar-inverse .navbar-brand {
+    color: #ffffff;
+}
+
+.actions {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    float: right;
+}
+.aright {
+    text-align: right;
+}
+
+.isHidden{display: none;}
+
+.red {color: red;}
+
+.asterisc {
+    color: red;
+    font-size: 0.65em;
+    vertical-align: top;
+}
+
+tr.active {background-color: #ff9999}
+
+.badge-active {
+	background-color: #428bca;
+}
+
+.edit, .del, .tableicon  {font-size: 20px}
+
+.isact0{background-color: #eee}
+
+
+.btn-circle {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 12px;
+  line-height: 1.428571429;
+  border-radius: 15px;
+}
+.btn-circle.btn-lg {
+  width: 50px;
+  height: 50px;
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.33;
+  border-radius: 25px;
+}
+.btn-circle.btn-xl {
+  width: 70px;
+  height: 70px;
+  padding: 10px 16px;
+  font-size: 24px;
+  line-height: 1.33;
+  border-radius: 35px;
+}
+
+.cntr{text-align: center}
+
+.form-top {
+    overflow: hidden;
+    padding: 0 25px 15px 25px;
+    background: #282658;
+    -moz-border-radius: 4px 4px 0 0;
+    -webkit-border-radius: 4px 4px 0 0;
+    border-radius: 4px 4px 0 0;
+    text-align: left;
+    color: #fff;
+}
+.form-bottom {
+    padding: 25px 25px 30px 25px;
+    background: #282658;
+    -moz-border-radius: 0 0 4px 4px;
+    -webkit-border-radius: 0 0 4px 4px;
+    border-radius: 0 0 4px 4px;
+    text-align: left;
+}
+.form-top-right {
+    float: left;
+    width: 25%;
+    padding-top: 5px;
+    font-size: 66px;
+    color: #fff;
+    line-height: 100px;
+    text-align: right;
+    opacity: 0.3;
+}
+.form-top-left {
+    float: left;
+    width: 75%;
+    padding-top: 25px;
+}
