@@ -341,7 +341,7 @@ Proponendosi in primo luogo come via di educazione morale e di mutuo rispetto, l
                 <td >&nbsp;</td>
               </tr>
               <tr>
-                <td class="tdtitle">marted&igrave;</td>
+                <td class="tdtitle">mercoled&igrave;</td>
                 <td >&nbsp;</td>
                 <td >19:30<span class="nomobile">-</span><span class="mobile"> </span>21:00</td>
                 <td >&nbsp;</td>
