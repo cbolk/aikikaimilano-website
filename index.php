@@ -389,9 +389,9 @@ Proponendosi in primo luogo come via di educazione morale e di mutuo rispetto, l
               </tbody>
             </table>
           </div>
-
-
+          <!--p>La responsabile del dojo &egrave; Laura Benevelli, 3° dan Aikikai d'Italia, Aikikai Tokyo</p-->
       	</div>
+
       </section>
       
       <section class="color">
@@ -528,6 +528,10 @@ Proponendosi in primo luogo come via di educazione morale e di mutuo rispetto, l
           <header>
           <h2>Contatti</h2>
           </header>
+
+          <div class="row">
+            <p>La responsabile del dojo &egrave; Laura Benevelli, 3° dan Aikikai d'Italia, Aikikai Tokyo.</p>
+          </div>
 
           <div class="row">
             <div class="col-xs-12 col-sm-6 col-lg-6">
