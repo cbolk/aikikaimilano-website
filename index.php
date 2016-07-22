@@ -254,7 +254,7 @@ Proponendosi in primo luogo come via di educazione morale e di mutuo rispetto, l
               </tr>
               <tr>
                 <td class="tdtitle"><span class="nomobile">marted&igrave;</span><span class="mobile">ma</span></td>
-                <td >08:00<span class="nomobile">-</span><span class="mobile"> </span>09:00</td>
+                <td >07:00<span class="nomobile">-</span><span class="mobile"> </span>08:00</td>
                 <td >13:00<span class="nomobile">-</span><span class="mobile"> </span>14:00</td>
                 <td >18:00<span class="nomobile">-</span><span class="mobile"> </span>19:00</td>
                 <td >&nbsp;</td>
@@ -278,7 +278,7 @@ Proponendosi in primo luogo come via di educazione morale e di mutuo rispetto, l
               </tr>
               <tr>
                 <td class="tdtitle"><span class="nomobile">venerd&igrave;</span><span class="mobile">ve</span></td>
-                <td >08:00<span class="nomobile">-</span><span class="mobile"> </span>09:00</td>
+                <td >07:00<span class="nomobile">-</span><span class="mobile"> </span>08:00</td>
                 <td >13:00<span class="nomobile">-</span><span class="mobile"> </span>14:00</td>
                 <td >18:00<span class="nomobile">-</span><span class="mobile"> </span>19:00</td>
                 <td >&nbsp;</td>
