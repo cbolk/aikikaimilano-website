@@ -50,7 +50,7 @@
 		</nav>
 	
 		<div class="hsponsors">
-		  	<a class="noborder" href="http://www.aikikai.it" target=_blank><img src="assets/img/csen.png" alt="CSEN" width="64px"></a><span class='mobile'><br/></span><a class="noborder" href="http://www.csen.it" target=_blank><img src="assets/img/aikikaiitalia.png" alt="aikikai d'italia" width="64px"></a>
+		  	<a class="noborder" href="http://www.csen.it" target=_blank><img src="assets/img/csen.png" alt="CSEN" width="64px"></a><span class='mobile'><br/></span><a class="noborder" href="http://www.aikikai.it" target=_blank><img src="assets/img/aikikaiitalia.png" alt="aikikai d'italia" width="64px"></a>
 		    <p>Scuola affiliata all'Associazione di Cultura Tradizionale Giapponese Aikikai d'Italia<span class='nomobile'><br/></span> Ente Morale (D.P.R. luglio 1978 n. 528)<span class='nomobile'><br/></span> e al Centro Sportivo<span class='mobile'><br/></span> Educativo Nazionale</p>
 		</div>
       </div>
