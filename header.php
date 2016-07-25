@@ -54,10 +54,10 @@
 		    <p>Scuola affiliata all'Associazione di Cultura Tradizionale Giapponese Aikikai d'Italia<span class='nomobile'><br/></span> Ente Morale (D.P.R. luglio 1978 n. 528)<span class='nomobile'><br/></span> e al Centro Sportivo<span class='mobile'><br/></span> Educativo Nazionale</p>
 		</div>
       </div>
-	  <!--div class="bottomx">
+	  <div class="bottomx">
 		<ul class="icons">
-			<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+			<li><a href="http://www.facebook.com/aikikaimilano/" target=_blank class="icon fa-facebook"><span class="label">Facebook</span></a></li>
 			<li><a href="./index.php#info" class="icon fa-envelope"><span class="label">Email</span></a></li>
 		</ul>
-	  </div-->      
+	  </div>      
     </div>
