@@ -1,6 +1,6 @@
 <?php
-	include("class.db.php");
-	include("class.login.php");
+	include("./class.db.php");
+	include("./class.login.php");
 	$log = new logmein();
 	$log->encrypt = true; //set encryption
 	if($_REQUEST['action'] == "login"){

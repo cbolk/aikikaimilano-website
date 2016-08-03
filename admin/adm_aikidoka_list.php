@@ -135,7 +135,7 @@
   $numYud = $aiki->numActiveYudansha($db);
   $numYou = $aiki->numActiveYoungster($db);
   $numB = $aiki->numActiveBeginner($db);
-  $list = $aiki->rawlist($db,$activeonly);
+  $list = $aiki->rawlist($db,$activeonly,true);
 ?>
           <h1 class="page-header">Iscritti 
           

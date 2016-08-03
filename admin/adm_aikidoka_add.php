@@ -1,9 +1,9 @@
 <?php  session_start();
 
-	include("basic.php");
-	include("class.db.php");
-	include("class.login.php");
-	include("class.aikidoka.php");
+	include("./basic.php");
+	include("./class.db.php");
+	include("./class.login.php");
+	include("./class.aikidoka.php");
 	$log = new logmein();
 	$log->encrypt = true; //set encryption 
 	$isLogged = $log->logincheck($_SESSION['loggedin'], "user_t", "passwd", "login");	
