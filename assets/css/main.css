@@ -1313,6 +1313,9 @@ pre {
 .note {
   font-size: 12.75pt; }
 
+.smallnote {
+  font-size: 8.5pt; }
+
 .imgcaption {
   color: #aaa;
   text-align: center;
@@ -2095,9 +2098,6 @@ cite {
       #footer .copyright li a {
         color: inherit; }
 
-#title1line {
-  display: none; }
-
 /* XLarge */
 @media screen and (max-width: 1680px) {
   /* 21em; */
@@ -2126,6 +2126,9 @@ cite {
   /* Header */
   #header {
     width: 225px; }
+
+  #title1line {
+    display: none; }
 
   /* Wrapper */
   #wrapper {

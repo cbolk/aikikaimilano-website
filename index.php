@@ -530,7 +530,7 @@ Proponendosi in primo luogo come via di educazione morale e di mutuo rispetto, l
           </header>
 
           <div class="row">
-            <p>La responsabile del dojo &egrave; Laura Benevelli, 3° dan Aikikai d'Italia, Aikikai Tokyo.</p>
+            <p>La responsabile del dojo &egrave; Laura Benevelli, III dan Aikikai d'Italia, Aikikai Tokyo.</p>
           </div>
 
           <div class="row">
@@ -561,15 +561,18 @@ Proponendosi in primo luogo come via di educazione morale e di mutuo rispetto, l
       </section>   
 
       <section id="aikikaiitalia" class="odd mobile">
-        <div class="container">
+        <div class="row">
           <div class="col-xs-2 col-sm-2 col-lg-2">
-            <a class="noborder" href="http://www.aikikai.it" target=_blank><img src="assets/img/aikikaiitalia.png" alt="aikikai d'italia" width="64px"></a>
+            <p class="text-left">
+            <a class="noborder" href="http://www.aikikai.it" target=_blank><img src="assets/img/aikikaiitalia.png" alt="aikikai d'italia" width="64px"></a>&nbsp;</p>
           </div>
           <div class="col-xs-8 col-sm-8 col-lg-8">
-          <p class="smallnote">Scuola affiliata all'Associazione di Cultura Tradizionale Giapponese Aikikai d'Italia Ente Morale (D.P.R. luglio 1978 n. 528)<span class='nomobile'><br/></span> e al Centro Sportivo Educativo Nazionale</p>
+          <p class="smallnote text-center">Scuola affiliata all'Associazione di Cultura<br/>Tradizionale Giapponese Aikikai d'Italia Ente<br/>Morale (D.P.R. luglio 1978 n. 528)<span class='nomobile'><br/></span> e al Centro Sportivo Educativo Nazionale</p>
           </div>
           <div class="col-xs-2 col-sm-2 col-lg-2">
+            <p class="text-left">
             <a class="noborder" href="http://www.csen.it" target=_blank><img src="assets/img/csen.png" alt="CSEN" width="64px"></a>
+            </p>
           </div>        
         </div>
       </section>
