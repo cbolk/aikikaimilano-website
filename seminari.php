@@ -15,10 +15,10 @@
 	$updateON = $seminar->lastUpdate($db);
 
 	$today = Date('Y-m-d');
-	if(date('m', strtotime($today)) >= 7 && date('d', strtotime($today)) > 10)
-		$year = date('Y', strtotime($today));
+	if(date('m', strtotime($today)) >= '08')
+		$y = date('Y', strtotime($today));
 	else
-		$year = date('Y', strtotime($today)) - 1;
+		$y = date('Y', strtotime($today)) - 1;
 
 
 ?>
@@ -50,7 +50,7 @@
       <section id="seminars" class="odd">
 		<div class="container">
 		  <header>
-			<h3 class="cntr">calendario seminari <?php echo "$year-" . ($year+1); ?></h3>
+			<h3 class="cntr">calendario seminari <?php echo $y . "-" . ($y+1); ?></h3>
 		  </header>
 
 		  <hr/>
@@ -59,6 +59,7 @@
 			<?php 
 				$today = date("Y-m-d");
 				$thismonth = date("m");
+				$year = $y;
 				for($i = 9; $i <= 12; $i++){
 					$semlist = $seminar->getStagesStartedMonthYear($db,$i,$year);
 					$nsem = count($semlist);
@@ -95,7 +96,9 @@
 							else
 								echo "disponibile prossimamente";
 							echo "</li>";
-							echo "<li class='itemli'><span class='itemhead'>Note:</span><span class='itemval small'>" .   $seminario->seminartype . "</span>";
+							echo "<li class='itemli'><span class='itemhead'>Tipo:</span><span class='itemval small'>" .   $seminario->seminartype . "</span>";
+							echo "</li>";
+							echo "<li class='itemli'><span class='itemhead'>Note:</span><span class='itemval small'>" .   $seminario->notes . "</span>";
 							echo "</li>";
 							echo "</ul>";
 							if($seminario->description)

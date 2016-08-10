@@ -344,35 +344,29 @@
                           </div>
                       </div> 
 
-            <div class="control-group col-md-6" >
-                        <label>tags</label>
-                        <div class="controls" >
-                            <input class="form-control" placeholder="tags" type="text" name="tags" id="tags" value="<?php echo $s->tags; ?>">
-                          </div>
-                      </div>  
-
             <div class="control-group col-md-6">
                         <label>note</label>
                         <div class="controls" >
                             <textarea class="form-control" name="notes" id="notes" maxlength="200" rows="3"><?php echo $s->notes; ?></textarea>
                           </div>
                       </div> 
+            <div class="control-group col-md-6">
+                        <label>visibile</label>
+                        <div class="controls" >
+                            <input data-style='btn-group-xs' class='form-control' name='visible' id='visible' type='checkbox' data-off-title='NO' data-on-title='SI' data-on-class='btn-success' data-off-class='btn-danger' <?php if($s->visible) echo "checked"; ?> />
+                          </div>
+                      </div> 
         </div>                    
                 <hr>
                  <div class="row">
-          <div class="control-group col-md-4">
+          <div class="control-group col-md-6">
                       <label>locandina<br/>(pdf)</label>
                   <input id="pdf" name="pdf" type="file" class="file-loading" uploadUrl='/<?php echo $uploaddir; ?>' >
 
                     </div>  
-                    
-          <div class="control-group col-md-4">
-                      <label>miniatura locandina<br/>(dim. max: 200px &times; 300px)</label>
-                      <input id="image" name="image" type="file" class="file-loading" uploadUrl='/<?php echo $uploaddir; ?>' >
-                    </div>
-                    
-          <div class="control-group col-md-4">
-                      <label>immagine pagina seminari<br/>(dim. max: 140px &times; 100px)</label>
+                                        
+          <div class="control-group col-md-6">
+                      <label>immagine pagina seminari<br/>(dim. width: 422px)</label>
                       <input id="photo" name="photo" type="file" class="file-loading" uploadUrl='/<?php echo $uploaddir; ?>' >
                     </div>
 
@@ -417,6 +411,7 @@
     <script>window.jQuery || document.write('<script src="./js/jquery-1.7.2.min.js"><\/script>')</script>
     <script src="../assets/js/bootstrap.js"></script>
     <script src="../assets/js/fileinput.js"></script>
+    <script src="../assets/js/bootstrap-checkbox.js"></script>
     <script src="../assets/js/moment-with-locales.js"></script>
     <script src="../assets/js/bootstrap-datetimepicker.min.js"></script>
     <!-- Just to make our placeholder images work. Don't actually copy the next line! -->

@@ -46,9 +46,7 @@
 		$ns->email = $_POST["email"];
 		$ns->url = $_POST["url"];
 	}
-	$ns->tags = $_POST["tags"];
 	$ns->pdf =	$_FILES['pdf']['name'];
-	$ns->image = $_FILES['image']['name'];
 	$ns->photo = $_FILES['photo']['name'];
 	$ns->notes	= convertCRBR($_POST["notes"]);
 	$ns->schedule	= convertCRBR($_POST["schedule"]);
@@ -66,6 +64,7 @@
 		$ns->shortcity = NULL;						
 	}
 	
+	$ns->visible	= convertCRBR($_POST["visible"]);
 	
 	$ris =  $ns->update($db);
 
@@ -76,13 +75,6 @@
 				echo('locandina non caricata!');
 		}
 	}
-	if ($ns->image != ""){
-		$srcfile = $_FILES['image']['tmp_name'];
-		$dstfile =  $uploadpath . $_FILES['image']['name'];
-		if (!move_uploaded_file($srcfile, $dstfile)) {
-				echo('miniatura non caricata!');
-		}
-	}
 	if ($ns->photo != ""){
 		$srcfile = $_FILES['photo']['tmp_name'];
 		$dstfile =  $uploadpath . $_FILES['photo']['name'];
@@ -90,13 +82,5 @@
 				echo('foto per elenco seminari non caricata!');
 		}
 	}
-	/*
-	$srcfile = $ns->shortdate . "_" . $ns->instructortag . ".ics";
-	$dstfile =  $uploadpath . $srcfile;
-	$ns->createICS();
-	if (!move_uploaded_file($srcfile, $dstfile)) {
-			echo('file ICS non creato!');
-	}
-	*/
 	return $ris;
 ?>

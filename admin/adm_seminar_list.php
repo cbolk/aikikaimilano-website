@@ -76,7 +76,28 @@
     });
   </script>
 
-
+    <script>
+    $(function(){
+      //acknowledgement message
+        var message_status = $("#status");
+      $(':checkbox').checkboxpicker();
+      $(':checkbox').checkboxpicker().change(function() {
+            var field_userid = $(this).attr("id") ;
+            var value = $(this).prop('checked');
+        $.ajax({
+          type: 'post',
+          url: 'adm_seminar_list_check_update.php',
+          data: field_userid + "=" + value,
+          beforeSend: function() {
+                  //alert("aggiorno");
+                },
+          success: function(response) {
+            //alert(response);
+          }
+        });           
+      });
+    });
+    </script>
   </head>
 
   <body>
@@ -98,15 +119,17 @@
   $sem = new seminar();
   $cu = new utils();
   $num = $sem->numActiveSeminars($db);
-  $list = $sem->rawlist($db,false,false);
+  $numh = $sem->numNotVisibleSeminars($db);
+  $list = $sem->rawlist($db,false,false,false);
 ?>
           <h1 class="page-header">Seminari 
-    	      <button type="button" class="btn btn-success btn-circle btn-xl"><?php echo $num; ?></button>
-	          <button type="button" class="btn btn-default btn-circle btn-xl"><?php echo mysql_num_rows($list) ?></button>
+            <button type="button" title="in elenco" class="btn visibili btn-default btn-circle btn-xl"><?php echo mysql_num_rows($list) ?></button>
+    	      <button type="button" title="futuri" class="btn btn-success btn-circle btn-xl"><?php echo $num; ?></button>
+            <button type="button" title="non visibili" class="btn btn-danger btn-circle btn-xl"><?php echo $numh ?></button>
 		 </h1>
           <div class="row">
             <div class=" actions aright">
-              <a href="./adm_seminar_new.php" alt="aggiungi una nuova notizia"><i class="fa fa-calendar-plus-o"></i> nuovo</a>
+              <a href="./adm_seminar_new.php" alt="aggiungi un nuovo seminario"><i class="fa fa-calendar-plus-o"></i> nuovo</a>
             </div>
           </div>
           <div class="table-responsive">
@@ -119,10 +142,10 @@
                   <th>titolo</th>
                   <th>diretto da</th>
                   <th>pdf</th>
-                  <th>min</th>
                   <th>img</th>
                   <th>edit</th>
                   <th>del</th>
+                  <th>vis</th>
                 </tr>
               </thead>
               <tbody>
@@ -133,7 +156,7 @@
       $instr = $s->getStageInstructors($db,$sid);
       $nin = count($instr);
 
-      echo "<tr id='" . $sid . "' ><a name='" . $sid . "'/>";
+      echo "<tr id='" . $sid . "' ><a name='" . $sid . "'></a>";
       echo "<td class='seminar_data'>" . $cu->date2monthday($row['startdate']) . "</td>";
       echo "<td class='seminar_data'>" . $cu->date2monthday($row['enddate']) . "</td>";
       echo "<td  class='seminar_info'>";
@@ -157,17 +180,20 @@
       echo "</td>";
 
       echo "<td class='tableicon seminar_info'>";
-      if($row['image'] != "")       
-        echo "<i class='fa fa-file-image-o'></i>";
-      echo "</td>";
-
-      echo "<td class='tableicon seminar_info'>";
       if($row['photo'] != "")       
         echo "<i class='fa fa-picture-o'></i>";
       echo "</td>";
 
       echo "<td class='seminar_info' id='record-" . $sid . "'><a class='edit' href='adm_seminar_edit.php?edit=" . $sid . "'><i class='fa fa-pencil-square-o'></i></a></td>";
       echo "<td class='seminar_info' id='record-" . $sid . "'><a class='del' href='#'><i class='fa fa-trash'></i></a></td>";
+
+      echo "<td class='cntr' id='visible:" . $row['id'] . "' contenteditable='true'>";
+      echo "<input data-style='btn-group-xs' class='form-control' name='visible' id='visible:" . $sid . "' type='checkbox' data-off-title='NO' data-on-title='SI' data-on-class='btn-success' data-off-class='btn-danger' ";
+      if($row['visible'] === "1")
+        echo " checked "; 
+      echo " />";
+      echo "</td>";
+
 
       echo "</tr>";
     }
@@ -186,6 +212,7 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script>window.jQuery || document.write('<script src="../assets/js/jquery-1.7.2.min.js"><\/script>')</script>
     <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/bootstrap-checkbox.js"></script>
     <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
     <script src="../assets/js/holder.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
