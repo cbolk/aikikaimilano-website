@@ -461,13 +461,13 @@ Proponendosi in primo luogo come via di educazione morale e di mutuo rispetto, l
             <h2>Fotografie</h2>
           </header>  
           <div class="features">
-            <!--article>
+            <article>
               <a href="#" class="image"><img class="thumbnail" src="photos/2016-dojo.jpg" alt="" width="200px"></a>
               <div class="inner">
                 <h4>Galleria fotografica del dojo</h4>
                 <p>Album foto: <a target="_blank" href="./galleria.php"><span class="icon fa-picture-o"></span></a></p>
               </div>
-            </article-->
+            </article>
             <article>
               <a href="#" class="image"><img class="thumbnail" src="photos/2016-osawa.jpg" alt="" width="200px"></a>
               <div class="inner">
