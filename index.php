@@ -537,7 +537,7 @@ Proponendosi in primo luogo come via di educazione morale e di mutuo rispetto, l
             <div class="col-xs-12 col-sm-6 col-lg-6">
             &Egrave; possibile contattarci in uno dei seguenti modi:
               <ul class="wbullets">
-                <li class="itemli"><span class="itemhead">In dojo:</span><span class="itemval">via Lulli, 30 B<br/>ingresso da via Porpora 43-47<br/><i>all'angolo con la farmacia</i></span></li>
+                <li class="itemli"><span class="itemhead">In dojo:</span><span class="itemval">zona loreto via privata con ingresso da via Porpora 43-47<br/><i>all'angolo con la farmacia</i></span></li>
                 <li class="itemli"><span class="itemhead">Telefono:</span><span class="itemval">(+39) 3881517258</span></li>
                 <li class="itemli"><span class="itemhead">Email:</span><span class="itemval">segreteria@aikikaimilano.it</span></li>            
               </ul>  

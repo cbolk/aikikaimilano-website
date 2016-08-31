@@ -98,8 +98,10 @@
 							echo "</li>";
 							echo "<li class='itemli'><span class='itemhead'>Tipo:</span><span class='itemval small'>" .   $seminario->seminartype . "</span>";
 							echo "</li>";
-							echo "<li class='itemli'><span class='itemhead'>Note:</span><span class='itemval small'>" .   $seminario->notes . "</span>";
-							echo "</li>";
+							if($seminario->notes){}
+								echo "<li class='itemli'><span class='itemhead'>Note:</span><span class='itemval small'>" .   $seminario->notes . "</span>";
+								echo "</li>";
+							}
 							echo "</ul>";
 							if($seminario->description)
 								echo "<span class='itemval small'>" .   html_entity_decode($seminario->description) . "</span>";
