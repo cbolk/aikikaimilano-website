@@ -124,10 +124,11 @@
   </div>
 
   <div class="nav">
-		<a class="nav-button" href="usr_attendance_daily.php?aid=<?php echo $aid; ?>&day=<?php echo $theday; ?>"><i class="fa fa-flag fa-fw"></i><br/>oggi</a>
+		<a class="nav-button" href="usr_attendance_daily.php?aid=<?php echo $aid; ?>"><i class="fa fa-flag fa-fw"></i><br/>oggi</a>
 		<a class="nav-button" href="usr_attendance_monthly.php?aid=<?php echo $aid; ?>"><i class="fa fa-calendar fa-fw"></i><br/>mese</a>
-		<a class="nav-button" href="usr_attendance_yearly.php?aid=<?php echo $aid; ?>&y=<?php echo $y; ?>"><i class="fa fa-area-chart fa-fw"></i><br/>anno</a>
+		<a class="nav-button" href="usr_attendance_yearly.php?aid=<?php echo $aid; ?>&y=<?php echo $year; ?>"><i class="fa fa-calendar-o fa-fw"></i><br/>anno</a>
 		<a class="nav-button" href="usr_attendance_yearly.php?aid=<?php echo $aid; ?>"><i class="fa fa-bar-chart fa-fw"></i><br/>da esame</a>
+		<a class="nav-button" href="usr_attendance_all.php?aid=<?php echo $aid; ?>"><i class="fa fa-area-chart fa-fw"></i><br/>da sempre</a>
   </div>
 </div>
 </body>

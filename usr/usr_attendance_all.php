@@ -74,7 +74,7 @@
 		    	$mhours = $ai->getHoursYear($dbconn, $aid, $from, $to);
 			} else {
 				echo "complessivo";
-		    	$mhours = $ai->getHoursFromExam($dbconn, $aid);
+		    	$mhours = $ai->getHoursFromStart($dbconn, $aid);
 			}
 	?>
 	</h3>
