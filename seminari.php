@@ -78,10 +78,11 @@
 								echo "<a href='#' class='image'><img width='140px' class='img-responsive' src='./seminars/" . $seminario->photo . "' /></a>";
 							echo "<div class='inner'>";
 							echo "  <h4>";
-							echo $seminario->title;
-							if (strpos($seminario->title,"Maestro") == FALSE && strpos($seminario->title,"Shihan") == FALSE && strpos($seminario->title,"M&deg;") == FALSE && strpos($seminario->title,"M°") == FALSE ){
-								echo'<br/>' . $seminario->instructorlabel;								
-							}
+							echo $seminario->title ;
+							if(strpos($seminario->instructorlabel,"_") == FALSE)
+								if (strpos($seminario->title,"Maestro") == FALSE && strpos($seminario->title,"Shihan") == FALSE && strpos($seminario->title,"M&deg;") == FALSE && strpos($seminario->title,"M°") == FALSE ){
+									echo'<br/>' . $seminario->instructorlabel;								
+								}
 							echo "  </h4>";
 							echo "<ul class='leftindent'>";
 							echo "<li class='itemli'><span class='itemhead'>Quando:</span><span class='itemval'>" .   $from . " <em>-</em> " . $to . "</span></li>";
@@ -130,9 +131,10 @@
 							}
 							echo "<div class='inner'>";
 							echo "  <h4>" . $seminario->title . "</h4>";
-							if (strpos($seminario->title,"Maestro") == FALSE && strpos($seminario->title,"Shihan") == FALSE && strpos($seminario->title,"M&deg;") == FALSE && strpos($seminario->title,"M°") == FALSE ){
-								echo "  <h4>" . $seminario->instructorlabel . "</h4>";
-							}
+							if(strpos($seminario->instructorlabel,"_") == FALSE)
+								if (strpos($seminario->title,"Maestro") == FALSE && strpos($seminario->title,"Shihan") == FALSE && strpos($seminario->title,"M&deg;") == FALSE && strpos($seminario->title,"M°") == FALSE ){
+									echo "  <h4>" . $seminario->instructorlabel . "</h4>";
+								}
 							echo "<ul class='leftindent'>";
 							echo "<li class='itemli'><span class='itemhead'>Quando:</span><span class='itemval'>" .   $from . " <em>-</em> " . $to . "</span></li>";
 							echo "<li class='itemli'><span class='itemhead'>Dove:</span><span class='itemval'>" . $seminario->shortcity ;
