@@ -318,7 +318,6 @@
 		$query = $query . " where date > '" . $year . "/08/31' and k.active = 1 ";
 		$query = $query . " GROUP BY aikidoka_fk, MONTH(date) ";
 		$query = $query . " ORDER BY beginner, k.lastname, k. firstname, month";
-		//echo $query;
 		$dbconn->dbconnect();
         $result = $dbconn->qry($query);
         $num = mysql_num_rows($result);
@@ -326,6 +325,8 @@
 		for($i = 0; $i < $num; $i++) 
 			$mhours[$i] = mysql_fetch_assoc($result);
 		return $mhours;
+		
+
   	}
 
   	function getTotHoursFromExam($dbconn, $aid){
