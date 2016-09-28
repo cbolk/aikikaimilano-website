@@ -469,6 +469,13 @@ Proponendosi in primo luogo come via di educazione morale e di mutuo rispetto, l
               </div>
             </article>
             <article>
+              <a href="#" class="image"><img class="thumbnail" src="photos/20160924gruppo.jpg" alt="" width="200px"></a>
+              <div class="inner">
+                <h4>Seminario Inizio anno 2016-17</h4>
+                <p>Album foto: <a target="_blank" href="https://www.facebook.com/media/set/?set=a.1807434562873673.1073741837.1670690169881447&type=1&l=f1f765d7a1"><span class="icon fa-picture-o"></span></a></p>
+              </div>
+            </article>
+            <article>
               <a href="#" class="image"><img class="thumbnail" src="photos/2016-osawa.jpg" alt="" width="200px"></a>
               <div class="inner">
                 <h4>Seminario Osawa Shihan</h4>
