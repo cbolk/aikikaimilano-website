@@ -103,7 +103,13 @@
 		$this->instructorlabel = "";
 		$this->instructortag = "";
 		for($i = 0; $i < $ninst; $i++){
-			$this->instructorlabel = $this->instructorlabel . "M&deg; " . $this->instructors[$i]['lastname'];
+			if($this->instructors[$i]['lastname'] == "Foglietta" || $this->instructors[$i]['lastname'] == "Travaglini")
+				$this->instructorlabel = $this->instructorlabel . "M&deg; ";
+			else
+				$this->instructorlabel = $this->instructorlabel . $this->instructors[$i]['firstname'] . " ";
+
+			$this->instructorlabel = $this->instructorlabel . $this->instructors[$i]['lastname'];
+
 			$this->instructortag = $this->instructortag . substr($this->instructors[$i]['lastname'],1);
 			if($i < $ninst - 1)
 				$this->instructorlabel = $this->instructorlabel . " &amp; ";

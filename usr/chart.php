@@ -105,12 +105,16 @@ var myData = div.textContent;
 d3.json("./datasrc.php?aid=" + myData, function(error, data) {
   var m = 0;
   var tophours = d3.max(data, function(d) { return +d.MH; });
+  var shodan = "2012.07";
+  var nidan = "2016.07";
   data.forEach(function(d) {
     d.yearmonth = parseDate(d.yearmonth);
     d.MH = +d.MH;
     d.label = d.YY + "." + d.MM;
     if (d.MH != 0) m++;
     if(d.MH == tophours) topmonth = d.label;
+    if(d.label == shodan) shodanhrs = d.MH;
+    else if (d.label == nidan) nidanhrs = d.MH;
   });
 
   data.sort(function(a, b){ return d3.ascending(a.label, b.label); });
@@ -120,6 +124,7 @@ d3.json("./datasrc.php?aid=" + myData, function(error, data) {
          function(totals) { return d3.sum(totals, function(d) {return +d.MH;}) }
      )
     .entries(data);
+  var daesame = tot - 668;
 
   var avg = tot / m;
   var firstmonth = d3.min(data, function(d) { return d.label; });
@@ -149,7 +154,7 @@ d3.json("./datasrc.php?aid=" + myData, function(error, data) {
       .attr("y", 6)
       .attr("dy", ".71em")
       .style("text-anchor", "end")
-      .text("total: " + tot);
+      .text("from last exam: " + daesame);
 
 
 //	console.log(topmonth);
@@ -162,6 +167,33 @@ d3.json("./datasrc.php?aid=" + myData, function(error, data) {
     .attr('fill', 'gold')
     .attr("width", x.rangeBand()-4)
     .attr("height", height - y(tophours)-2);
+
+
+  svg.append("text")
+    .attr("x", x(topmonth)+10)
+    .attr("y", y(tophours)-14)
+    .attr('fill', 'steelblue')
+    .attr("dy", ".71em")
+    .style("text-anchor", "middle")
+    .text("" + tophours)
+
+  //exams
+  svg.append("rect")
+    .attr("class", "bartop")
+    .attr("x", x(shodan)+2)
+    .attr("y", y(shodanhrs)+2)
+    .attr('fill', 'green')
+    .attr("width", x.rangeBand()-4)
+    .attr("height", height - y(shodanhrs)-2);
+
+  svg.append("rect")
+    .attr("class", "bartop")
+    .attr("x", x(nidan)+2)
+    .attr("y", y(nidanhrs)+2)
+    .attr('fill', 'green')
+    .attr("width", x.rangeBand()-4)
+    .attr("height", height - y(nidanhrs)-2);
+
 
 	// average line
 	svg.append("line")
