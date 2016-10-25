@@ -548,7 +548,12 @@ Proponendosi in primo luogo come via di educazione morale e di mutuo rispetto, l
                 <li class="itemli"><span class="itemhead">Telefono:</span><span class="itemval">(+39) 3881517258</span></li>
                 <li class="itemli"><span class="itemhead">Email:</span><span class="itemval">segreteria@aikikaimilano.it</span></li>            
               </ul>  
+              <p>Gli orari della segreteria sono i seguenti:<br/>
+                  &#9671;&nbsp;luned&igrave;, marted&igrave; mercoled&igrave;: 17:30-19:30<br/>
+                  &#9671;&nbsp;gioved&igrave; e venerd&igrave;: 18:00-20:00</p>
               </div>
+
+
 
               <div class="col-xs-12 col-sm-6 col-lg-6">
                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1398.578193092592!2d9.22148602746856!3d45.48679546000087!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c6e45a43eff1%3A0xaa50fad891bebd!2sAikikai+Milano!5e0!3m2!1sen!2sit!4v1464555022194"  frameborder="0" style="border:0" allowfullscreen></iframe>
