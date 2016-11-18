@@ -549,8 +549,9 @@ Proponendosi in primo luogo come via di educazione morale e di mutuo rispetto, l
                 <li class="itemli"><span class="itemhead">Email:</span><span class="itemval">segreteria@aikikaimilano.it</span></li>            
               </ul>  
               <p>Gli orari della segreteria sono i seguenti:<br/>
-                  &#9671;&nbsp;luned&igrave;, marted&igrave; mercoled&igrave;: 17:30-19:30<br/>
-                  &#9671;&nbsp;gioved&igrave; e venerd&igrave;: 18:00-20:00</p>
+                  &#9671;&nbsp;marted&igrave; e mercoled&igrave;: 17:30-19:30<br/>
+                  &#9671;&nbsp;gioved&igrave;: 18:00-20:00<br/>
+                  &#9671;&nbsp;venerd&igrave;: 16:30-18:30</p>
               </div>
 
 

@@ -27,6 +27,7 @@
   	var $opening;
   	var $url;
   	var $pdf;
+  	var $pdfe;
   	var $photo;
   	var $pagelink;
   	var $expires;
@@ -90,6 +91,7 @@
 		}
 
 		$this->pdf = $sem[0]['pdf'];
+		$this->pdfe = $sem[0]['pdfe'];
 		$this->photo = $sem[0]['photo'];
 		$this->notes = $sem[0]['notes'];
 		$this->schedule = $sem[0]['schedule'];
@@ -190,10 +192,10 @@
 
 		$query = "INSERT INTO seminar (startdate, enddate, month, year, title, description, ";
 		$query = $query . "locationfk, location, address, city, shortcity, schedule, typefk, organizerfk, ";
-		$query = $query . "organizer, email, phone, url, link, notes, pdf, image, photo, expires, visible) ";
+		$query = $query . "organizer, email, phone, url, link, notes, pdf, pdfe, image, photo, expires, visible) ";
 		$query = $query . " values ('$this->fromdate','$this->todate',MONTH('$this->fromdate'),YEAR('$this->todate'), '$this->title', '$this->description', ";
 		$query = $query . " $this->locationfk, '$this->location', '$this->address', '$this->city', '$this->shortcity', '$this->schedule', $this->seminartype, $this->organizerfk, ";
-		$query = $query . " '$this->organizer', '$this->email', '$this->phone', '$this->url', '$this->pagelink', '$this->notes', '$this->pdf', '$this->photo', '$this->expires', 1);";
+		$query = $query . " '$this->organizer', '$this->email', '$this->phone', '$this->url', '$this->pagelink', '$this->notes', '$this->pdf', '$this->pdfe', '$this->photo', '$this->expires', 1);";
 
 		//echo $query;
 
@@ -219,7 +221,7 @@
 		$query = $query . "year=YEAR('$this->todate'), description='$this->description', title='$this->title', ";
 		$query = $query . "locationfk=$this->locationfk, location='$this->location', address='$this->address', city='$this->city', shortcity='$this->shortcity',";
 		$query = $query . " schedule='$this->schedule', typefk=$this->seminartype, organizerfk=$this->organizerfk, ";
-		$query = $query . "organizer='$this->organizer', email='$this->email', phone='$this->phone', url='$this->url', pdf='$this->pdf', link='$this->pagelink', notes='$this->notes', photo='$this->photo', expires='$this->expires', visible='$this->visible' ";
+		$query = $query . "organizer='$this->organizer', email='$this->email', phone='$this->phone', url='$this->url', pdf='$this->pdf', pdfe='$this->pdfe', link='$this->pagelink', notes='$this->notes', photo='$this->photo', expires='$this->expires', visible='$this->visible' ";
 		$query = $query . " WHERE id = " . $this->id . ";";
 
 		//echo $query;

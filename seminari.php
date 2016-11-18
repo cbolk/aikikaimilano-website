@@ -97,6 +97,11 @@
 							else
 								echo "disponibile prossimamente";
 							echo "</li>";
+							if($seminario->pdfe != NULL){
+								echo "<li class='itemli'><span class='itemhead'>Flyer:</span><span class='itemval'>";
+								echo "pdf <a class='noborder disable' title='download the flyer' href='./seminars/$seminario->pdfe'><span class='icon fa-file-pdf-o fa-fw smallicon'></span></a>";
+								echo "</li>";
+							}
 							echo "<li class='itemli'><span class='itemhead'>Tipo:</span><span class='itemval small'>" .   $seminario->seminartype . "</span>";
 							echo "</li>";
 							if($seminario->notes){
@@ -148,6 +153,11 @@
 							else
 								echo "disponibile prossimamente";
 							echo "</li>";
+							if($seminario->pdfe != NULL){
+								echo "<li class='itemli'><span class='itemhead'>Flyer:</span><span class='itemval'>";
+								echo "pdf <a class='noborder disable' title='download the flyer' href='./seminars/$seminario->pdfe'><span class='icon fa-file-pdf-o fa-fw smallicon'></span></a>";
+								echo "</li>";
+							}
 							echo "<li class='itemli'><span class='itemhead'>Tipo:</span><span class='itemval small'>" .   $seminario->seminartype . "</span>";
 							echo "</li>";
 							if($seminario->notes){

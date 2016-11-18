@@ -28,6 +28,7 @@
   	var $url;
   	var $tags;
   	var $pdf;
+  	var $pdfe;
   	var $image;
   	var $photo;
   	var $pagelink;
@@ -92,6 +93,7 @@
 		}
 
 		$this->pdf = $sem[0]['pdf'];
+		$this->pdfe = $sem[0]['pdfe'];
 		$this->image = $sem[0]['image'];
 		$this->photo = $sem[0]['photo'];
 		$this->tags = $sem[0]['tags'];
@@ -103,7 +105,7 @@
 		$this->instructorlabel = "";
 		$this->instructortag = "";
 		for($i = 0; $i < $ninst; $i++){
-			if($this->instructors[$i]['lastname'] == "Foglietta" || $this->instructors[$i]['lastname'] == "Travaglini")
+			if($this->instructors[$i]['lastname'] == "Osawa" || $this->instructors[$i]['lastname'] == "Foglietta" || $this->instructors[$i]['lastname'] == "Travaglini")
 				$this->instructorlabel = $this->instructorlabel . "M&deg; ";
 			else
 				$this->instructorlabel = $this->instructorlabel . $this->instructors[$i]['firstname'] . " ";
@@ -200,7 +202,7 @@
 		$query = $query . "organizer, email, phone, url, link, notes, pdf, image, photo, expires, visible) ";
 		$query = $query . " values ('$this->fromdate','$this->todate',MONTH('$this->fromdate'),YEAR('$this->todate'), '$this->title', '$this->description', ";
 		$query = $query . " $this->locationfk, '$this->location', '$this->address', '$this->city', '$this->shortcity', '$this->schedule', '$this->tags', $this->seminartype, $this->organizerfk, ";
-		$query = $query . " '$this->organizer', '$this->email', '$this->phone', '$this->url', '$this->pagelink', '$this->notes', '$this->pdf', '$this->image', '$this->photo', '$this->expires', '$this->visible');";
+		$query = $query . " '$this->organizer', '$this->email', '$this->phone', '$this->url', '$this->pagelink', '$this->notes', '$this->pdf', '$this->pdfe', '$this->image', '$this->photo', '$this->expires', '$this->visible');";
 
 		//echo $query;
 
@@ -226,7 +228,7 @@
 		$query = $query . "year=YEAR('$this->todate'), description='$this->description', title='$this->title', ";
 		$query = $query . "locationfk=$this->locationfk, location='$this->location', address='$this->address', city='$this->city', shortcity='$this->shortcity',";
 		$query = $query . " schedule='$this->schedule', tags='$this->tags', typefk=$this->seminartype, organizerfk=$this->organizerfk, ";
-		$query = $query . "organizer='$this->organizer', email='$this->email', phone='$this->phone', url='$this->url', pdf='$this->pdf', link='$this->pagelink', notes='$this->notes', image='$this->image', photo='$this->photo', expires='$this->expires', visible='$this->visible'";
+		$query = $query . "organizer='$this->organizer', email='$this->email', phone='$this->phone', url='$this->url', pdf='$this->pdf', pdfe='$this->pdfe', link='$this->pagelink', notes='$this->notes', image='$this->image', photo='$this->photo', expires='$this->expires', visible='$this->visible'";
 		$query = $query . " WHERE id = " . $this->id . ";";
 
 		//echo $query;
@@ -958,6 +960,7 @@
 		$output = $output . "<span class='seminarinfo'>titolo</span>";
 		$output = $output . "<span class='seminarinfo'>diretto da</span>";
 		$output = $output . "<span class='seminarinfo'>pdf</span>";
+		$output = $output . "<span class='seminarinfo'>pdf E</span>";
 		$output = $output . "<span class='seminarinfo'>min</span>";
 		$output = $output . "<span class='seminarinfo'>img</span>";
 		$output = $output . "<span class='seminarinfo'>edit</span>";
@@ -992,6 +995,11 @@
 			}
 			$output = $output . "</span>";
 			if($row['pdf'] != "")				
+				$output = $output . "<span class='seminarinfo'><i class='fa fa-file-pdf-o'></i></span>";
+			else
+				$output = $output . "<span class='seminarinfo'></span>";
+
+			if($row['pdfe'] != "")				
 				$output = $output . "<span class='seminarinfo'><i class='fa fa-file-pdf-o'></i></span>";
 			else
 				$output = $output . "<span class='seminarinfo'></span>";
