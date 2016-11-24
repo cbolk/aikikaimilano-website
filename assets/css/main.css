@@ -1344,6 +1344,14 @@ pre {
 .itemhead, .itemval {
   display: table-cell; }
 
+article.past {
+  color: #bebebe;
+  text-decoration: line-through; }
+
+article.past h4 {
+  color: #bebebe;
+  text-decoration: line-through; }
+
 /* Section/Article */
 section.special, article.special {
   text-align: center; }

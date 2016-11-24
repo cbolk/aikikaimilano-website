@@ -73,7 +73,10 @@
 							$to = $util->medDate($seminario->todate);
 							$toMob = $util->medDate($seminario->todate);
 							$semUID = sprintf(str_replace("-", "", $seminario->fromdate),4,4);
-							echo "<article><a id='" . $semUID . "'></a>";
+							echo "<article ";
+							if($today > $seminario->todate)
+								echo " class='past' ";
+							echo "><a id='" . $semUID . "'></a>";
 							if($seminario->photo != null)
 								echo "<a href='#' class='image'><img width='140px' class='img-responsive' src='./seminars/" . $seminario->photo . "' /></a>";
 							echo "<div class='inner'>";
@@ -130,7 +133,10 @@
 							$to = $util->medDate($seminario->todate);
 							$toMob = $util->medDate($seminario->todate);
 							$semUID = sprintf(str_replace("-", "", $seminario->fromdate),4,4);
-							echo "<article><a id='" . $semUID . "'></a>";
+							echo "<article ";
+							if($today > $seminario->todate)
+								echo " class='past' ";
+							echo "><a id='" . $semUID . "'></a>";
 							if($seminario->photo != null){
 								echo "<a href='#' class='image'><img src='./seminars/" . $seminario->photo . "' /></a>";
 							}
