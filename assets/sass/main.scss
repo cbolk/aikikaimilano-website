@@ -234,12 +234,14 @@
 
 	article.past {
 		color: _palette(pastsem);
+	}
+
+	article.past img {
 		text-decoration:line-through;
 	}
 
 	article.past h4 {
 		color: _palette(pastsem);
-		text-decoration:line-through;
 	}
 
 

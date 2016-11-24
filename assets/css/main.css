@@ -1345,12 +1345,13 @@ pre {
   display: table-cell; }
 
 article.past {
-  color: #bebebe;
+  color: #eeeeee; }
+
+article.past img {
   text-decoration: line-through; }
 
 article.past h4 {
-  color: #bebebe;
-  text-decoration: line-through; }
+  color: #eeeeee; }
 
 /* Section/Article */
 section.special, article.special {
