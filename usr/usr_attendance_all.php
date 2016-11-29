@@ -75,6 +75,8 @@
 			} else {
 				echo "complessivo";
 		    	$mhours = $ai->getHoursFromStart($dbconn, $aid);
+		    	$allexams = $ai->getExams($dbconn, $aid);
+		    	$nex = count($allexams);
 			}
 	?>
 	</h3>
@@ -131,8 +133,12 @@
 					for(; $i <= 8; $i++){
 						$headstr =  $headstr ."<div class='calendar__day calendar__day_working";
 						if($mhours[$j]['MM'] == ($i % 12)){
-							if ($y == "" && $mhours[$j]['MM'] == $firstmonth && $mhours[$j]['YY'] == $firstyear)
-								$headstr = $headstr . " date__lastexam ";
+							for($ie = 0; $ie < $nex; $ie++){
+								$dpart = explode('-',$allexams[$ie]['date']);
+								if($dpart[0] == intval($startyear) - 1)
+									if($dpart[1] == $mhours[$j]['MM'])
+										$headstr = $headstr . " date__dateexam ";
+							}
 							$headstr = $headstr . " '>";
 							$headstr = $headstr . $mhours[$j]['MH'];
 							$nhrs = $nhrs + intval($mhours[$j]['MH']);
@@ -140,8 +146,12 @@
 							$j++;
 							$ndati--;
 						} else if ($mhours[$j]['MM'] == 12){
-							if ($y == "" && $mhours[$j]['MM'] == $firstmonth && $mhours[$j]['YY'] == $firstyear)
-								$headstr = $headstr . " date__lastexam ";
+							for($ie = 0; $ie < $nex; $ie++){
+								$dpart = explode('-',$allexams[$ie]['date']);
+								if($dpart[0] == intval($startyear) - 1)
+									if($dpart[1] == $mhours[$j]['MM'])
+										$headstr = $headstr . " date__dateexam ";
+							}
 							$headstr = $headstr . "'>";
 							$headstr = $headstr . $mhours[$j]['MH'];
 							$nhrs = $nhrs + intval($mhours[$j]['MH']);
@@ -166,21 +176,31 @@
 					for($i = 9, $yhrs = 0; $i < 21; $i++){
 						$headstr =  $headstr ."<div class='calendar__day calendar__day_working";
 						if($mhours[$j]['MM'] == ($i % 12)){
-							if ($y == "" && $mhours[$j]['MM'] == $firstmonth && $mhours[$j]['YY'] == $firstyear)
-								$headstr = $headstr . " date__lastexam ";
+
+							for($ie = 0; $ie < $nex; $ie++){
+								$dpart = explode('-',$allexams[$ie]['date']);
+								if($dpart[0] == intval($startyear))
+									if($dpart[1] == $mhours[$j]['MM'])
+										$headstr = $headstr . " date__dateexam ";
+							}
 							$headstr = $headstr . "'>";
 							if($mhours[$j]['MH'] == ""){
 								$headstr = $headstr . "0";
 							} else {
 								$headstr = $headstr . $mhours[$j]['MH'];
 							}
+							//if($mhours[$j]['MM'] == 7 && (2015 == intval($startyear) -1)) echo "xx";
 							$nhrs = $nhrs + intval($mhours[$j]['MH']);
 							$yhrs = $yhrs + intval($mhours[$j]['MH']);
 							$j++;
 							$ndati--;
 						} else if ($mhours[$j]['MM'] == 12){
-							if ($y == "" && $mhours[$j]['MM'] == $firstmonth && $mhours[$j]['YY'] == $firstyear)
-								$headstr = $headstr . " date__lastexam ";
+							for($ie = 0; $ie < $nex; $ie++){
+								$dpart = explode('-',$allexams[$ie]['date']);
+								if($dpart[0] == intval($startyear) - 1)
+									if($dpart[1] == $mhours[$j]['MM'])
+										$headstr = $headstr . " date__dateexam ";
+							}
 							$headstr = $headstr . "'>";
 							if($mhours[$j]['MH'] == ""){
 								$headstr = $headstr . "0";

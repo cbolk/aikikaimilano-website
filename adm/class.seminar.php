@@ -105,7 +105,7 @@
 		$this->instructorlabel = "";
 		$this->instructortag = "";
 		for($i = 0; $i < $ninst; $i++){
-			if($this->instructors[$i]['lastname'] == "Osawa" || $this->instructors[$i]['lastname'] == "Foglietta" || $this->instructors[$i]['lastname'] == "Travaglini")
+			if($this->instructors[$i]['lastname'] == "Osawa" || $this->instructors[$i]['lastname'] == "Foglietta" || $this->instructors[$i]['lastname'] == "Travaglini" || $this->instructors[$i]['lastname'] == "Bogdanovic")
 				$this->instructorlabel = $this->instructorlabel . "M&deg; ";
 			else
 				$this->instructorlabel = $this->instructorlabel . $this->instructors[$i]['firstname'] . " ";

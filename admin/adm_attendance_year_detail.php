@@ -31,7 +31,7 @@
     <link rel="icon" href="../assets/favicon.png">
 	<link href='http://fonts.googleapis.com/css?family=Lato:400,400italic,700,300,300italic' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Oxygen+Mono' rel='stylesheet' type='text/css'>
-	<title>presenze mensili</title>
+	<title>presenze annuali</title>
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" type="text/css" href="../assets/css/jquery-ui-1.8.20.custom.css">
     <link href="../assets/css/bootstrap.css" rel="stylesheet">
@@ -71,7 +71,7 @@
         <?php include('./_nav_main.php'); ?>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
           <h1 class="page-header">
-          Elenco frequenze
+          Elenco presenze anno in corso
 		  <div class='actions aright'>
 		  	<a href='./adm_attendance_month.php' alt="elenco presenze"><i class="fa fa-bars"></i> elenco</a>&nbsp;
 		  </div>
@@ -103,39 +103,27 @@
 				$headstr = $headstr . "<div class='calendar__month_tot'>TOT</div>\n";
 				$headstr = $headstr . "</div>";
 				echo $headstr;
-				$aii = $mhours[0]['aikidoka_fk'];			    
-			    $j = 0;
 			    $headstr = "";
-			    echo "\n<div class='calendar_row'>\n<div class='calendar__aikidokanames'>" . $mhours[$j]['lastname'] . '&nbsp;' .  $mhours[$j]['firstname'] . "</div>\n";	
+			    $j = 0;
 			    while($ndati > 0){
-			    	$yhrs = 0;
-				    $firstamonth = $mhours[$j]['month'];
-			    	$i = 1;
-				    while($i < $firstamonth){
-				    	echo "<div class='calendar__day calendar__day_not_in_month'>&nbsp;</div>\n";
-				    	$i++;
+				    echo "\n<div class='calendar_row'>\n<div class='calendar__aikidokanames";
+				    if ($mhours[$j]['beginner'] == 1)
+				    	echo " beginnerrow";
+				    echo "''>" . $mhours[$j]['lastname'] . '&nbsp;' .  $mhours[$j]['firstname'] . "</div>\n";
+				    echo "<div class='calendar__day calendar__day_working'>" . $mhours[$j]['M09'] . "</div>\n";
+			    	$yhrs = $mhours[$j]['M09'];
+			    	for($i = 10; $i <= 12; $i++){
+				    	echo "<div class='calendar__day calendar__day_working'>" . $mhours[$j]['M'. $i] . "</div>\n";
+				    	$yhrs = $yhrs + $mhours[$j][$i]; 
 				    }
-				    for(; $i <= 12 && $mhours[$j]['aikidoka_fk'] == $aii; $i++){
-//				    	echo "<div class='calendar__day calendar__day_working'>$i</div>\n";
-				    	echo "<div class='calendar__day calendar__day_working'>";
-				    	if($mhours[$j]['month'] == $i){
-				    		echo $mhours[$j]['mhours'];
-							$yhrs = $yhrs + intval($mhours[$j]['mhours']);
-							$ndati--;
-							$j++;			    		
-				    	} else {
-				    		echo "0";
-				    	}
-						echo "</div>\n";
+			    	for($i = 1; $i <= 8; $i++){
+				    	echo "<div class='calendar__day calendar__day_working'>" . $mhours[$j]['M0'. $i] . "</div>\n";
+				    	$yhrs = $yhrs + $mhours[$j][$i]; 
 				    }
-				    for(;$i <= 12; $i++)
-				    	echo "<div class='calendar__day calendar__day_working'>0</div>";
-
 				    echo "<div class='calendar__tothours aright'>" . $yhrs . "</div>\n</div><!-- row -->";	
-				    /* new aikidoka */
-				    $aii = $mhours[$j]['aikidoka_fk'];    
-				    echo "\n<div class='calendar_row'>\n<div class='calendar__aikidokanames'>" . $mhours[$j]['lastname'] . '&nbsp;' .  $mhours[$j]['firstname'] . "</div>\n";
-				}
+				    $ndati--;
+				    $j++;
+				}/**/
 
 
 

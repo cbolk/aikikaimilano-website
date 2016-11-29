@@ -286,7 +286,7 @@
   		$query = $query . "INNER JOIN aikidoka k ON a.aikidoka_fk = k.id ";
   		$query = $query . "WHERE (date >= k.last_exam OR k.last_exam is null) AND k.active = 1 ";
 		$query = $query . "GROUP BY a.aikidoka_fk ";
-		$query = $query . "ORDER BY beginner, k.lastname, k. firstname";
+		$query = $query . "ORDER BY beginner, k.lastname, k.firstname";
 		$dbconn->dbconnect();
         $result = $dbconn->qry($query);
         $num = mysql_num_rows($result);
@@ -302,7 +302,7 @@
   		$query = $query . " INNER JOIN aikidoka k ON a.aikidoka_fk = k.id ";
 		$query = $query . " where date > '" . $fromyear . "/08/31' AND date <= '" . $toyear . "/08/31' and k.active = 1 ";
 		$query = $query . " GROUP BY aikidoka_fk, AA ";
-		$query = $query . " ORDER BY beginner, k.lastname, k. firstname, AA";
+		$query = $query . " ORDER BY beginner, k.lastname, k.firstname, AA";
 		$dbconn->dbconnect();
         $result = $dbconn->qry($query);
         $num = mysql_num_rows($result);
@@ -312,13 +312,14 @@
 		return $mhours;
   	}
 
-  	function getHoursYearDetailAllAikidokas($dbconn, $year){
+  	function getHoursYearDetailAllAikidokas_old($dbconn, $year){
 		$query = "SELECT k.lastname, k. firstname, aikidoka_fk, SUM(hours) AS mhours, beginner, MOD(MONTH(date)+4,12) as month ";
 		$query = $query . " FROM attendance a INNER JOIN aikidoka k ON a.aikidoka_fk = k.id ";
 		$query = $query . " where date > '" . $year . "/08/31' and k.active = 1 ";
 		$query = $query . " GROUP BY aikidoka_fk, MONTH(date) ";
-		$query = $query . " ORDER BY beginner, k.lastname, k. firstname, month";
+		$query = $query . " ORDER BY beginner, k.lastname, k.firstname, month";
 		$dbconn->dbconnect();
+	//	echo $query;
         $result = $dbconn->qry($query);
         $num = mysql_num_rows($result);
         $mhours = array();
@@ -328,6 +329,23 @@
 		
 
   	}
+
+  	function getHoursYearDetailAllAikidokas($dbconn, $year){
+		$query = "SELECT k.lastname, k. firstname, beginner, ay.* ";
+		$query = $query . " FROM attendanceyear ay INNER JOIN aikidoka k ON ay.aikidoka_fk = k.id ";
+		$query = $query . " ORDER BY beginner, k.lastname, k.firstname;";
+		$dbconn->dbconnect();
+	//	echo $query;
+        $result = $dbconn->qry($query);
+        $num = mysql_num_rows($result);
+        $mhours = array();
+		for($i = 0; $i < $num; $i++) 
+			$mhours[$i] = mysql_fetch_assoc($result);
+		return $mhours;
+		
+
+  	}
+
 
   	function getTotHoursFromExam($dbconn, $aid){
   		$this->lastexam = $this->getDateLastexam($dbconn, $aid);
