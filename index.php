@@ -462,7 +462,7 @@ Proponendosi in primo luogo come via di educazione morale e di mutuo rispetto, l
           </header>  
           <div class="features">
             <article>
-              <a href="#" class="image"><img class="thumbnail" src="photos/2016-dojo.jpg" alt="" width="200px"></a>
+              <a href="./galleria.php" target="_blank" class="image"><img class="thumbnail" src="photos/2016-dojo.jpg" alt="" width="200px"></a>
               <div class="inner">
                 <h4>Galleria fotografica del dojo</h4>
                 <p>Album foto: <a target="_blank" href="./galleria.php"><span class="icon fa-picture-o"></span></a></p>
