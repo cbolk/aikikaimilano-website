@@ -163,7 +163,7 @@ Proponendosi in primo luogo come via di educazione morale e di mutuo rispetto, l
           <div class="row">
             <div class="col-xs-12">
               <p>Il Maestro Fujimoto, nato a Yamaguchi nel 1948, viene mandato in Italia per aiutare la diffusione dell’Aikido nel continente e diventa vicedirettore didattico dell'Aikikai d’Italia.<br/>
-              Arriva a Milano del 1971 e qui vi rimane tutta la sua vita, consolidando una delle scuole pi&ugrave; importanti d'Europa.<br/>
+              Arriva a Milano dal 1971 e qui vi rimane tutta la sua vita, consolidando una delle scuole pi&ugrave; importanti d'Europa.<br/>
               In oltre 40 anni di permanenza in Italia, Fujimoto Sensei ha contribuito notevolmente alla crescita dell'Aikido sul territorio, spaziando anche oltre confine in tutta Europa, Russia e Sud Africa.<br/>
               Il Maestro Fujimoto &egrave; venuto a mancare nel febbraio del 2012, garantendo la continuit&agrave; del suo stile aikidoistico e del suo Dojo.</p>
               </div>
@@ -469,6 +469,13 @@ Proponendosi in primo luogo come via di educazione morale e di mutuo rispetto, l
               </div>
             </article>
             <article>
+              <a href="https://www.facebook.com/media/set/?set=a.1858810281069434.1073741839.1670690169881447&type=1&l=99201c48be" class="image"><img class="thumbnail" src="photos/20161226.jpg" alt=""></a>
+              <div class="inner">
+                <h4>Seminario di fine anno - 2016</h4>
+                <p>Album foto: <a target="_blank" href="https://www.facebook.com/media/set/?set=a.1858810281069434.1073741839.1670690169881447&type=1&l=99201c48be"><span class="icon fa-picture-o"></span></a></p>
+              </div>
+            </article>
+            <article>
               <a href="https://www.facebook.com/media/set/?set=a.1807434562873673.1073741837.1670690169881447&type=1&l=f1f765d7a1" class="image"><img class="thumbnail" src="photos/20160924gruppo.jpg" alt="" width="200px"></a>
               <div class="inner">
                 <h4>Seminario Inizio anno 2016-17</h4>
@@ -537,7 +544,7 @@ Proponendosi in primo luogo come via di educazione morale e di mutuo rispetto, l
           </header>
 
           <div class="row">
-            <p>La responsabile del dojo &egrave; Laura Benevelli, III dan Aikikai d'Italia, Aikikai Tokyo.</p>
+            <p>La responsabile del dojo &egrave; Laura Benevelli, IV dan Aikikai d'Italia, Aikikai Tokyo.</p>
           </div>
 
           <div class="row">
