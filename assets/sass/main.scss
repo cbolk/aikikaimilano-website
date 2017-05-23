@@ -1080,6 +1080,7 @@
 		}
 	}
 
+	#title1line {display: none}
 	#logo {
 		position: relative;
 		margin: 1.75em 1.5em 1.5em 0.5em;
@@ -1275,6 +1276,8 @@
 		}
 
 		/* Header */
+
+		#title1line {display: none}
 
 		#header {
 			width: $size-header;
@@ -1620,6 +1623,7 @@
 			}
 
 			#title1line {display: block}
+			#title, #subtitle {display: none}
 
 
 		/* Footer */

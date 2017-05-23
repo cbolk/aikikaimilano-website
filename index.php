@@ -29,6 +29,7 @@
     <title>Aikikai Milano</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Aikikai Milano via porpora Yoji Fujimoto"/>
     <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/css/main.css" />
@@ -67,7 +68,7 @@
       		  </header>
             <div class="row">
                <div class="col-xs-12 col-sm-12 col-lg-12">
-                  <blockquote class="pull-right">
+                  <blockquote class="text-right">
                        Non ci sono competizioni nell'arte della guerra. Un vero guerriero &egrave; invincibile perch&egrave; non compete contro nulla. Vincere significa sconfiggere la mente conflittuale che si annida dentro di noi.
                        <small> <cite>Morihei Ueshiba</cite></small>
                   </blockquote>
@@ -133,7 +134,7 @@ Proponendosi in primo luogo come via di educazione morale e di mutuo rispetto, l
           </div>
           <div class="row">          
             <div class="col-xs-12 col-sm-12 col-lg-12">
-              <blockquote class="pull-right">
+              <blockquote class="text-right">
                    Le tecniche utilizzano quattro qualit&agrave; che riflettono la natura del nostro mondo. Secondo la circostanza, dovreste essere: duri come un diamante, flessibili come un salice, fluidi come l'acqua, o vuoti come lo spazio.
                    <small> <cite>Morihei Ueshiba</cite></small>
               </blockquote>
@@ -468,6 +469,44 @@ Proponendosi in primo luogo come via di educazione morale e di mutuo rispetto, l
                 <p>Album foto: <a target="_blank" href="./galleria.php"><span class="icon fa-picture-o"></span></a></p>
               </div>
             </article>
+
+            <article>
+              <a href="https://www.facebook.com/media/set/?set=a.1925320057751789.1073741848.1670690169881447&type=1&l=5639ac360e" class="image"><img class="thumbnail" src="photos/20170430.jpg" alt=""></a>
+              <div class="inner">
+                <h4>Seminario di armi - Aprile 2017</h4>
+                <p>Album foto: <a target="_blank" href="https://www.facebook.com/media/set/?set=a.1925320057751789.1073741848.1670690169881447&type=1&l=5639ac360e"><span class="icon fa-picture-o"></span></a></p>
+              </div>
+            </article>
+
+
+            <article>
+              <a href="https://www.facebook.com/media/set/?set=a.1896509150632880.1073741847.1670690169881447&type=1&l=a14a88f3fa" class="image"><img class="thumbnail" src="photos/20170311.jpg" alt=""></a>
+              <div class="inner">
+                <h4>Seminario mu, VI e V Kyu - Marzo 2017</h4>
+                <p>Album foto: <a target="_blank" href="https://www.facebook.com/media/set/?set=a.1896509150632880.1073741847.1670690169881447&type=1&l=a14a88f3fa"><span class="icon fa-picture-o"></span></a></p>
+              </div>
+            </article>
+            <article>
+              <a href="https://www.facebook.com/media/set/?set=a.1883872098563252.1073741845.1670690169881447&type=1&l=bfae86b123" class="image"><img class="thumbnail" src="photos/20170211.jpg" alt=""></a>
+              <div class="inner">
+                <h4>Seminario M&deg; Osawa - Febbraio 2017</h4>
+                <p>Album foto: <a target="_blank" href="https://www.facebook.com/media/set/?set=a.1883872098563252.1073741845.1670690169881447&type=1&l=bfae86b123"><span class="icon fa-picture-o"></span></a></p>
+              </div>
+            </article>
+            <article>
+              <a href="https://www.facebook.com/media/set/?set=a.1886584914958637.1073741846.1670690169881447&type=1&l=c278d40c95" class="image"><img class="thumbnail" src="photos/20170225.jpg" alt=""></a>
+              <div class="inner">
+                <h4>Seminario M&deg; Bogdanovic - Febbraio 2017</h4>
+                <p>Album foto: <a target="_blank" href="https://www.facebook.com/media/set/?set=a.1886584914958637.1073741846.1670690169881447&type=1&l=c278d40c95"><span class="icon fa-picture-o"></span></a></p>
+              </div>
+            </article>
+            <article>
+              <a href="https://www.facebook.com/media/set/?set=a.1874352916181837.1073741843.1670690169881447&type=1&l=087c64b363" class="image"><img class="thumbnail" src="photos/20161226.jpg" alt=""></a>
+              <div class="inner">
+                <h4>Seminario V, IV e III Kyu - Gennaio 2017</h4>
+                <p>Album foto: <a target="_blank" href="https://www.facebook.com/media/set/?set=a.1874352916181837.1073741843.1670690169881447&type=1&l=087c64b363"><span class="icon fa-picture-o"></span></a></p>
+              </div>
+            </article>
             <article>
               <a href="https://www.facebook.com/media/set/?set=a.1858810281069434.1073741839.1670690169881447&type=1&l=99201c48be" class="image"><img class="thumbnail" src="photos/20161226.jpg" alt=""></a>
               <div class="inner">
@@ -492,7 +531,7 @@ Proponendosi in primo luogo come via di educazione morale e di mutuo rispetto, l
             <article>
               <a href="https://www.facebook.com/media/set/?set=a.1697283107222153.1073741834.1670690169881447&type=1&l=bb98b34d73#" class="image"><img class="thumbnail" src="photos/2016-56kyu.jpg" alt=""></a>
               <div class="inner">
-                <h4>Seminario di Aikido per 5° e 6° Kyu</h4>
+                <h4>Seminario di Aikido per VI e V Kyu</h4>
                 <p>Album foto: <a target="_blank" href="https://www.facebook.com/media/set/?set=a.1697283107222153.1073741834.1670690169881447&type=1&l=bb98b34d73"><span class="icon fa-picture-o"></span></a></p>
               </div>
             </article>
@@ -524,7 +563,10 @@ Proponendosi in primo luogo come via di educazione morale e di mutuo rispetto, l
       			<li><a href="http://www.aikikai.it" target="_blank" title="Aikikai Italia">www.aikikai.it</a></li>
       			<li><a href="http://www.aikikai.or.jp" target="_blank" title="Aikikai Giappone">www.aikikai.or.jp</a></li>
       			<li><a href="http://www.aikidorenbukai.it" target="_blank" title="Aikido Renbukai">www.aikidorenbukai.it</a></li>
-      			<li><a href="http://www.fujinami.it/" target="_blank" title="Aikido Fujinami Bologna">www.fujinami.it</a></li>
+      			<li><a href="http://www.fujinami.it" target="_blank" title="Aikido Fujinami Bologna">www.fujinami.it</a></li>
+            <li><a href="http://www.kikaidojo.it" target="_blank" title="Kikai Dojo">www.kikaidojo.it</a></li>
+            <li><a href="http://www.aikidopordenone.com" target="_blank" title="Aikido Pordenone">aikidopordenone.com</a></li>
+            <li><a href="http://www.aikidowatanabedojo.it" target="_blank" title="Aikido Watanabe">www.aikidowatanabedojo.it</a></li>
       	    </ul>
       	  </div>
       	  

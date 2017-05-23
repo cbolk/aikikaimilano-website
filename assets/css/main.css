@@ -1989,6 +1989,9 @@ input[type="button"],
       #header > nav ul li:first-child {
         border-top: 0; }
 
+#title1line {
+  display: none; }
+
 #logo {
   position: relative;
   margin: 1.75em 1.5em 1.5em 0.5em;
@@ -2117,6 +2120,9 @@ cite {
     font-size: 16pt; }
 
   /* Header */
+  #title1line {
+    display: none; }
+
   #header {
     width: 215px; }
     #header #bottom1 {
@@ -2367,6 +2373,9 @@ cite {
 
   #title1line {
     display: block; }
+
+  #title, #subtitle {
+    display: none; }
 
   /* Footer */
   #footer {
