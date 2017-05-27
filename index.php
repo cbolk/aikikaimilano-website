@@ -198,20 +198,20 @@ Proponendosi in primo luogo come via di educazione morale e di mutuo rispetto, l
               <tr>
                 <td class="tdtitle">pre-aikido</td>
                 <td >anni 5-6</td>
-                <td ><span class="nomobile">ottobre&#8209;giugno</span><span class="mobile">ott-giu</span></td>
+                <td ><span class="nomobile">ottobre&#8209;maggio</span><span class="mobile">ott-mag</span></td>
                 <td class="text-right"><span class="nomobile">mer. 17:00</span><span class="mobile">me 17&ndash;18</span><span class="nomobile">&ndash;18:00</span></td>
               </tr>
               <tr>
                 <td class="tdtitle">bambini</td>
                 <td >anni 7-10</td>
-                <td ><span class="nomobile">ottobre&#8209;giugno</span><span class="mobile">ott-giu</span></td>
+                <td ><span class="nomobile">ottobre&#8209;maggio</span><span class="mobile">ott-mag</span></td>
                 <td class="text-right"><span class="nomobile">lun. 17:00</span><span class="mobile">lu 17&ndash;18</span><span class="nomobile">&ndash;18:00</span><span class="nomobile"><br/></span>
                             <span class="nomobile">gio. 17:00</span><span class="mobile">gi 17&ndash;18</span><span class="nomobile">&ndash;18:00</span></td>
               </tr>
               <tr>
                 <td class="tdtitle">ragazzi</td>
                 <td >anni 11-14</td>
-                <td ><span class="nomobile">ottobre&#8209;giugno</span><span class="mobile">ott-giu</span></td>
+                <td ><span class="nomobile">ottobre&#8209;maggio</span><span class="mobile">ott-mag</span></td>
                 <td class="text-right"><span class="nomobile">mar. 17:00</span><span class="mobile">ma 17&ndash;18</span><span class="nomobile">&ndash;18:00</span><span class="nomobile"><br/></span>
                             <span class="nomobile">ven. 17:00</span><span class="mobile">ve 17&ndash;18</span><span class="nomobile">&ndash;18:00</span></td>
               </tr>
