@@ -6,7 +6,7 @@
 		  <!--img src="assets/img/mon.png" alt="logo" id="logoheader" class="nomobile" width="64px" /-->
 		  <h1 id="title1line">ASD Aikikai Milano - dojo di Aikido</h1>
 		  <h1 id="title"><span class='asd'>ASD</span> Aikikai Milano</h1>
-		  <p id="subtitle"><strong>dojo di aikido</strong></p>
+		  <p id="subtitle"><strong>dojo di Aikido</strong></p>
 		</div>	
 
 
@@ -18,7 +18,7 @@
 		<tr valign="top">
 		<td>
 		  <h3 class="mobile"><span class='asd'>ASD</span> Aikikai Milano</h3>
-		  <h4 class="mobile">dojo di aikido</h4>
+		  <h4 class="mobile">dojo di Aikido</h4>
 		  </td>
 		<td><img src="assets/img/mon.png" alt="logo" width=48px /></td>
 		  </tr>
@@ -58,6 +58,7 @@
 		<ul class="icons">
 			<li><a href="http://www.facebook.com/aikikaimilano/" target=_blank class="icon fa-facebook"><span class="label">Facebook</span></a></li>
 			<li><a href="./index.php#info" class="icon fa-envelope"><span class="label">Email</span></a></li>
+			<li><a href="./index.en.php" class="icon fa-envelope"><span class="label">EN</span></a></li>
 		</ul>
 	  </div>      
     </div>
