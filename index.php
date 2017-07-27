@@ -411,12 +411,12 @@ Proponendosi in primo luogo come via di educazione morale e di mutuo rispetto, l
       </section>
 
       <?php 
-        if($semID != null)
+        if($semID != null && $semID != ""){
       ?>
         <section id="nextseminar" class="odd">
           <div class="container">
              <header>
-              <h2>Il prossimo appuntamento</h2>
+              <h2>Il prossimo appuntamento (<?php echo $semID; ?>) </h2>
             </header>
             <div class="row">
               <?php if(strlen(trim($seminario->photo)) > 0) {?>
@@ -466,7 +466,7 @@ Proponendosi in primo luogo come via di educazione morale e di mutuo rispetto, l
       <section class="color">
         <p>&#9671;&#9671;</p>
       </section>
-
+      <?php } ?>
 
       <section id="photos" class="even">
         <div class="container">  
