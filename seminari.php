@@ -11,7 +11,6 @@
 	$util = new utils();
   	$thismonth = Date('m');
   	$nextsem = $util->getNextStageMMDD($db);
-
 	$updateON = $seminar->lastUpdate($db);
 
 	$today = Date('Y-m-d');
@@ -57,7 +56,8 @@
 
   	  	  <div class="features">
 			<?php 
-				$today = date("Y-m-d");
+
+		  		$today = date("Y-m-d");
 				$thismonth = date("m");
 				$year = $y;
 				for($i = 9; $i <= 12; $i++){
@@ -191,7 +191,13 @@
 					</article>  	  	  				
 					<?php
   	  	  		}
-  	  	  	?>
+
+	  	  	  	if($nextsem == null || $nextsem == "0000"){
+	  	  	  	?>
+				<h4 class="cntr">a breve sar&agrave; disponibile il calendario dei prossimi seminari</h4>
+	  	  	  	<?php
+	  	  	  	}
+	  	  	  	?>
 
   	  	  </div>
 	  

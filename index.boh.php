@@ -16,14 +16,13 @@
   $nextsem = $u->getNextStageMMDD($db);
 
   $semID = $seminar->getNextStageID($db);
-  if($semID != null){
-    $seminario = $seminar->get($db,$semID);
-    $from = $u->medDate($seminario->fromdate);
-    $fromMob = $u->medDate($seminario->fromdate);
-    $to = $u->medDate($seminario->todate);
-    $toMob = $u->medDate($seminario->todate);
-    $istruttori = $seminar->getStageInstructors($db,$semID);
-  }
+  $seminario = $seminar->get($db,$semID);
+  $from = $u->medDate($seminario->fromdate);
+  $fromMob = $u->medDate($seminario->fromdate);
+  $to = $u->medDate($seminario->todate);
+  $toMob = $u->medDate($seminario->todate);
+  $istruttori = $seminar->getStageInstructors($db,$semID);
+
 ?>
 <!DOCTYPE html>
   <head>
@@ -303,35 +302,25 @@ Proponendosi in primo luogo come via di educazione morale e di mutuo rispetto, l
           </div>
 
         	  <header>
-        	    <h4><a id="orarioestivo"></a>luglio ~ avanzati</h4>
+        	    <h4>luglio ~ avanzati</h4>
         	  </header>
           <div class="table-responsive">
             <table class="table table-striped">
             <tbody>
               <tr>
                 <td class="tdtitle">luned&igrave;</td>
-                <td >&nbsp;</td>
                 <td >18:00<span class="nomobile">-</span><span class="mobile"> </span>19:00</td>
                 <td >19:00<span class="nomobile">-</span><span class="mobile"> </span>20:00</td>
                 <td >20:00<span class="nomobile">-</span><span class="mobile"> </span>21:00</td>
               </tr>
               <tr>
-                <td class="tdtitle">marted&igrave;</td>
-                <td >07:00<span class="nomobile">-</span><span class="mobile"> </span>08:00</td>
-                <td >&nbsp;</td>
-                <td >&nbsp;</td>
-                <td >&nbsp;</td>
-              </tr>
-              <tr>
                 <td class="tdtitle">mercoled&igrave;</td>
-                <td >&nbsp;</td>
                 <td >18:00<span class="nomobile">-</span><span class="mobile"> </span>19:00</td>
                 <td >19:00<span class="nomobile">-</span><span class="mobile"> </span>20:00</td>
                 <td >20:00<span class="nomobile">-</span><span class="mobile"> </span>21:00</td>
               </tr>
               <tr>
                 <td class="tdtitle">venerd&igrave;</td>
-                <td >&nbsp;</td>
                 <td >18:00<span class="nomobile">-</span><span class="mobile"> </span>19:00</td>
                 <td >19:00<span class="nomobile">-</span><span class="mobile"> </span>20:00</td>
                 <td >20:00<span class="nomobile">-</span><span class="mobile"> </span>21:00</td>
@@ -341,7 +330,7 @@ Proponendosi in primo luogo come via di educazione morale e di mutuo rispetto, l
           </div>
 
         	  <header>
-        	    <h4><a id="agosto"></a>agosto ~ avanzati</h4>
+        	    <h4>agosto ~ avanzati</h4>
         	  </header>
           <div class="table-responsive">
             <table class="table table-striped">
@@ -349,19 +338,19 @@ Proponendosi in primo luogo come via di educazione morale e di mutuo rispetto, l
               <tr>
                 <td class="tdtitle">luned&igrave;</td>
                 <td >&nbsp;</td>
-                <td >19:00<span class="nomobile">-</span><span class="mobile"> </span>20:30</td>
+                <td >19:30<span class="nomobile">-</span><span class="mobile"> </span>21:00</td>
                 <td >&nbsp;</td>
               </tr>
               <tr>
                 <td class="tdtitle">mercoled&igrave;</td>
                 <td >&nbsp;</td>
-                <td >19:00<span class="nomobile">-</span><span class="mobile"> </span>20:30</td>
+                <td >19:30<span class="nomobile">-</span><span class="mobile"> </span>21:00</td>
                 <td >&nbsp;</td>
               </tr>
               <tr>
                 <td class="tdtitle">venerd&igrave;</td>
                 <td >&nbsp;</td>
-                <td >19:00<span class="nomobile">-</span><span class="mobile"> </span>20:30</td>
+                <td >19:30<span class="nomobile">-</span><span class="mobile"> </span>21:00</td>
                 <td >&nbsp;</td>
               </tr>
               </tbody>
@@ -369,7 +358,7 @@ Proponendosi in primo luogo come via di educazione morale e di mutuo rispetto, l
           </div>
 
         	  <header>
-        	    <h4><a id='settembre'></a>settembre ~ avanzati</h4>
+        	    <h4>settembre ~ avanzati</h4>
         	  </header>
           <div class="table-responsive">
             <table class="table table-striped">
@@ -410,59 +399,58 @@ Proponendosi in primo luogo come via di educazione morale e di mutuo rispetto, l
         <p>&#9671;&#9671;</p>
       </section>
 
-      <?php 
-        if($semID != null)
-      ?>
-        <section id="nextseminar" class="odd">
-          <div class="container">
-             <header>
-              <h2>Il prossimo appuntamento</h2>
-            </header>
-            <div class="row">
-              <?php if(strlen(trim($seminario->photo)) > 0) {?>
-                <div class="col-xs-12 col-sm-4 col-lg-4 cntr">
-                      <img class="img-responsive thumbnail" src="seminars/<?php echo $seminario->photo?>" />
-                </div>              
-                <div class="col-xs-12 col-sm-6 col-lg-6">
-              <?php } else { ?>
-                <div class="col-xs-12 col-sm-12 col-lg-12">
-              <?php } ?>
-                    <h4><? echo $seminario->title ?></h4>
-                    <ul class="leftindent">
-                        <li class="itemli"><span class="itemhead">Quando:</span> <span class='itemval'>
-                        <span class="nomobile"><? echo $from; ?> <em>-</em> <? echo $to; ?></span>
-                        <span class="mobile"><? echo $fromMob; ?> <em>-</em> <? echo $toMob; ?></span>
-                        </span>
-                        <li class="itemli"><span class="itemhead">Dove:</span> <span class='itemval'>
-                          <? echo $seminario->shortcity; ?></span>
-                        <li class="itemli"><span class="itemhead">Diretto da:</span>
-                      <?php
-                         $num = count($istruttori);
 
-                         for($i = 0; $i < $num; $i++){
-                              echo "<span class='itemval'>";
-                              echo $istruttori[$i]['firstname'] . " " . strtoupper($istruttori[$i]['lastname']) . ", " . $istruttori[$i]['rank'];
-                              echo "</span></li>";
-                              if($i < $num - 1)
-                                echo "<li class='itemli'><span class='itemhead'></span>";
-                         }
-                      ?>
-                          <li class="itemli"><span class="itemhead">Locandina:</span>
-                      <?php if($seminario->pdf != '') { ?>
-                          <a class="anoborder" title="scarica la locandina" href="./seminars/<?php echo $seminario->pdf; ?>">pdf &nbsp; <span class="icon fa-file-pdf-o"></span></a>
-                       <?php } else { ?>
-                            disponibile prossimamente 
-                       <?php } ?>
-                      </ul>
-                 </div> 
-            </div>
-            <div class="row">
+      <section id="nextseminar" class="odd">
+        <div class="container">
+           <header>
+            <h2>Il prossimo appuntamento</h2>
+          </header>
+          <div class="row">
+            <?php if(strlen(trim($seminario->photo)) > 0) {?>
+              <div class="col-xs-12 col-sm-4 col-lg-4 cntr">
+                    <img class="img-responsive thumbnail" src="seminars/<?php echo $seminario->photo?>" />
+              </div>              
+              <div class="col-xs-12 col-sm-6 col-lg-6">
+            <?php } else { ?>
               <div class="col-xs-12 col-sm-12 col-lg-12">
-                Vai alla lista completa di seminari dell'anno in corso <a href="./seminari.php"><span class="icon fa-sign-out"></span></a>
-              </div>
+            <?php } ?>
+                  <h4><? echo $seminario->title ?></h4>
+                  <ul class="leftindent">
+                      <li class="itemli"><span class="itemhead">Quando:</span> <span class='itemval'>
+                      <span class="nomobile"><? echo $from; ?> <em>-</em> <? echo $to; ?></span>
+                      <span class="mobile"><? echo $fromMob; ?> <em>-</em> <? echo $toMob; ?></span>
+                      </span>
+                      <li class="itemli"><span class="itemhead">Dove:</span> <span class='itemval'>
+                        <? echo $seminario->shortcity; ?></span>
+                      <li class="itemli"><span class="itemhead">Diretto da:</span>
+                    <?php
+                       $num = count($istruttori);
+
+                       for($i = 0; $i < $num; $i++){
+                            echo "<span class='itemval'>";
+                            echo $istruttori[$i]['firstname'] . " " . strtoupper($istruttori[$i]['lastname']) . ", " . $istruttori[$i]['rank'];
+                            echo "</span></li>";
+                            if($i < $num - 1)
+                              echo "<li class='itemli'><span class='itemhead'></span>";
+                       }
+                    ?>
+                        <li class="itemli"><span class="itemhead">Locandina:</span>
+                    <?php if($seminario->pdf != '') { ?>
+                        <a class="anoborder" title="scarica la locandina" href="./seminars/<?php echo $seminario->pdf; ?>">pdf &nbsp; <span class="icon fa-file-pdf-o"></span></a>
+                     <?php } else { ?>
+                          disponibile prossimamente 
+                     <?php } ?>
+                    </ul>
+               </div> 
+          </div>
+          <div class="row">
+            <div class="col-xs-12 col-sm-12 col-lg-12">
+              Vai alla lista completa di seminari dell'anno in corso <a href="./seminari.php"><span class="icon fa-sign-out"></span></a>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
+
       <section class="color">
         <p>&#9671;&#9671;</p>
       </section>
@@ -609,14 +597,12 @@ Proponendosi in primo luogo come via di educazione morale e di mutuo rispetto, l
                 <li class="itemli"><span class="itemhead">Telefono:</span><span class="itemval">(+39) 3881517258</span></li>
                 <li class="itemli"><span class="itemhead">Email:</span><span class="itemval">segreteria@aikikaimilano.it</span></li>            
               </ul>  
-              <p>Gli orari della segreteria nel mese di luglio sono i seguenti:<br/>
-              &#9671;&nbsp;luned&igrave;, mercoled&igrave; e venerd&igrave;: 17:30-19:30<br/>
-              </div>
-<!--
+              <p>Gli orari della segreteria sono i seguenti:<br/>
                   &#9671;&nbsp;marted&igrave; e mercoled&igrave;: 17:30-19:30<br/>
                   &#9671;&nbsp;gioved&igrave;: 18:00-20:00<br/>
                   &#9671;&nbsp;venerd&igrave;: 16:30-18:30</p>
--->
+              </div>
+
 
 
               <div class="col-xs-12 col-sm-6 col-lg-6">

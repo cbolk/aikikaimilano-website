@@ -16,21 +16,19 @@
   $nextsem = $u->getNextStageMMDD($db);
 
   $semID = $seminar->getNextStageID($db);
-  if($semID != null){
-    $seminario = $seminar->get($db,$semID);
-    $from = $u->medDate($seminario->fromdate);
-    $fromMob = $u->medDate($seminario->fromdate);
-    $to = $u->medDate($seminario->todate);
-    $toMob = $u->medDate($seminario->todate);
-    $istruttori = $seminar->getStageInstructors($db,$semID);
-  }
+  $seminario = $seminar->get($db,$semID);
+  $from = $u->medDate($seminario->fromdate);
+  $fromMob = $u->medDate($seminario->fromdate);
+  $to = $u->medDate($seminario->todate);
+  $toMob = $u->medDate($seminario->todate);
+  $istruttori = $seminar->getStageInstructors($db,$semID);
+
 ?>
 <!DOCTYPE html>
   <head>
     <title>Aikikai Milano</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Aikikai Milano via porpora Yoji Fujimoto"/>
     <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/css/main.css" />
@@ -54,7 +52,7 @@
       </section>
 
       <section id="top" class="cover mobile color">
-           <img id="banner" class="img-responsive" src="assets/img/banner400.jpg" alt="banner">
+           <img id="banner" src="assets/img/banner400.jpg" alt="banner">
       </section>
       
       <section class="color">
@@ -69,7 +67,7 @@
       		  </header>
             <div class="row">
                <div class="col-xs-12 col-sm-12 col-lg-12">
-                  <blockquote class="text-right">
+                  <blockquote class="pull-right">
                        Non ci sono competizioni nell'arte della guerra. Un vero guerriero &egrave; invincibile perch&egrave; non compete contro nulla. Vincere significa sconfiggere la mente conflittuale che si annida dentro di noi.
                        <small> <cite>Morihei Ueshiba</cite></small>
                   </blockquote>
@@ -84,7 +82,7 @@
           </div>
           <div class="row">
               <div class="col-xs-12 col-sm-6 col-lg-6  text-center">
-                  <img class="img-responsive thumbnail" src="photos/morihei-ueshiba-throwing-tada.jpg" alt="Morihei Ueshiba Throwing Tada" width="440px" />
+                  <img class="thumbnail" src="photos/morihei-ueshiba-throwing-tada.jpg" alt="Morihei Ueshiba Throwing Tada" width="440" />
                   <p class="imgcaption">Ueshiba Morihei, fondatore dell'Aikido<br/>
                   (dal sito <a href="http://blog.aikidojournal.com" target="_blank">Aikido Journal</a>)</p>
                </div>
@@ -95,7 +93,7 @@ Proponendosi in primo luogo come via di educazione morale e di mutuo rispetto, l
           </div> 
           <div class="row">
               <div class="col-xs-12 col-sm-8 col-lg-8">
-                  <img class="img-responsive thumbnail text-center" src="photos/Ueshiba-Kisshomaru-loc.png" alt="Kisshomaru Ueshiba" width="600px" />
+                  <img class="img-responsive thumbnail text-center" src="photos/Ueshiba-Kisshomaru-loc.png" alt="Kisshomaru Ueshiba" width="700px" />
                   <p class="imgcaption">Ueshiba Kisshomaru, il secondo Doshu<br/>
                    (fonte: <a href="http://blog.aikidojournal.com" target="_blank">Aikido Journal</a>)</p>
               </div>
@@ -111,20 +109,20 @@ Proponendosi in primo luogo come via di educazione morale e di mutuo rispetto, l
               attratti dalla bellezza del movimento.</p>
             </div>
             <div class="col-xs-12 col-sm-4 col-lg-4 cntr">
-              <img class="img-responsive thumbnail" src="http://www.ueshibaaikido.org/Images/Images/Doshu/doshu.jpg" alt="Attuale Doshu" width="250px"/>
+              <img class="thumbnail" src="http://www.ueshibaaikido.org/Images/Images/Doshu/doshu.jpg" alt="Attuale Doshu" width="250px"/>
               <p class="imgcaption">Ueshiba Moriteru, l'attuale Doshu<br/>
                (dal sito dell'<a href="http://www.aikikai.or.jp/eng/aikido/history.html" target="_blank">Aikikai Foundation</a>)</p>
             </div>
           </div>
           <div class="row">
-                <div class="col-xs-12 col-sm-4 col-lg-4">
-                    <img class="img-responsive thumbnail" src="http://www.aikikai.or.jp/eng/images/aikido/img_history_1.jpg" alt="" width="200px"/>
+                <div class="col-xs-12 col-lg-4">
+                    <img class="thumbnail" src="http://www.aikikai.or.jp/eng/images/aikido/img_history_1.jpg" alt="" width="250px"/>
                 </div>
                 <div class="col-xs-12 col-sm-4 col-lg-4">
-                    <img class="img-responsive thumbnail" src="http://www.aikikai.or.jp/eng/images/aikido/img_history_2.jpg" alt="" width="200px"/>
+                    <img class="thumbnail" src="http://www.aikikai.or.jp/eng/images/aikido/img_history_2.jpg" alt="" width="250px"/>
                 </div>
                 <div class="col-xs-12 col-sm-4 col-lg-4">
-                    <img class="img-responsive thumbnail" src="http://www.aikikai.or.jp/eng/images/aikido/img_history_3.jpg" alt="" width="200px"/>
+                    <img class="thumbnail" src="http://www.aikikai.or.jp/eng/images/aikido/img_history_3.jpg" alt="" width="250px"/>
                 </div>
           </div>
           <div class="row text-center">
@@ -135,7 +133,7 @@ Proponendosi in primo luogo come via di educazione morale e di mutuo rispetto, l
           </div>
           <div class="row">          
             <div class="col-xs-12 col-sm-12 col-lg-12">
-              <blockquote class="text-right">
+              <blockquote class="pull-right">
                    Le tecniche utilizzano quattro qualit&agrave; che riflettono la natura del nostro mondo. Secondo la circostanza, dovreste essere: duri come un diamante, flessibili come un salice, fluidi come l'acqua, o vuoti come lo spazio.
                    <small> <cite>Morihei Ueshiba</cite></small>
               </blockquote>
@@ -156,7 +154,7 @@ Proponendosi in primo luogo come via di educazione morale e di mutuo rispetto, l
           </header>
           <div class="row">
               <div class="col-xs-12 col-sm-8 col-lg-8 text-center">
-                <img class="img-responsive thumbnail" src="photos/maestrofujimoto.jpg" alt="Il Maestro Fujimoto" width="600px" /> 
+                <img class="image thumbnail nomobile" src="photos/maestrofujimoto.jpg" alt="Il Maestro Fujimoto" width="600px" /> 
               </div>
               <div class="col-xs-12 col-sm-4 col-lg-4">
               <p>Il Dojo, fondato direttamente dal Maestro Fujimoto (VIII dan e Shihan Aikikai Hombudojo), ha una storia di 40 anni sotto il suo diretto insegnamento e dopo la sua scomparsa, nel febbraio del 2012, continua a seguire la linea etica, morale e didattica del suo fondatore.</p>
@@ -165,16 +163,111 @@ Proponendosi in primo luogo come via di educazione morale e di mutuo rispetto, l
           <div class="row">
             <div class="col-xs-12">
               <p>Il Maestro Fujimoto, nato a Yamaguchi nel 1948, viene mandato in Italia per aiutare la diffusione dell’Aikido nel continente e diventa vicedirettore didattico dell'Aikikai d’Italia.<br/>
-              Arriva a Milano dal 1971 e qui vi rimane tutta la sua vita, consolidando una delle scuole pi&ugrave; importanti d'Europa.<br/>
+              Arriva a Milano del 1971 e qui vi rimane tutta la sua vita, consolidando una delle scuole pi&ugrave; importanti d'Europa.<br/>
               In oltre 40 anni di permanenza in Italia, Fujimoto Sensei ha contribuito notevolmente alla crescita dell'Aikido sul territorio, spaziando anche oltre confine in tutta Europa, Russia e Sud Africa.<br/>
               Il Maestro Fujimoto &egrave; venuto a mancare nel febbraio del 2012, garantendo la continuit&agrave; del suo stile aikidoistico e del suo Dojo.</p>
               </div>
             </div>
           <div class="row">
             <div class="col-xs-12 text-center">
-                <img class="img-responsive thumbnail" src="photos/maestrofujimoto2.jpg" alt="Il Maestro Fujimoto" />
+                <img class="image thumbnail" src="photos/maestrofujimoto2.jpg" alt="Il Maestro Fujimoto" />
             </div>
-          </div> 
+          </div>
+
+            <!--header>
+                <h2>insegnanti</h2>
+            </header>   
+
+            <div class="row">
+              <div class="col-xs-12 col-sm-4 col-lg-4 text-center">
+                  <img class="image thumbnail" src="photos/fujimoto.jpg" alt="Il Maestro Fujimoto" />
+              </div>
+              <div class="col-xs-12 col-sm-8 col-lg-8">
+                  <h4>Cristina Sguinzo, V dan</h4>
+                  <p>insegnante del corso di armi e avanzati</p>
+              </div>
+            </div>      
+
+            <div class="row">
+              <div class="col-xs-12 col-sm-4 col-lg-4 text-center">
+                  <img class="image thumbnail" src="photos/fujimoto.jpg" alt="Il Maestro Fujimoto" />
+              </div>
+              <div class="col-xs-12 col-sm-8 col-lg-8">
+                  <h4>Cinzia Susca, IV dan</h4>
+                  <p>insegnante del corso avanzati</p>
+              </div>
+            </div>      
+
+            <div class="row">
+              <div class="col-xs-12 col-sm-4 col-lg-4 text-center">
+                  <img class="image thumbnail" src="photos/fujimoto.jpg" alt="Il Maestro Fujimoto" />
+              </div>
+              <div class="col-xs-12 col-sm-8 col-lg-8">
+                    <h4>Laura Benevelli, III dan</h4>
+                    <p>responsabile di dojo ed insegnante del corso avanzati, bambini e preaikido</p>
+              </div>
+            </div>      
+
+            <div class="row">
+              <div class="col-xs-12 col-sm-4 col-lg-4 text-center">
+                  <img class="image thumbnail" src="photos/fujimoto.jpg" alt="Il Maestro Fujimoto" />
+              </div>
+              <div class="col-xs-12 col-sm-8 col-lg-8">
+                    <h4>Alberto Marzagalli, III dan</h4>
+                    <p>insegnante del corso ragazzi ed avanzati</p>
+              </div>
+            </div>      
+
+            <div class="row">
+              <div class="col-xs-12 col-sm-4 col-lg-4 text-center">
+                  <img class="image thumbnail" src="photos/fujimoto.jpg" alt="Il Maestro Fujimoto" />
+              </div>
+              <div class="col-xs-12 col-sm-8 col-lg-8">
+                    <h4>Emanuele Perin, III dan</h4>
+                    <p>responsabile di dojo ed insegnante del corso avanzati, bambini e preaikido</p>
+              </div>
+            </div>      
+
+            <div class="row">
+              <div class="col-xs-12 col-sm-4 col-lg-4 text-center">
+                  <img class="image thumbnail" src="photos/fujimoto.jpg" alt="Il Maestro Fujimoto" />
+              </div>
+              <div class="col-xs-12 col-sm-8 col-lg-8">
+                    <h4>Pietro Piletskyy, III dan</h4>
+                    <p>insegnante del corso avanzati</p>
+              </div>
+            </div>      
+
+
+            <div class="row">
+              <div class="col-xs-12 col-sm-4 col-lg-4 text-center">
+                  <img class="image thumbnail" src="photos/fujimoto.jpg" alt="Il Maestro Fujimoto" />
+              </div>
+              <div class="col-xs-12 col-sm-8 col-lg-8">
+                    <h4>Emilio Zaccarini, III dan</h4>
+                    <p>insegnante del corso avanzati</p>
+              </div>
+            </div>      
+
+            <div class="row">
+              <div class="col-xs-12 col-sm-4 col-lg-4 text-center">
+                  <img class="image thumbnail" src="photos/fujimoto.jpg" alt="Il Maestro Fujimoto" />
+              </div>
+              <div class="col-xs-12 col-sm-8 col-lg-8">
+                    <h4>Manuele De Grandi, II dan</h4>
+                    <p>insegnante del corso avanzati e ragazzi</p>
+              </div>
+            </div>      
+
+            <div class="row">
+              <div class="col-xs-12 col-sm-4 col-lg-4 text-center">
+                  <img class="image thumbnail" src="photos/fujimoto.jpg" alt="Il Maestro Fujimoto" />
+              </div>
+              <div class="col-xs-12 col-sm-8 col-lg-8">
+                    <h4>Fabio Pezzoli, II dan</h4>
+                    <p>insegnante del corso avanzati</p>
+              </div>
+            </div-->      
 
 
         </div>
@@ -195,38 +288,38 @@ Proponendosi in primo luogo come via di educazione morale e di mutuo rispetto, l
             al proprio livello e alla propria et&agrave;:</p>
          <div class="table-responsive">
            <table class="table table-striped">
-             <tbody>
+              <tbody>
               <tr>
                 <td class="tdtitle">pre-aikido</td>
                 <td >anni 5-6</td>
-                <td ><span class="nomobile">ottobre&#8209;maggio</span><span class="mobile">ott-mag</span></td>
-                <td class="text-right"><span class="nomobile">mer. 17:00</span><span class="mobile">me 17&ndash;18</span><span class="nomobile">&ndash;18:00</span></td>
+                <td ><span class="nomobile">ottobre&#8209;giugno</span><span class="mobile">ott-giu</span></td>
+                <td class="text-right">mer. 17<span class="nomobile">:00</span>&ndash;18<span class="nomobile">:00</span></td>
               </tr>
               <tr>
                 <td class="tdtitle">bambini</td>
                 <td >anni 7-10</td>
-                <td ><span class="nomobile">ottobre&#8209;maggio</span><span class="mobile">ott-mag</span></td>
-                <td class="text-right"><span class="nomobile">lun. 17:00</span><span class="mobile">lu 17&ndash;18</span><span class="nomobile">&ndash;18:00</span><span class="nomobile"><br/></span>
-                            <span class="nomobile">gio. 17:00</span><span class="mobile">gi 17&ndash;18</span><span class="nomobile">&ndash;18:00</span></td>
+                <td ><span class="nomobile">ottobre&#8209;giugno</span><span class="mobile">ott-giu</span></td>
+                <td class="text-right">lun. 17<span class="nomobile">:00</span>&ndash;18<span class="nomobile">:00</span><br/>
+                            gio. 17<span class="nomobile">:00</span>&ndash;18<span class="nomobile">:00</span></td>
               </tr>
               <tr>
                 <td class="tdtitle">ragazzi</td>
                 <td >anni 11-14</td>
-                <td ><span class="nomobile">ottobre&#8209;maggio</span><span class="mobile">ott-mag</span></td>
-                <td class="text-right"><span class="nomobile">mar. 17:00</span><span class="mobile">ma 17&ndash;18</span><span class="nomobile">&ndash;18:00</span><span class="nomobile"><br/></span>
-                            <span class="nomobile">ven. 17:00</span><span class="mobile">ve 17&ndash;18</span><span class="nomobile">&ndash;18:00</span></td>
+                <td ><span class="nomobile">ottobre&#8209;giugno</span><span class="mobile">ott-giu</span></td>
+                <td class="text-right">mar. 17<span class="nomobile">:00</span>&#8209;18<span class="nomobile">:00</span><br/>
+                            ven. 17<span class="nomobile">:00</span>&#8209;18<span class="nomobile">:00</span></td>
               </tr>
               <tr>
                 <td colspan="2" class="tdtitle">principianti</td>
                 <td ><span class="nomobile">ottobre&#8209;giugno</span><span class="mobile">ott-giu</span></td>
-                <td class="text-right"><span class="nomobile">mar. 19:00</span><span class="mobile">ma 19&ndash;20</span><span class="nomobile">&ndash;20:00</span><span class="nomobile"><br/></span>
-                            <span class="nomobile">gio. 20:00</span><span class="mobile">gi 20&ndash;21</span><span class="nomobile">&ndash;21:00</span><span class="nomobile"><br/></span>
-                            <span class="nomobile">ven. 19:00</span><span class="mobile">ve 19&ndash;20</span><span class="nomobile">&ndash;20:00</span></td>
+                <td class="text-right">mar. 19<span class="nomobile">:00</span>&#8209;20<span class="nomobile">:00</span><br/>
+                            gio. 20<span class="nomobile">:00</span>&#8209;21<span class="nomobile">:00</span><br/>
+                            ven. 19<span class="nomobile">:00</span>&#8209;20<span class="nomobile">:00</span></td>
               </tr>
-              <tr class="nomobile">
+              <tr>
                 <td colspan="4" class="note"></td>
               </tr>
-              <tr class="nomobile">
+              <tr>
                 <td colspan="4" class="note">
             Il corso principianti &egrave; aperto a tutti coloro che non conoscono e non hanno mai praticato Aikido. L’et&agrave; minima &egrave; 14 anni e non vi &egrave; un'et&agrave; massima. Le iscrizioni possono avvenire durante tutto l'anno, gli assistenti del corso vi possono seguire individualmente fino al raggiungimento del livello del resto del gruppo che ha iniziato ad ottobre.
                 </td>
@@ -237,8 +330,8 @@ Proponendosi in primo luogo come via di educazione morale e di mutuo rispetto, l
               </tr>
               </tbody>
             </table>
+
           </div>
-            <p class="mobile">Il corso principianti &egrave; aperto a tutti coloro che non conoscono e non hanno mai praticato Aikido. L’et&agrave; minima &egrave; 14 anni e non vi &egrave; un'et&agrave; massima. Le iscrizioni possono avvenire durante tutto l'anno, gli assistenti del corso vi possono seguire individualmente fino al raggiungimento del livello del resto del gruppo che ha iniziato ad ottobre.</p>
             <header>
               <h4>ottobre-giugno ~ avanzati</h4>
             </header>
@@ -256,7 +349,7 @@ Proponendosi in primo luogo come via di educazione morale e di mutuo rispetto, l
               </tr>
               <tr>
                 <td class="tdtitle"><span class="nomobile">marted&igrave;</span><span class="mobile">ma</span></td>
-                <td >07:00<span class="nomobile">-</span><span class="mobile"> </span>08:00</td>
+                <td >08:00<span class="nomobile">-</span><span class="mobile"> </span>09:00</td>
                 <td >13:00<span class="nomobile">-</span><span class="mobile"> </span>14:00</td>
                 <td >18:00<span class="nomobile">-</span><span class="mobile"> </span>19:00</td>
                 <td >&nbsp;</td>
@@ -280,7 +373,7 @@ Proponendosi in primo luogo come via di educazione morale e di mutuo rispetto, l
               </tr>
               <tr>
                 <td class="tdtitle"><span class="nomobile">venerd&igrave;</span><span class="mobile">ve</span></td>
-                <td >07:00<span class="nomobile">-</span><span class="mobile"> </span>08:00</td>
+                <td >08:00<span class="nomobile">-</span><span class="mobile"> </span>09:00</td>
                 <td >13:00<span class="nomobile">-</span><span class="mobile"> </span>14:00</td>
                 <td >18:00<span class="nomobile">-</span><span class="mobile"> </span>19:00</td>
                 <td >&nbsp;</td>
@@ -303,7 +396,35 @@ Proponendosi in primo luogo come via di educazione morale e di mutuo rispetto, l
           </div>
 
         	  <header>
-        	    <h4><a id="orarioestivo"></a>luglio ~ avanzati</h4>
+        	    <h4>luglio ~ avanzati</h4>
+        	  </header>
+          <div class="table-responsive">
+            <table class="table table-striped">
+            <tbody>
+              <tr>
+                <td class="tdtitle">luned&igrave;</td>
+                <td >18:00<span class="nomobile">-</span><span class="mobile"> </span>19:00</td>
+                <td >19:00<span class="nomobile">-</span><span class="mobile"> </span>20:00</td>
+                <td >20:00<span class="nomobile">-</span><span class="mobile"> </span>21:00</td>
+              </tr>
+              <tr>
+                <td class="tdtitle">mercoled&igrave;</td>
+                <td >18:00<span class="nomobile">-</span><span class="mobile"> </span>19:00</td>
+                <td >19:00<span class="nomobile">-</span><span class="mobile"> </span>20:00</td>
+                <td >20:00<span class="nomobile">-</span><span class="mobile"> </span>21:00</td>
+              </tr>
+              <tr>
+                <td class="tdtitle">venerd&igrave;</td>
+                <td >18:00<span class="nomobile">-</span><span class="mobile"> </span>19:00</td>
+                <td >19:00<span class="nomobile">-</span><span class="mobile"> </span>20:00</td>
+                <td >20:00<span class="nomobile">-</span><span class="mobile"> </span>21:00</td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+
+        	  <header>
+        	    <h4>agosto ~ avanzati</h4>
         	  </header>
           <div class="table-responsive">
             <table class="table table-striped">
@@ -311,57 +432,19 @@ Proponendosi in primo luogo come via di educazione morale e di mutuo rispetto, l
               <tr>
                 <td class="tdtitle">luned&igrave;</td>
                 <td >&nbsp;</td>
-                <td >18:00<span class="nomobile">-</span><span class="mobile"> </span>19:00</td>
-                <td >19:00<span class="nomobile">-</span><span class="mobile"> </span>20:00</td>
-                <td >20:00<span class="nomobile">-</span><span class="mobile"> </span>21:00</td>
+                <td >19:30<span class="nomobile">-</span><span class="mobile"> </span>21:00</td>
+                <td >&nbsp;</td>
               </tr>
               <tr>
                 <td class="tdtitle">marted&igrave;</td>
-                <td >07:00<span class="nomobile">-</span><span class="mobile"> </span>08:00</td>
                 <td >&nbsp;</td>
-                <td >&nbsp;</td>
-                <td >&nbsp;</td>
-              </tr>
-              <tr>
-                <td class="tdtitle">mercoled&igrave;</td>
-                <td >&nbsp;</td>
-                <td >18:00<span class="nomobile">-</span><span class="mobile"> </span>19:00</td>
-                <td >19:00<span class="nomobile">-</span><span class="mobile"> </span>20:00</td>
-                <td >20:00<span class="nomobile">-</span><span class="mobile"> </span>21:00</td>
-              </tr>
-              <tr>
-                <td class="tdtitle">venerd&igrave;</td>
-                <td >&nbsp;</td>
-                <td >18:00<span class="nomobile">-</span><span class="mobile"> </span>19:00</td>
-                <td >19:00<span class="nomobile">-</span><span class="mobile"> </span>20:00</td>
-                <td >20:00<span class="nomobile">-</span><span class="mobile"> </span>21:00</td>
-              </tr>
-              </tbody>
-            </table>
-          </div>
-
-        	  <header>
-        	    <h4><a id="agosto"></a>agosto ~ avanzati</h4>
-        	  </header>
-          <div class="table-responsive">
-            <table class="table table-striped">
-            <tbody>
-              <tr>
-                <td class="tdtitle">luned&igrave;</td>
-                <td >&nbsp;</td>
-                <td >19:00<span class="nomobile">-</span><span class="mobile"> </span>20:30</td>
-                <td >&nbsp;</td>
-              </tr>
-              <tr>
-                <td class="tdtitle">mercoled&igrave;</td>
-                <td >&nbsp;</td>
-                <td >19:00<span class="nomobile">-</span><span class="mobile"> </span>20:30</td>
+                <td >19:30<span class="nomobile">-</span><span class="mobile"> </span>21:00</td>
                 <td >&nbsp;</td>
               </tr>
               <tr>
                 <td class="tdtitle">venerd&igrave;</td>
                 <td >&nbsp;</td>
-                <td >19:00<span class="nomobile">-</span><span class="mobile"> </span>20:30</td>
+                <td >19:30<span class="nomobile">-</span><span class="mobile"> </span>21:00</td>
                 <td >&nbsp;</td>
               </tr>
               </tbody>
@@ -369,7 +452,7 @@ Proponendosi in primo luogo come via di educazione morale e di mutuo rispetto, l
           </div>
 
         	  <header>
-        	    <h4><a id='settembre'></a>settembre ~ avanzati</h4>
+        	    <h4>settembre ~ avanzati</h4>
         	  </header>
           <div class="table-responsive">
             <table class="table table-striped">
@@ -401,68 +484,67 @@ Proponendosi in primo luogo come via di educazione morale e di mutuo rispetto, l
               </tbody>
             </table>
           </div>
-          <!--p>La responsabile del dojo &egrave; Laura Benevelli, 3° dan Aikikai d'Italia, Aikikai Tokyo</p-->
-      	</div>
 
+
+      	</div>
       </section>
       
       <section class="color">
         <p>&#9671;&#9671;</p>
       </section>
 
-      <?php 
-        if($semID != null)
-      ?>
-        <section id="nextseminar" class="odd">
-          <div class="container">
-             <header>
-              <h2>Il prossimo appuntamento</h2>
-            </header>
-            <div class="row">
-              <?php if(strlen(trim($seminario->photo)) > 0) {?>
-                <div class="col-xs-12 col-sm-4 col-lg-4 cntr">
-                      <img class="img-responsive thumbnail" src="seminars/<?php echo $seminario->photo?>" />
-                </div>              
-                <div class="col-xs-12 col-sm-6 col-lg-6">
-              <?php } else { ?>
-                <div class="col-xs-12 col-sm-12 col-lg-12">
-              <?php } ?>
-                    <h4><? echo $seminario->title ?></h4>
-                    <ul class="leftindent">
-                        <li class="itemli"><span class="itemhead">Quando:</span> <span class='itemval'>
-                        <span class="nomobile"><? echo $from; ?> <em>-</em> <? echo $to; ?></span>
-                        <span class="mobile"><? echo $fromMob; ?> <em>-</em> <? echo $toMob; ?></span>
-                        </span>
-                        <li class="itemli"><span class="itemhead">Dove:</span> <span class='itemval'>
-                          <? echo $seminario->shortcity; ?></span>
-                        <li class="itemli"><span class="itemhead">Diretto da:</span>
-                      <?php
-                         $num = count($istruttori);
 
-                         for($i = 0; $i < $num; $i++){
-                              echo "<span class='itemval'>";
-                              echo $istruttori[$i]['firstname'] . " " . strtoupper($istruttori[$i]['lastname']) . ", " . $istruttori[$i]['rank'];
-                              echo "</span></li>";
-                              if($i < $num - 1)
-                                echo "<li class='itemli'><span class='itemhead'></span>";
-                         }
-                      ?>
-                          <li class="itemli"><span class="itemhead">Locandina:</span>
-                      <?php if($seminario->pdf != '') { ?>
-                          <a class="anoborder" title="scarica la locandina" href="./seminars/<?php echo $seminario->pdf; ?>">pdf &nbsp; <span class="icon fa-file-pdf-o"></span></a>
-                       <?php } else { ?>
-                            disponibile prossimamente 
-                       <?php } ?>
-                      </ul>
-                 </div> 
-            </div>
-            <div class="row">
+      <section id="nextseminar" class="odd">
+        <div class="container">
+           <header>
+            <h2>Il prossimo appuntamento</h2>
+          </header>
+          <div class="row">
+            <?php if(strlen(trim($seminario->photo)) > 0) {?>
+              <div class="col-xs-12 col-sm-4 col-lg-4 cntr">
+                    <img class="img-responsive thumbnail" src="seminars/<?php echo $seminario->photo?>" />
+              </div>              
+              <div class="col-xs-12 col-sm-6 col-lg-6">
+            <?php } else { ?>
               <div class="col-xs-12 col-sm-12 col-lg-12">
-                Vai alla lista completa di seminari dell'anno in corso <a href="./seminari.php"><span class="icon fa-sign-out"></span></a>
-              </div>
+            <?php } ?>
+                  <h4><? echo $seminario->title ?></h4>
+                  <ul class="leftindent">
+                      <li class="itemli"><span class="itemhead">Quando:</span> <span class='itemval'>
+                      <span class="nomobile"><? echo $from; ?> <em>-</em> <? echo $to; ?></span>
+                      <span class="mobile"><? echo $fromMob; ?> <em>-</em> <? echo $toMob; ?></span>
+                      </span>
+                      <li class="itemli"><span class="itemhead">Dove:</span> <span class='itemval'>
+                        <? echo $seminario->city; ?></span>
+                      <li class="itemli"><span class="itemhead">Diretto da:</span>
+                    <?php
+                       $num = count($istruttori);
+
+                       for($i = 0; $i < $num; $i++){
+                            echo "<span class='itemval'>";
+                            echo $istruttori[$i]['firstname'] . " " . strtoupper($istruttori[$i]['lastname']) . ", " . $istruttori[$i]['rank'];
+                            echo "</span></li>";
+                            if($i < $num - 1)
+                              echo "<li class='itemli'><span class='itemhead'></span>";
+                       }
+                    ?>
+                        <li class="itemli"><span class="itemhead">Locandina:</span>
+                    <?php if($seminario->pdf != '') { ?>
+                        <a class="anoborder" title="scarica la locandina" href="./seminars/<?php echo $seminario->pdf; ?>">pdf &nbsp; <span class="icon fa-file-pdf-o"></span></a>
+                     <?php } else { ?>
+                          disponibile a breve <span class="icon fa-file-pdf-o"></span>
+                     <?php } ?>
+                    </ul>
+               </div> 
+          </div>
+          <div class="row">
+            <div class="col-xs-12 col-sm-12 col-lg-12">
+              Vai alla lista completa di seminari dell'anno in corso <a href="./seminari.php"><span class="icon fa-sign-out"></span></a>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
+
       <section class="color">
         <p>&#9671;&#9671;</p>
       </section>
@@ -475,80 +557,28 @@ Proponendosi in primo luogo come via di educazione morale e di mutuo rispetto, l
           </header>  
           <div class="features">
             <article>
-              <a href="./galleria.php" target="_blank" class="image"><img class="thumbnail" src="photos/2016-dojo.jpg" alt="" width="200px"></a>
+              <a href="#" class="image"><img class="thumbnail" src="photos/2016-dojo.jpg" alt="" width="200px"></a>
               <div class="inner">
                 <h4>Galleria fotografica del dojo</h4>
                 <p>Album foto: <a target="_blank" href="./galleria.php"><span class="icon fa-picture-o"></span></a></p>
               </div>
             </article>
-
             <article>
-              <a href="https://www.facebook.com/media/set/?set=a.1925320057751789.1073741848.1670690169881447&type=1&l=5639ac360e" class="image"><img class="thumbnail" src="photos/20170430.jpg" alt=""></a>
-              <div class="inner">
-                <h4>Seminario di armi - Aprile 2017</h4>
-                <p>Album foto: <a target="_blank" href="https://www.facebook.com/media/set/?set=a.1925320057751789.1073741848.1670690169881447&type=1&l=5639ac360e"><span class="icon fa-picture-o"></span></a></p>
-              </div>
-            </article>
-
-
-            <article>
-              <a href="https://www.facebook.com/media/set/?set=a.1896509150632880.1073741847.1670690169881447&type=1&l=a14a88f3fa" class="image"><img class="thumbnail" src="photos/20170311.jpg" alt=""></a>
-              <div class="inner">
-                <h4>Seminario mu, VI e V Kyu - Marzo 2017</h4>
-                <p>Album foto: <a target="_blank" href="https://www.facebook.com/media/set/?set=a.1896509150632880.1073741847.1670690169881447&type=1&l=a14a88f3fa"><span class="icon fa-picture-o"></span></a></p>
-              </div>
-            </article>
-            <article>
-              <a href="https://www.facebook.com/media/set/?set=a.1883872098563252.1073741845.1670690169881447&type=1&l=bfae86b123" class="image"><img class="thumbnail" src="photos/20170211.jpg" alt=""></a>
-              <div class="inner">
-                <h4>Seminario M&deg; Osawa - Febbraio 2017</h4>
-                <p>Album foto: <a target="_blank" href="https://www.facebook.com/media/set/?set=a.1883872098563252.1073741845.1670690169881447&type=1&l=bfae86b123"><span class="icon fa-picture-o"></span></a></p>
-              </div>
-            </article>
-            <article>
-              <a href="https://www.facebook.com/media/set/?set=a.1886584914958637.1073741846.1670690169881447&type=1&l=c278d40c95" class="image"><img class="thumbnail" src="photos/20170225.jpg" alt=""></a>
-              <div class="inner">
-                <h4>Seminario M&deg; Bogdanovic - Febbraio 2017</h4>
-                <p>Album foto: <a target="_blank" href="https://www.facebook.com/media/set/?set=a.1886584914958637.1073741846.1670690169881447&type=1&l=c278d40c95"><span class="icon fa-picture-o"></span></a></p>
-              </div>
-            </article>
-            <article>
-              <a href="https://www.facebook.com/media/set/?set=a.1874352916181837.1073741843.1670690169881447&type=1&l=087c64b363" class="image"><img class="thumbnail" src="photos/20161226.jpg" alt=""></a>
-              <div class="inner">
-                <h4>Seminario V, IV e III Kyu - Gennaio 2017</h4>
-                <p>Album foto: <a target="_blank" href="https://www.facebook.com/media/set/?set=a.1874352916181837.1073741843.1670690169881447&type=1&l=087c64b363"><span class="icon fa-picture-o"></span></a></p>
-              </div>
-            </article>
-            <article>
-              <a href="https://www.facebook.com/media/set/?set=a.1858810281069434.1073741839.1670690169881447&type=1&l=99201c48be" class="image"><img class="thumbnail" src="photos/20161226.jpg" alt=""></a>
-              <div class="inner">
-                <h4>Seminario di fine anno - 2016</h4>
-                <p>Album foto: <a target="_blank" href="https://www.facebook.com/media/set/?set=a.1858810281069434.1073741839.1670690169881447&type=1&l=99201c48be"><span class="icon fa-picture-o"></span></a></p>
-              </div>
-            </article>
-            <article>
-              <a href="https://www.facebook.com/media/set/?set=a.1807434562873673.1073741837.1670690169881447&type=1&l=f1f765d7a1" class="image"><img class="thumbnail" src="photos/20160924gruppo.jpg" alt="" width="200px"></a>
-              <div class="inner">
-                <h4>Seminario Inizio anno 2016-17</h4>
-                <p>Album foto: <a target="_blank" href="https://www.facebook.com/media/set/?set=a.1807434562873673.1073741837.1670690169881447&type=1&l=f1f765d7a1"><span class="icon fa-picture-o"></span></a></p>
-              </div>
-            </article>
-            <article>
-              <a href="https://www.facebook.com/media/set/?set=a.1705859776364486.1073741835.1670690169881447&type=1&l=0bfb9df410" class="image"><img class="thumbnail" src="photos/2016-osawa.jpg" alt="" width="200px"></a>
+              <a href="#" class="image"><img class="thumbnail" src="photos/2016-osawa.jpg" alt="" width="200px"></a>
               <div class="inner">
                 <h4>Seminario Osawa Shihan</h4>
                 <p>Album foto: <a target="_blank" href="https://www.facebook.com/media/set/?set=a.1705859776364486.1073741835.1670690169881447&type=1&l=0bfb9df410"><span class="icon fa-picture-o"></span></a></p>
               </div>
             </article>
             <article>
-              <a href="https://www.facebook.com/media/set/?set=a.1697283107222153.1073741834.1670690169881447&type=1&l=bb98b34d73#" class="image"><img class="thumbnail" src="photos/2016-56kyu.jpg" alt=""></a>
+              <a href="#" class="image"><img class="thumbnail" src="photos/2016-56kyu.jpg" alt=""></a>
               <div class="inner">
-                <h4>Seminario di Aikido per VI e V Kyu</h4>
+                <h4>Seminario di Aikido per 5° e 6° Kyu</h4>
                 <p>Album foto: <a target="_blank" href="https://www.facebook.com/media/set/?set=a.1697283107222153.1073741834.1670690169881447&type=1&l=bb98b34d73"><span class="icon fa-picture-o"></span></a></p>
               </div>
             </article>
             <article>
-              <a href="https://www.facebook.com/media/set/?set=a.1688545051429292.1073741832.1670690169881447&type=1&l=910662fb65" class="image"><img class="thumbnail" src="photos/20151226.jpg" alt=""></a>
+              <a href="#" class="image"><img class="thumbnail" src="photos/20151226.jpg" alt=""></a>
               <div class="inner">
                 <h4>Seminario di fine anno - 2015</h4>
                 <p>Album foto: <a target="_blank" href="https://www.facebook.com/media/set/?set=a.1688545051429292.1073741832.1670690169881447&type=1&l=910662fb65"><span class="icon fa-picture-o"></span></a></p>
@@ -575,10 +605,7 @@ Proponendosi in primo luogo come via di educazione morale e di mutuo rispetto, l
       			<li><a href="http://www.aikikai.it" target="_blank" title="Aikikai Italia">www.aikikai.it</a></li>
       			<li><a href="http://www.aikikai.or.jp" target="_blank" title="Aikikai Giappone">www.aikikai.or.jp</a></li>
       			<li><a href="http://www.aikidorenbukai.it" target="_blank" title="Aikido Renbukai">www.aikidorenbukai.it</a></li>
-      			<li><a href="http://www.fujinami.it" target="_blank" title="Aikido Fujinami Bologna">www.fujinami.it</a></li>
-            <li><a href="http://www.kikaidojo.it" target="_blank" title="Kikai Dojo">www.kikaidojo.it</a></li>
-            <li><a href="http://www.aikidopordenone.com" target="_blank" title="Aikido Pordenone">aikidopordenone.com</a></li>
-            <li><a href="http://www.aikidowatanabedojo.it" target="_blank" title="Aikido Watanabe">www.aikidowatanabedojo.it</a></li>
+      			<li><a href="http://www.fujinami.it/" target="_blank" title="Aikido Fujinami Bologna">www.fujinami.it</a></li>
       	    </ul>
       	  </div>
       	  
@@ -598,26 +625,14 @@ Proponendosi in primo luogo come via di educazione morale e di mutuo rispetto, l
           </header>
 
           <div class="row">
-            <p>La responsabile del dojo &egrave; Laura Benevelli, IV dan Aikikai d'Italia, Aikikai Tokyo.</p>
-          </div>
-
-          <div class="row">
             <div class="col-xs-12 col-sm-6 col-lg-6">
             &Egrave; possibile contattarci in uno dei seguenti modi:
               <ul class="wbullets">
-                <li class="itemli"><span class="itemhead">In dojo:</span><span class="itemval">zona loreto via privata con ingresso da via Porpora 43-47<br/><i>all'angolo con la farmacia</i></span></li>
+                <li class="itemli"><span class="itemhead">In dojo:</span><span class="itemval">via Lulli, 30 B<br/>ingresso da via Porpora 43-47<br/><i>all'angolo con la farmacia</i></span></li>
                 <li class="itemli"><span class="itemhead">Telefono:</span><span class="itemval">(+39) 3881517258</span></li>
                 <li class="itemli"><span class="itemhead">Email:</span><span class="itemval">segreteria@aikikaimilano.it</span></li>            
               </ul>  
-              <p>Gli orari della segreteria nel mese di luglio sono i seguenti:<br/>
-              &#9671;&nbsp;luned&igrave;, mercoled&igrave; e venerd&igrave;: 17:30-19:30<br/>
               </div>
-<!--
-                  &#9671;&nbsp;marted&igrave; e mercoled&igrave;: 17:30-19:30<br/>
-                  &#9671;&nbsp;gioved&igrave;: 18:00-20:00<br/>
-                  &#9671;&nbsp;venerd&igrave;: 16:30-18:30</p>
--->
-
 
               <div class="col-xs-12 col-sm-6 col-lg-6">
                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1398.578193092592!2d9.22148602746856!3d45.48679546000087!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c6e45a43eff1%3A0xaa50fad891bebd!2sAikikai+Milano!5e0!3m2!1sen!2sit!4v1464555022194"  frameborder="0" style="border:0" allowfullscreen></iframe>
@@ -632,29 +647,13 @@ Proponendosi in primo luogo come via di educazione morale e di mutuo rispetto, l
         </div>
       </section>
 
-      <section class="color mobile">
-        <p>&#9671;&#9671;</p>
-      </section>   
-
       <section id="aikikaiitalia" class="odd mobile">
-        <div class="row">
-          <div class="col-xs-2 col-sm-2 col-lg-2">
-            <p class="text-left">
-            <a class="noborder" href="http://www.aikikai.it" target=_blank><img src="assets/img/aikikaiitalia.png" alt="aikikai d'italia" width="64px"></a>&nbsp;</p>
+        <div class="container">
+          Scuola affiliata all'Associazione di Cultura Tradizionale Giapponese Aikikai d'Italia<span class='nomobile'><br/></span> Ente Morale (D.P.R. luglio 1978 n. 528)
           </div>
-          <div class="col-xs-8 col-sm-8 col-lg-8">
-          <p class="smallnote text-center">Scuola affiliata all'Associazione di Cultura<br/>Tradizionale Giapponese Aikikai d'Italia Ente<br/>Morale (D.P.R. luglio 1978 n. 528)<span class='nomobile'><br/></span> e al Centro Sportivo Educativo Nazionale</p>
-          </div>
-          <div class="col-xs-2 col-sm-2 col-lg-2">
-            <p class="text-left">
-            <a class="noborder" href="http://www.csen.it" target=_blank><img src="assets/img/csen.png" alt="CSEN" width="64px"></a>
-            </p>
-          </div>        
-        </div>
       </section>
 
-
-      <section class="color">
+      <section class="color mobile">
         <p>&#9671;&#9671;</p>
       </section>   
 
@@ -662,10 +661,7 @@ Proponendosi in primo luogo come via di educazione morale e di mutuo rispetto, l
     
     <!-- Footer -->
 	 <?php include('./footer.php'); ?>
-
-  <!-- google -->
-  <?php include_once("analyticstracking.php") ?>
-      
+    
     <!-- Scripts -->
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/jquery.scrolly.min.js"></script>

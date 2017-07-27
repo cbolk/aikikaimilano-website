@@ -126,10 +126,11 @@
 		/* returns the data of the next seminar to be held*/
 		function getNextStageMMDD($dbconn)
 		{
-			$query = "SELECT startdate FROM seminar WHERE startdate >= DATE(NOW()) order by startdate asc LIMIT 1;";
+			$query = "SELECT startdate FROM seminar WHERE startdate >= DATE(NOW()) AND VISIBLE = '1' order by startdate asc LIMIT 1;";
 			$dbconn->dbconnect();
 			$result = $dbconn->qry($query);
 			$rownum = mysql_num_rows($result);
+			if ($rownum == 0) return "0000";
 	        while($row = mysql_fetch_assoc($result)){
 	        	$shortdate = str_replace("-", "", $row['startdate']);
 	   	        $mmdd = sprintf($shortdate,4,4);
