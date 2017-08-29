@@ -37,15 +37,16 @@
 			<span class="icon fa-university">Corsi e Orari</span></a></li>
 		    <li><a href="./seminari.php#<?php echo $nextsem;?>" id="seminars-link" class="skel-layers-ignoreHref">
 			<span class="icon  fa-diamond">Seminari</span></a></li>
-		    <li><a href="./notizie.php" id="news-link" class="skel-layers-ignoreHref">
-			<span class="icon fa-bullhorn">Notizie</span></a></li>
+		    <!--li><a href="./notizie.php" id="news-link" class="skel-layers-ignoreHref">
+			<span class="icon fa-bullhorn">Notizie</span></a></li-->
 		    <li><a href="./index.php#photos" id="photos-link" class="skel-layers-ignoreHref">
 			<span class="icon fa-photo">Foto</span></a></li>
 		    <li><a href="./index.php#link" id="link-link" class="skel-layers-ignoreHref">
 			<span class="icon fa-link">Link</span></a></li>
 		    <li><a href="./index.php#info" id="info-link" class="skel-layers-ignoreHref">
 			<span class="icon fa-info">Contatti</span></a></li>
-
+			<!--li><a href="./index.en.php" id="info-link" class="skel-layers-ignoreHref">
+			<span class="icon"><img src="assets/img/english.png" alt="logo" width=20px /> In inglese <img src="assets/img/english.png" alt="logo" width=20px /></span></a></li-->
 		  </ul>
 		</nav>
 	
@@ -57,8 +58,7 @@
 	  <div class="bottomx">
 		<ul class="icons">
 			<li><a href="http://www.facebook.com/aikikaimilano/" target=_blank class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-			<li><a href="./index.php#info" class="icon fa-envelope"><span class="label">Email</span></a></li>
-			<li><a href="./index.en.php" class="icon fa-envelope"><span class="label">EN</span></a></li>
+			<li><a href="./index.en.php#info" class="icon fa-envelope"><span class="label">Email</span></a></li>
 		</ul>
 	  </div>      
     </div>

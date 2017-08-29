@@ -30,7 +30,7 @@
     <title>Aikikai Milano</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Aikikai Milano via porpora Yoji Fujimoto"/>
+    <meta name="description" content="Aikikai Milano Dojo Aikido M&deg; Yoji Fujimoto"/>
     <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/css/main.css" />
@@ -232,8 +232,8 @@ Proponendosi in primo luogo come via di educazione morale e di mutuo rispetto, l
                 </td>
               </tr>
               <tr>
-                <td colspan="2" class="tdtitle">avanzati</td>
-                <td colspan="2">tutto l'anno<span class="nomobile">, vedi dettagli</span></td>
+                <td class="tdtitle">avanzati</td>
+                <td colspan="3"><center>tutto l'anno<span class="nomobile">, vedi dettagli</span></center></td>
               </tr>
               </tbody>
             </table>
@@ -376,24 +376,28 @@ Proponendosi in primo luogo come via di educazione morale e di mutuo rispetto, l
             <tbody>
               <tr>
                 <td class="tdtitle">luned&igrave;</td>
+                <td >&nbsp;</td>
                 <td >18:00<span class="nomobile">-</span><span class="mobile"> </span>19:00</td>
                 <td >19:00<span class="nomobile">-</span><span class="mobile"> </span>20:00</td>
                 <td >20:00<span class="nomobile">-</span><span class="mobile"> </span>21:00</td>
               </tr>
               <tr>
                 <td class="tdtitle">marted&igrave;</td>
+                <td >07:00<span class="nomobile">-</span><span class="mobile"> </span>08:00</td>
                 <td >18:00<span class="nomobile">-</span><span class="mobile"> </span>19:00</td>
                 <td >19:00<span class="nomobile">-</span><span class="mobile"> </span>20:00</td>
                 <td >20:00<span class="nomobile">-</span><span class="mobile"> </span>21:00</td>
               </tr>
               <tr>
                 <td class="tdtitle">gioved&igrave;</td>
+                <td >&nbsp;</td>
                 <td >18:00<span class="nomobile">-</span><span class="mobile"> </span>19:00</td>
                 <td >19:00<span class="nomobile">-</span><span class="mobile"> </span>20:00</td>
                 <td >20:00<span class="nomobile">-</span><span class="mobile"> </span>21:00</td>
               </tr>
               <tr>
                 <td class="tdtitle">venerd&igrave;</td>
+                <td >&nbsp;</td>
                 <td >18:00<span class="nomobile">-</span><span class="mobile"> </span>19:00</td>
                 <td >19:00<span class="nomobile">-</span><span class="mobile"> </span>20:00</td>
                 <td >20:00<span class="nomobile">-</span><span class="mobile"> </span>21:00</td>
@@ -416,7 +420,7 @@ Proponendosi in primo luogo come via di educazione morale e di mutuo rispetto, l
         <section id="nextseminar" class="odd">
           <div class="container">
              <header>
-              <h2>Il prossimo appuntamento (<?php echo $semID; ?>) </h2>
+              <h2>Il prossimo appuntamento</h2>
             </header>
             <div class="row">
               <?php if(strlen(trim($seminario->photo)) > 0) {?>
@@ -513,7 +517,7 @@ Proponendosi in primo luogo come via di educazione morale e di mutuo rispetto, l
               </div>
             </article>
             <article>
-              <a href="https://www.facebook.com/media/set/?set=a.1874352916181837.1073741843.1670690169881447&type=1&l=087c64b363" class="image"><img class="thumbnail" src="photos/20161226.jpg" alt=""></a>
+              <a href="https://www.facebook.com/media/set/?set=a.1874352916181837.1073741843.1670690169881447&type=1&l=087c64b363" class="image"><img class="thumbnail" src="photos/20170128.jpg" alt=""></a>
               <div class="inner">
                 <h4>Seminario V, IV e III Kyu - Gennaio 2017</h4>
                 <p>Album foto: <a target="_blank" href="https://www.facebook.com/media/set/?set=a.1874352916181837.1073741843.1670690169881447&type=1&l=087c64b363"><span class="icon fa-picture-o"></span></a></p>
@@ -524,6 +528,13 @@ Proponendosi in primo luogo come via di educazione morale e di mutuo rispetto, l
               <div class="inner">
                 <h4>Seminario di fine anno - 2016</h4>
                 <p>Album foto: <a target="_blank" href="https://www.facebook.com/media/set/?set=a.1858810281069434.1073741839.1670690169881447&type=1&l=99201c48be"><span class="icon fa-picture-o"></span></a></p>
+              </div>
+            </article>
+            <article>
+              <a href="https://www.facebook.com/media/set/?set=a.1837455226538273.1073741838.1670690169881447&type=1&l=64bca56a96" class="image"><img class="thumbnail" src="photos/20161120.jpg" alt="" width="200px"></a>
+              <div class="inner">
+                <h4>Seminario Seminario Yudansha, I, II e III kyu - Novembre 2016</h4>
+                <p>Album foto: <a target="_blank" href="https://www.facebook.com/media/set/?set=a.1837455226538273.1073741838.1670690169881447&type=1&l=64bca56a96"><span class="icon fa-picture-o"></span></a></p>
               </div>
             </article>
             <article>

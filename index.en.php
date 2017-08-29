@@ -16,20 +16,21 @@
   $nextsem = $u->getNextStageMMDD($db);
 
   $semID = $seminar->getNextStageID($db);
-  $seminario = $seminar->get($db,$semID);
-  $from = $u->medDate($seminario->fromdate);
-  $fromMob = $u->medDate($seminario->fromdate);
-  $to = $u->medDate($seminario->todate);
-  $toMob = $u->medDate($seminario->todate);
-  $istruttori = $seminar->getStageInstructors($db,$semID);
-
+  if($semID != null){
+    $seminario = $seminar->get($db,$semID);
+    $from = $u->medDate($seminario->fromdate);
+    $fromMob = $u->medDate($seminario->fromdate);
+    $to = $u->medDate($seminario->todate);
+    $toMob = $u->medDate($seminario->todate);
+    $istruttori = $seminar->getStageInstructors($db,$semID);
+  }
 ?>
 <!DOCTYPE html>
   <head>
     <title>Aikikai Milano</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Aikikai Milano via porpora Yoji Fujimoto"/>
+    <meta name="description" content="Aikikai Milano Dojo Aikido M&deg; Yoji Fujimoto"/>
     <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/css/main.css" />
@@ -105,20 +106,20 @@
               <p>Aikido has no competition, thus it is common to see in Aikido dojos people of all ages practicing together. The practice inherently develops a cooperation between participants, who progress together in their paths. Attention is devoted to the etiquette and respect, so creating a propitious atmosphere towards a positive approach to Aikido and life.<br/>People start practicing Aikido with different motivations, some do it because of its philosphy, others for the martial aspects, others for the elegance of the movements.</p>
             </div>
             <div class="col-xs-12 col-sm-4 col-lg-4 cntr">
-              <img class="img-responsive thumbnail" src="http://www.ueshibaaikido.org/IMayes/IMayes/Doshu/doshu.jpg" alt="Attuale Doshu" width="250px"/>
+              <img class="img-responsive thumbnail" src="http://www.ueshibaaikido.org/Images/Images/Doshu/doshu.jpg" alt="Present Doshu" width="250px"/>
               <p class="imgcaption">Ueshiba Moriteru, the present Doshu<br/>
                (source: <a href="http://www.aikikai.or.jp/eng/aikido/history.html" target="_blank">Aikikai Foundation</a>)</p>
             </div>
           </div>
           <div class="row">
                 <div class="col-xs-12 col-sm-4 col-lg-4">
-                    <img class="img-responsive thumbnail" src="http://www.aikikai.or.jp/eng/iMayes/aikido/img_history_1.jpg" alt="" width="200px"/>
+                    <img class="img-responsive thumbnail" src="http://www.aikikai.or.jp/eng/images/aikido/img_history_1.jpg" alt="" width="200px"/>
                 </div>
                 <div class="col-xs-12 col-sm-4 col-lg-4">
-                    <img class="img-responsive thumbnail" src="http://www.aikikai.or.jp/eng/iMayes/aikido/img_history_2.jpg" alt="" width="200px"/>
+                    <img class="img-responsive thumbnail" src="http://www.aikikai.or.jp/eng/images/aikido/img_history_2.jpg" alt="" width="200px"/>
                 </div>
                 <div class="col-xs-12 col-sm-4 col-lg-4">
-                    <img class="img-responsive thumbnail" src="http://www.aikikai.or.jp/eng/iMayes/aikido/img_history_3.jpg" alt="" width="200px"/>
+                    <img class="img-responsive thumbnail" src="http://www.aikikai.or.jp/eng/images/aikido/img_history_3.jpg" alt="" width="200px"/>
                 </div>
           </div>
           <div class="row text-center">
@@ -153,7 +154,7 @@
                 <img class="img-responsive thumbnail" src="photos/maestrofujimoto.jpg" alt="Il Maestro Fujimoto" width="600px" /> 
               </div>
               <div class="col-xs-12 col-sm-4 col-lg-4">
-              <p>Fujimoto Sensei (VIII dan and Shihan Aikikai Hombudojo) founded and directed it for over 40 years. After his death, in February 2012, the teaching in the dojo keeps following the same ethics and teaching path.</p>
+              <p>Fujimoto Sensei (VIII dan and Shihan Aikikai Hombudojo) founded and directed the dojo for over 40 years. After his death, in February 2012, the same ethics and teaching path are adopted in continuing his work.</p>
               </div>
           </div>
           <div class="row">
@@ -303,18 +304,28 @@
             <tbody>
               <tr>
                 <td class="tdtitle">Monday</td>
+                <td >&nbsp;</td>
                 <td >18:00<span class="nomobile">-</span><span class="mobile"> </span>19:00</td>
                 <td >19:00<span class="nomobile">-</span><span class="mobile"> </span>20:00</td>
                 <td >20:00<span class="nomobile">-</span><span class="mobile"> </span>21:00</td>
               </tr>
               <tr>
+                <td class="tdtitle">Tuesday</td>
+                <td >07:00<span class="nomobile">-</span><span class="mobile"> </span>08:00</td>
+                <td >&nbsp;</td>
+                <td >&nbsp;</td>
+                <td >&nbsp;</td>
+              </tr>
+              <tr>
                 <td class="tdtitle">Wednesday</td>
+                <td >&nbsp;</td>
                 <td >18:00<span class="nomobile">-</span><span class="mobile"> </span>19:00</td>
                 <td >19:00<span class="nomobile">-</span><span class="mobile"> </span>20:00</td>
                 <td >20:00<span class="nomobile">-</span><span class="mobile"> </span>21:00</td>
               </tr>
               <tr>
                 <td class="tdtitle">Friday</td>
+                <td >&nbsp;</td>
                 <td >18:00<span class="nomobile">-</span><span class="mobile"> </span>19:00</td>
                 <td >19:00<span class="nomobile">-</span><span class="mobile"> </span>20:00</td>
                 <td >20:00<span class="nomobile">-</span><span class="mobile"> </span>21:00</td>
@@ -359,24 +370,28 @@
             <tbody>
               <tr>
                 <td class="tdtitle">Monday</td>
+                <td >&nbsp;</td>
                 <td >18:00<span class="nomobile">-</span><span class="mobile"> </span>19:00</td>
                 <td >19:00<span class="nomobile">-</span><span class="mobile"> </span>20:00</td>
                 <td >20:00<span class="nomobile">-</span><span class="mobile"> </span>21:00</td>
               </tr>
               <tr>
                 <td class="tdtitle">Tuesday</td>
+                <td >07:00<span class="nomobile">-</span><span class="mobile"> </span>08:00</td>
                 <td >18:00<span class="nomobile">-</span><span class="mobile"> </span>19:00</td>
                 <td >19:00<span class="nomobile">-</span><span class="mobile"> </span>20:00</td>
                 <td >20:00<span class="nomobile">-</span><span class="mobile"> </span>21:00</td>
               </tr>
               <tr>
                 <td class="tdtitle">Thursday</td>
+                <td >&nbsp;</td>
                 <td >18:00<span class="nomobile">-</span><span class="mobile"> </span>19:00</td>
                 <td >19:00<span class="nomobile">-</span><span class="mobile"> </span>20:00</td>
                 <td >20:00<span class="nomobile">-</span><span class="mobile"> </span>21:00</td>
               </tr>
               <tr>
                 <td class="tdtitle">Friday</td>
+                <td >&nbsp;</td>
                 <td >18:00<span class="nomobile">-</span><span class="mobile"> </span>19:00</td>
                 <td >19:00<span class="nomobile">-</span><span class="mobile"> </span>20:00</td>
                 <td >20:00<span class="nomobile">-</span><span class="mobile"> </span>21:00</td>
@@ -392,6 +407,10 @@
       <section class="color">
         <p>&#9671;&#9671;</p>
       </section>
+
+      <?php 
+        if($semID != null && $semID != ""){
+      ?>
 
 
       <section id="nextseminar" class="odd">
@@ -448,6 +467,7 @@
       <section class="color">
         <p>&#9671;&#9671;</p>
       </section>
+      <?php } ?>
 
 
       <section id="photos" class="even">
@@ -457,7 +477,7 @@
           </header>  
           <div class="features">
             <article>
-              <a href="./galleria.php" target="_blank" class="iMaye"><img class="thumbnail" src="photos/2016-dojo.jpg" alt="" width="200px"></a>
+              <a href="./galleria.php" target="_blank" class="image"><img class="thumbnail" src="photos/2016-dojo.jpg" alt="" width="200px"></a>
               <div class="inner">
                 <h4>Dojo photo gallery</h4>
                 <p>photos: <a target="_blank" href="./galleria.php"><span class="icon fa-picture-o"></span></a></p>
@@ -465,7 +485,7 @@
             </article>
 
             <article>
-              <a href="https://www.facebook.com/media/set/?set=a.1925320057751789.1073741848.1670690169881447&type=1&l=5639ac360e" class="iMaye"><img class="thumbnail" src="photos/20170430.jpg" alt=""></a>
+              <a href="https://www.facebook.com/media/set/?set=a.1925320057751789.1073741848.1670690169881447&type=1&l=5639ac360e" class="image"><img class="thumbnail" src="photos/20170430.jpg" alt=""></a>
               <div class="inner">
                 <h4>Weapons seminar - April 2017</h4>
                 <p>photos: <a target="_blank" href="https://www.facebook.com/media/set/?set=a.1925320057751789.1073741848.1670690169881447&type=1&l=5639ac360e"><span class="icon fa-picture-o"></span></a></p>
@@ -474,63 +494,70 @@
 
 
             <article>
-              <a href="https://www.facebook.com/media/set/?set=a.1896509150632880.1073741847.1670690169881447&type=1&l=a14a88f3fa" class="iMaye"><img class="thumbnail" src="photos/20170311.jpg" alt=""></a>
+              <a href="https://www.facebook.com/media/set/?set=a.1896509150632880.1073741847.1670690169881447&type=1&l=a14a88f3fa" class="image"><img class="thumbnail" src="photos/20170311.jpg" alt=""></a>
               <div class="inner">
                 <h4>Mu, VI and V Kyu seminar - March 2017</h4>
                 <p>photos: <a target="_blank" href="https://www.facebook.com/media/set/?set=a.1896509150632880.1073741847.1670690169881447&type=1&l=a14a88f3fa"><span class="icon fa-picture-o"></span></a></p>
               </div>
             </article>
             <article>
-              <a href="https://www.facebook.com/media/set/?set=a.1883872098563252.1073741845.1670690169881447&type=1&l=bfae86b123" class="iMaye"><img class="thumbnail" src="photos/20170211.jpg" alt=""></a>
+              <a href="https://www.facebook.com/media/set/?set=a.1883872098563252.1073741845.1670690169881447&type=1&l=bfae86b123" class="image"><img class="thumbnail" src="photos/20170211.jpg" alt=""></a>
               <div class="inner">
                 <h4>Osawa Shihan seminar - February 2017</h4>
                 <p>photos: <a target="_blank" href="https://www.facebook.com/media/set/?set=a.1883872098563252.1073741845.1670690169881447&type=1&l=bfae86b123"><span class="icon fa-picture-o"></span></a></p>
               </div>
             </article>
             <article>
-              <a href="https://www.facebook.com/media/set/?set=a.1886584914958637.1073741846.1670690169881447&type=1&l=c278d40c95" class="iMaye"><img class="thumbnail" src="photos/20170225.jpg" alt=""></a>
+              <a href="https://www.facebook.com/media/set/?set=a.1886584914958637.1073741846.1670690169881447&type=1&l=c278d40c95" class="image"><img class="thumbnail" src="photos/20170225.jpg" alt=""></a>
               <div class="inner">
                 <h4>Bogdanovic Sensei seminar - February 2017</h4>
                 <p>photos: <a target="_blank" href="https://www.facebook.com/media/set/?set=a.1886584914958637.1073741846.1670690169881447&type=1&l=c278d40c95"><span class="icon fa-picture-o"></span></a></p>
               </div>
             </article>
             <article>
-              <a href="https://www.facebook.com/media/set/?set=a.1874352916181837.1073741843.1670690169881447&type=1&l=087c64b363" class="iMaye"><img class="thumbnail" src="photos/20161226.jpg" alt=""></a>
+              <a href="https://www.facebook.com/media/set/?set=a.1874352916181837.1073741843.1670690169881447&type=1&l=087c64b363" class="image"><img class="thumbnail" src="photos/20170128.jpg" alt=""></a>
               <div class="inner">
                 <h4>V, IV and III Kyu seminar - January 2017</h4>
                 <p>photos: <a target="_blank" href="https://www.facebook.com/media/set/?set=a.1874352916181837.1073741843.1670690169881447&type=1&l=087c64b363"><span class="icon fa-picture-o"></span></a></p>
               </div>
             </article>
             <article>
-              <a href="https://www.facebook.com/media/set/?set=a.1858810281069434.1073741839.1670690169881447&type=1&l=99201c48be" class="iMaye"><img class="thumbnail" src="photos/20161226.jpg" alt=""></a>
+              <a href="https://www.facebook.com/media/set/?set=a.1858810281069434.1073741839.1670690169881447&type=1&l=99201c48be" class="image"><img class="thumbnail" src="photos/20161226.jpg" alt=""></a>
               <div class="inner">
                 <h4>End of the year seminar - 2016</h4>
                 <p>photos: <a target="_blank" href="https://www.facebook.com/media/set/?set=a.1858810281069434.1073741839.1670690169881447&type=1&l=99201c48be"><span class="icon fa-picture-o"></span></a></p>
               </div>
             </article>
             <article>
-              <a href="https://www.facebook.com/media/set/?set=a.1807434562873673.1073741837.1670690169881447&type=1&l=f1f765d7a1" class="iMaye"><img class="thumbnail" src="photos/20160924gruppo.jpg" alt="" width="200px"></a>
+              <a href="https://www.facebook.com/media/set/?set=a.1837455226538273.1073741838.1670690169881447&type=1&l=64bca56a96" class="image"><img class="thumbnail" src="photos/20161120.jpg" alt="" width="200px"></a>
+              <div class="inner">
+                <h4>Yudansha, I, II and III kyu seminar - November 2016</h4>
+                <p>photos: <a target="_blank" href="https://www.facebook.com/media/set/?set=a.1837455226538273.1073741838.1670690169881447&type=1&l=64bca56a96"><span class="icon fa-picture-o"></span></a></p>
+              </div>
+            </article>
+            <article>
+              <a href="https://www.facebook.com/media/set/?set=a.1807434562873673.1073741837.1670690169881447&type=1&l=f1f765d7a1" class="image"><img class="thumbnail" src="photos/20160924gruppo.jpg" alt="" width="200px"></a>
               <div class="inner">
                 <h4>Opening seminar 2016-17</h4>
                 <p>photos: <a target="_blank" href="https://www.facebook.com/media/set/?set=a.1807434562873673.1073741837.1670690169881447&type=1&l=f1f765d7a1"><span class="icon fa-picture-o"></span></a></p>
               </div>
             </article>
             <article>
-              <a href="https://www.facebook.com/media/set/?set=a.1705859776364486.1073741835.1670690169881447&type=1&l=0bfb9df410" class="iMaye"><img class="thumbnail" src="photos/2016-osawa.jpg" alt="" width="200px"></a>
+              <a href="https://www.facebook.com/media/set/?set=a.1705859776364486.1073741835.1670690169881447&type=1&l=0bfb9df410" class="image"><img class="thumbnail" src="photos/2016-osawa.jpg" alt="" width="200px"></a>
               <div class="inner">
                 <h4>Osawa Shihan seminar</h4>
                 <p>photos: <a target="_blank" href="https://www.facebook.com/media/set/?set=a.1705859776364486.1073741835.1670690169881447&type=1&l=0bfb9df410"><span class="icon fa-picture-o"></span></a></p>
               </div>
             </article>
             <article>
-              <a href="https://www.facebook.com/media/set/?set=a.1697283107222153.1073741834.1670690169881447&type=1&l=bb98b34d73#" class="iMaye"><img class="thumbnail" src="photos/2016-56kyu.jpg" alt=""></a>
+              <a href="https://www.facebook.com/media/set/?set=a.1697283107222153.1073741834.1670690169881447&type=1&l=bb98b34d73#" class="image"><img class="thumbnail" src="photos/2016-56kyu.jpg" alt=""></a>
               <div class="inner">
                 <h4>VI and V Kyu seminar</h4>
                 <p>photos: <a target="_blank" href="https://www.facebook.com/media/set/?set=a.1697283107222153.1073741834.1670690169881447&type=1&l=bb98b34d73"><span class="icon fa-picture-o"></span></a></p>
               </div>
             </article>
             <article>
-              <a href="https://www.facebook.com/media/set/?set=a.1688545051429292.1073741832.1670690169881447&type=1&l=910662fb65" class="iMaye"><img class="thumbnail" src="photos/20151226.jpg" alt=""></a>
+              <a href="https://www.facebook.com/media/set/?set=a.1688545051429292.1073741832.1670690169881447&type=1&l=910662fb65" class="image"><img class="thumbnail" src="photos/20151226.jpg" alt=""></a>
               <div class="inner">
                 <h4>End of the year seminar - 2015</h4>
                 <p>photos: <a target="_blank" href="https://www.facebook.com/media/set/?set=a.1688545051429292.1073741832.1670690169881447&type=1&l=910662fb65"><span class="icon fa-picture-o"></span></a></p>

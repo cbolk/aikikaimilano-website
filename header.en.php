@@ -35,17 +35,16 @@
 			<span class="icon fa-users">Insegnanti</span></a></li-->
 		    <li><a href="./index.en.php#corsi" id="corsi-link" class="skel-layers-ignoreHref">
 			<span class="icon fa-university">Classes and Schedule</span></a></li>
-		    <li><a href="./seminari.php#<?php echo $nextsem;?>" id="seminars-link" class="skel-layers-ignoreHref">
+		    <li><a href="./seminars.php#<?php echo $nextsem;?>" id="seminars-link" class="skel-layers-ignoreHref">
 			<span class="icon  fa-diamond">Seminars</span></a></li>
-		    <li><a href="./notizie.php" id="news-link" class="skel-layers-ignoreHref">
-			<!--span class="icon fa-bullhorn">Notizie</span></a></li-->
 		    <li><a href="./index.en.php#photos" id="photos-link" class="skel-layers-ignoreHref">
 			<span class="icon fa-photo">Photos</span></a></li>
 		    <li><a href="./index.en.php#link" id="link-link" class="skel-layers-ignoreHref">
 			<span class="icon fa-link">Links</span></a></li>
 		    <li><a href="./index.en.php#info" id="info-link" class="skel-layers-ignoreHref">
 			<span class="icon fa-info">Contacts</span></a></li>
-
+			<li><a href="./index.php" id="info-link" class="skel-layers-ignoreHref">
+			<span class="icon"><img src="assets/img/italian.png" alt="logo" width=20px /> In Italian <img src="assets/img/italian.png" alt="logo" width=20px /></span></a></li>
 		  </ul>
 		</nav>
 	
@@ -54,11 +53,12 @@
 		    <p>School affiliated with Associazione di Cultura Tradizionale Giapponese Aikikai d'Italia<span class='nomobile'><br/></span> Ente Morale (D.P.R. luglio 1978 n. 528)<span class='nomobile'><br/></span> and Centro Sportivo<span class='mobile'><br/></span> Educativo Nazionale</p>
 		</div>
       </div>
+
+
 	  <div class="bottomx">
 		<ul class="icons">
 			<li><a href="http://www.facebook.com/aikikaimilano/" target=_blank class="icon fa-facebook"><span class="label">Facebook</span></a></li>
 			<li><a href="./index.en.php#info" class="icon fa-envelope"><span class="label">Email</span></a></li>
-			<li><a href="./index.php" class="icon fa-envelope"><span class="label">IT</span></a></li>
 		</ul>
 	  </div>      
     </div>

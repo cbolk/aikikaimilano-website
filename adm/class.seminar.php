@@ -105,7 +105,7 @@
 		$this->instructorlabel = "";
 		$this->instructortag = "";
 		for($i = 0; $i < $ninst; $i++){
-			if($this->instructors[$i]['lastname'] == "Osawa" || $this->instructors[$i]['lastname'] == "Foglietta" || $this->instructors[$i]['lastname'] == "Travaglini" || $this->instructors[$i]['lastname'] == "Bogdanovic")
+			if($this->instructors[$i]['lastname'] == "Osawa" || $this->instructors[$i]['lastname'] == "Foglietta" || $this->instructors[$i]['lastname'] == "Travaglini" || $this->instructors[$i]['lastname'] == "Bogdanovic" || $this->instructors[$i]['lastname'] == "Aiello" || $this->instructors[$i]['lastname'] == "Fabbretti" || $this->instructors[$i]['lastname'] == "Asai")
 				$this->instructorlabel = $this->instructorlabel . "M&deg; ";
 			else
 				$this->instructorlabel = $this->instructorlabel . $this->instructors[$i]['firstname'] . " ";
@@ -501,7 +501,7 @@
 	/* retrieves the instructors for a given stage by ID */
 	function getStageInstructors($dbconn, $sid)
 	{
-		$query = "SELECT i.* from instructor i INNER JOIN seminarinstructor si ON i.id=si.instructorfk WHERE si.seminarfk = " . $sid . " ORDER BY sorting;";
+		$query = "SELECT i.*, si.sorting from instructor i INNER JOIN seminarinstructor si ON i.id=si.instructorfk WHERE si.seminarfk = " . $sid . " ORDER BY si.sorting;";
 		$dbconn->dbconnect();
 		$result = $dbconn->qry($query);
 		$rownum = mysql_num_rows($result);
