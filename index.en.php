@@ -74,7 +74,7 @@
                        <small> <cite>Morihei Ueshiba</cite></small>
                   </blockquote>
 
-          		    <p>At first sight, Aikido looks like an elegant self-defence technique, exploiting blocks, projections and levers against one or more attackers. 
+          		    <p>At first sight, Aikido looks like an elegant self-defence technique, exploiting blocks, projections and join locks against one or more attackers. 
                   Indeed, it is the synthesis of ancient techniques eveolved from the classical <em>Jujutsu</em> and from <em>Kenjutsu</em> (the art of the sword). Aikido has its own peculiarity and power by means of movements based on the rotation of a sphere.</p>
               </div>
           </div>
@@ -91,7 +91,7 @@
                </div>
               <div class="col-xs-12 col-sm-6 col-lg-6">
                   <p>Aikido (Path of the energy and armony, from Ai 合 Armony, Ki 気 Energy, and Do 道 Path) is the result of a long personal journey carried out by the founder, Morihei Ueshiba.<br/>
-                  The first aim Aikido aims at educating towards the mutual respect of one another, thus it refuses to become a competitive activity. In this spirit, there are no competitions but only tests to pass from one level to the next, and demostrations to disseminate the activity itself.</p>
+                  Aikido aims at educating towards the mutual respect of one another, thus it refuses to become a competitive activity. In this spirit, there are no competitions but only tests to pass from one level to the next, and demostrations to disseminate the activity itself.</p>
               </div> 
           </div> 
           <div class="row">
@@ -222,7 +222,7 @@
               </tr>
               <tr class="nomobile">
                 <td colspan="4" class="note">
-            Beginners' class is open to all those who have never practised Aikido and are 15 years old, at least. There is no maximum age. It is possible at any time during the year, since teacher's assistants will help you catch up with the rest of the group.
+            Beginners' class is open to all those who have never practised Aikido and are 15 years old, at least. There is no maximum age. It is possible to join at any time during the year, since teacher's assistants will help you catch up with the rest of the group.
                 </td>
               </tr>
               <tr>
