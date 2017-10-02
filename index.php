@@ -487,6 +487,14 @@ Proponendosi in primo luogo come via di educazione morale e di mutuo rispetto, l
             </article>
 
             <article>
+              <a href="https://www.facebook.com/media/set/?set=a.10155637520434171.1073741848.98851534170&type=1&l=e244b77b2e" class="image"><img class="thumbnail" src="photos/201707.jpg" alt=""></a>
+              <div class="inner">
+                <h4>Aikido summer camp 2017</h4>
+                <p>Album foto: <a target="_blank" href="https://www.facebook.com/media/set/?set=a.10155637520434171.1073741848.98851534170&type=1&l=e244b77b2e"><span class="icon fa-picture-o"></span></a></p>
+              </div>
+            </article>
+
+            <article>
               <a href="https://www.facebook.com/media/set/?set=a.1925320057751789.1073741848.1670690169881447&type=1&l=5639ac360e" class="image"><img class="thumbnail" src="photos/20170430.jpg" alt=""></a>
               <div class="inner">
                 <h4>Seminario di armi - Aprile 2017</h4>
@@ -616,12 +624,12 @@ Proponendosi in primo luogo come via di educazione morale e di mutuo rispetto, l
             <div class="col-xs-12 col-sm-6 col-lg-6">
             &Egrave; possibile contattarci in uno dei seguenti modi:
               <ul class="wbullets">
-                <li class="itemli"><span class="itemhead">In dojo:</span><span class="itemval">zona loreto via privata con ingresso da via Porpora 43-47<br/><i>all'angolo con la farmacia</i></span></li>
+                <li class="itemli"><span class="itemhead">In dojo:</span><span class="itemval">zona loreto via privata con ingresso da via Porpora 43-47<br/><i>all'angolo con la farmacia</i></span>. Raggiungibile con MM1 e MM2 (fermata Loreto), bus 62 e 81.</li>
                 <li class="itemli"><span class="itemhead">Telefono:</span><span class="itemval">(+39) 3881517258</span></li>
                 <li class="itemli"><span class="itemhead">Email:</span><span class="itemval">segreteria@aikikaimilano.it</span></li>            
               </ul>  
-              <p>Gli orari della segreteria nel mese di luglio sono i seguenti:<br/>
-              &#9671;&nbsp;luned&igrave;, mercoled&igrave; e venerd&igrave;: 17:30-19:30<br/>
+              <p>Gli orari della segreteria nel mese di settembre sono i seguenti:<br/>
+              &#9671;&nbsp;luned&igrave;, marted&igrave;, gioved&igrave; e venerd&igrave;: 17:30-19:30<br/>
               </div>
 <!--
                   &#9671;&nbsp;marted&igrave; e mercoled&igrave;: 17:30-19:30<br/>

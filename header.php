@@ -45,8 +45,8 @@
 			<span class="icon fa-link">Link</span></a></li>
 		    <li><a href="./index.php#info" id="info-link" class="skel-layers-ignoreHref">
 			<span class="icon fa-info">Contatti</span></a></li>
-			<!--li><a href="./index.en.php" id="info-link" class="skel-layers-ignoreHref">
-			<span class="icon"><img src="assets/img/english.png" alt="logo" width=20px /> In inglese <img src="assets/img/english.png" alt="logo" width=20px /></span></a></li-->
+			<li><a href="./index.en.php" id="info-link" class="skel-layers-ignoreHref">
+			<span class="icon"><img src="assets/img/english.png" alt="logo" width=20px /> In inglese <img src="assets/img/english.png" alt="logo" width=20px /></span></a></li>
 		  </ul>
 		</nav>
 	

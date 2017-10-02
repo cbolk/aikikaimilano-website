@@ -458,7 +458,7 @@
           </div>
           <div class="row">
             <div class="col-xs-12 col-sm-12 col-lg-12">
-              Complete list of this year seminars <a href="./seminari.php"><span class="icon fa-sign-out"></span></a>
+              Complete list of this year seminars <a href="./seminari.php"><span class="icon fa-sign-out"></span></a> (in Italian)
             </div>
           </div>
         </div>
@@ -481,6 +481,14 @@
               <div class="inner">
                 <h4>Dojo photo gallery</h4>
                 <p>photos: <a target="_blank" href="./galleria.php"><span class="icon fa-picture-o"></span></a></p>
+              </div>
+            </article>
+
+            <article>
+              <a href="https://www.facebook.com/media/set/?set=a.10155637520434171.1073741848.98851534170&type=1&l=e244b77b2e" class="image"><img class="thumbnail" src="photos/201707.jpg" alt=""></a>
+              <div class="inner">
+                <h4>Aikido summer camp 2017</h4>
+                <p>photos: <a target="_blank" href="https://www.facebook.com/media/set/?set=a.10155637520434171.1073741848.98851534170&type=1&l=e244b77b2e"><span class="icon fa-picture-o"></span></a></p>
               </div>
             </article>
 
@@ -614,14 +622,14 @@
             <div class="col-xs-12 col-sm-6 col-lg-6">
             Contact us:
               <ul class="wbullets">
-                <li class="itemli"><span class="itemhead">In the dojo:</span><span class="itemval">Loreto area, small private road from via Porpora 43-47<br/><i>Pharmacy on the corner</i></span></li>
+                <li class="itemli"><span class="itemhead">In the dojo:</span><span class="itemval">Loreto area, small private road from via Porpora 43-47<br/><i>Pharmacy on the corner</i></span>, Red and Green Metro lines (Loreto stop) and busses 62 and 81.</li>
                 <li class="itemli"><span class="itemhead">Phone:</span><span class="itemval">(+39) 3881517258</span></li>
                 <li class="itemli"><span class="itemhead">Email:</span><span class="itemval">segreteria@aikikaimilano.it</span></li>            
               </ul>  
               <p>Desk hours:<br/>
-                  &#9671;&nbsp;Tuesday e Wednesday: 17:30-19:30<br/>
+                  &#9671;&nbsp;Monday, Tuesday, Thursday and Friday: 17:30-19:30<!--br/>
                   &#9671;&nbsp;Thursday: 18:00-20:00<br/>
-                  &#9671;&nbsp;Friday: 16:30-18:30</p>
+                  &#9671;&nbsp;Friday: 16:30-18:30!--></p>
               </div>
 
 
