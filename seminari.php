@@ -78,7 +78,7 @@
 								echo " class='past' ";
 							echo "><a id='" . $semUID . "'></a>";
 							if($seminario->photo != null)
-								echo "<a href='#' class='image'><img width='140px' class='img-responsive' src='./seminars/" . $seminario->photo . "' /></a>";
+								echo "<img width='140px' class='img-responsive' src='./seminars/" . $seminario->photo . "' />";
 							echo "<div class='inner'>";
 							echo "  <h4>";
 							echo $seminario->title ;
@@ -138,7 +138,7 @@
 								echo " class='past' ";
 							echo "><a id='" . $semUID . "'></a>";
 							if($seminario->photo != null){
-								echo "<a href='#' class='image'><img src='./seminars/" . $seminario->photo . "' /></a>";
+								echo "<img src='./seminars/" . $seminario->photo . "' />";
 							}
 							echo "<div class='inner'>";
 							echo "  <h4>" . $seminario->title . "</h4>";
@@ -183,7 +183,7 @@
   	  	  		for($i = 0; $i < $n; $i++){
   	  	  			?>
 					<article>
-						<a href="#" class="image"><img src="stages/<?php echo $semlist[$i][$photo]; ?>" alt="" /></a>
+						<img src="stages/<?php echo $semlist[$i][$photo]; ?>" alt="" />
 						<div class="inner">
 							<h4><?php echo $semlist[$i][$title]; ?></h4>
 							<p><?php echo $semlist[$i][$date]; ?></p>
