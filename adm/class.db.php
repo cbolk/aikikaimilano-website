@@ -2,7 +2,8 @@
 class dbaccess {
     //database setup
     //local
-    var $hostname_logon = '89.46.111.19:3306'; //'62.149.150.132:3306'; //Database server LOCATION
+//    var $hostname_logon = '89.46.111.19:3306'; //'62.149.150.132:3306'; //Database server LOCATION
+    var $hostname_logon = '127.0.0.1:3306'; //'62.149.150.132:3306'; //Database server LOCATION
     var $database_logon = 'Sql974967_1';       //Database NAME
     var $username_logon = 'Sql974967';       //Database USERNAME
     var $password_logon = '36s2607l21';       //Database PASSWORD

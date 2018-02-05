@@ -622,14 +622,14 @@
             <div class="col-xs-12 col-sm-6 col-lg-6">
             Contact us:
               <ul class="wbullets">
-                <li class="itemli"><span class="itemhead">In the dojo:</span><span class="itemval">Loreto area, small private road from via Porpora 43-47<br/><i>Pharmacy on the corner</i></span>, Red and Green Metro lines (Loreto stop) and busses 62 and 81.</li>
+                <li class="itemli"><span class="itemhead">In the dojo:</span><span class="itemval">Loreto area, small private road from via Porpora 43-47<br/><i>Pharmacy on the corner</i>.<br/>Red and Green Metro lines (Loreto stop) and busses 62 and 81.</span></li>
                 <li class="itemli"><span class="itemhead">Phone:</span><span class="itemval">(+39) 3881517258</span></li>
                 <li class="itemli"><span class="itemhead">Email:</span><span class="itemval">segreteria@aikikaimilano.it</span></li>            
               </ul>  
               <p>Desk hours:<br/>
-                  &#9671;&nbsp;Monday, Tuesday, Thursday and Friday: 17:30-19:30<!--br/>
-                  &#9671;&nbsp;Thursday: 18:00-20:00<br/>
-                  &#9671;&nbsp;Friday: 16:30-18:30!--></p>
+                  &#9671;&nbsp;Monday, Tuesday and Friday: 17:30-19:30<br/>
+                  &#9671;&nbsp;Wednesday: 17:30-18:30<br/>
+                  &#9671;&nbsp;Thursday: 18:00-20:00</p>
               </div>
 
 

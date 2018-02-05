@@ -3,7 +3,7 @@
       <div class="top">	
 		<!-- Logo -->
 		<div id="logo">
-		  <!--img src="assets/img/mon.png" alt="logo" id="logoheader" class="nomobile" width="64px" /-->
+		  <img src="assets/img/logo.jpg" alt="logo" id="logoheader" class="nomobile" width="64px" >
 		  <h1 id="title1line">ASD Aikikai Milano - dojo di Aikido</h1>
 		  <h1 id="title"><span class='asd'>ASD</span> Aikikai Milano</h1>
 		  <p id="subtitle"><strong>dojo di Aikido</strong></p>
@@ -17,6 +17,7 @@
 		<table class="mobile">
 		<tr valign="top">
 		<td>
+		  <img src="assets/img/logo.jpg" alt="logo" id="logoheader" class="mobile" width="32px" >
 		  <h3 class="mobile"><span class='asd'>ASD</span> Aikikai Milano</h3>
 		  <h4 class="mobile">dojo di Aikido</h4>
 		  </td>

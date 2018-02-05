@@ -624,12 +624,16 @@ Proponendosi in primo luogo come via di educazione morale e di mutuo rispetto, l
             <div class="col-xs-12 col-sm-6 col-lg-6">
             &Egrave; possibile contattarci in uno dei seguenti modi:
               <ul class="wbullets">
-                <li class="itemli"><span class="itemhead">In dojo:</span><span class="itemval">zona loreto via privata con ingresso da via Porpora 43-47<br/><i>all'angolo con la farmacia</i></span>. Raggiungibile con MM1 e MM2 (fermata Loreto), bus 62 e 81.</li>
+                <li class="itemli"><span class="itemhead">In dojo:</span><span class="itemval">zona loreto via privata con ingresso da via Porpora 43-47<br/><i>all'angolo con la farmacia</i>.<br/>Raggiungibile con MM1 e MM2 (fermata Loreto), bus 62 e 81.</span></li>
                 <li class="itemli"><span class="itemhead">Telefono:</span><span class="itemval">(+39) 3881517258</span></li>
                 <li class="itemli"><span class="itemhead">Email:</span><span class="itemval">segreteria@aikikaimilano.it</span></li>            
               </ul>  
-              <p>Gli orari della segreteria nel mese di settembre sono i seguenti:<br/>
-              &#9671;&nbsp;luned&igrave;, marted&igrave;, gioved&igrave; e venerd&igrave;: 17:30-19:30<br/>
+              <p>Gli orari della segreteria sono i seguenti:<br/>
+              &#9671;&nbsp;luned&igrave;, marted&igrave; e venerd&igrave;: 17:30-19:30<br/>
+              &#9671;&nbsp;mercoled&igrave;: 17:30-18:30<br/>
+              &#9671;&nbsp;gioved&igrave;: 18:00-20:00<br/>
+              <!--p>Gli orari della segreteria nel mese di settembre sono i seguenti:<br/>
+              &#9671;&nbsp;luned&igrave;, marted&igrave;, gioved&igrave; e venerd&igrave;: 17:30-19:30<br/-->
               </div>
 <!--
                   &#9671;&nbsp;marted&igrave; e mercoled&igrave;: 17:30-19:30<br/>
