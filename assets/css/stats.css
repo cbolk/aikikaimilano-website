@@ -35,9 +35,9 @@ body, html {
 
 h3 {
   font-weight: 400;
-  font-size: 23px;
-  margin-top: 30px;
-  margin-bottom: 20px; }
+  font-size: 18px;
+  margin-top: 5px;
+  margin-bottom: 2px; }
 
 .content {
   clear: both;
@@ -186,8 +186,8 @@ input[type="radio"]:checked + label span {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
   display: table-cell;
   background-color: #ffffff;
   margin-right: 2px;
@@ -202,8 +202,8 @@ input[type="radio"]:checked + label span {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
   display: table-cell;
   background-color: #ffffff;
   margin-right: 2px;
@@ -211,7 +211,7 @@ input[type="radio"]:checked + label span {
   font-weight: 400;
   text-transform: lowercase;
   text-align: center;
-  font-size: .9em;
+  font-size: .8em;
   line-height: 2em; }
 
 .calendar__month_tot {
@@ -219,7 +219,7 @@ input[type="radio"]:checked + label span {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   width: 45px;
-  height: 30px;
+  height: 25px;
   display: table-cell;
   background-color: #ffffff;
   margin-right: 2px;
@@ -227,19 +227,19 @@ input[type="radio"]:checked + label span {
   font-weight: 400;
   text-transform: lowercase;
   text-align: center;
-  font-size: .9em;
+  font-size: .8em;
   line-height: 2em; }
 
 @media (max-width: 960px) {
   .calendar__month_tot {
     font-weight: 300;
-    font-size: .8em; } }
+    font-size: .7em; } }
 .calendar__year_label {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   width: 90px;
-  height: 30px;
+  height: 25px;
   display: table-cell;
   background-color: #ffffff;
   margin-right: 2px;
@@ -247,7 +247,7 @@ input[type="radio"]:checked + label span {
   font-weight: 400;
   text-transform: lowercase;
   text-align: center;
-  font-size: .9em;
+  font-size: .8em;
   line-height: 2em; }
 
 @media (max-width: 960px) {
@@ -258,8 +258,8 @@ input[type="radio"]:checked + label span {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
   display: table-cell;
   background-color: #ecf0f1;
   margin-right: 2px;
@@ -267,7 +267,7 @@ input[type="radio"]:checked + label span {
   font-weight: 300;
   text-transform: lowercase;
   text-align: center;
-  font-size: .7em;
+  font-size: .6em;
   line-height: 2em; }
 
 .calendar__day_not_working {
@@ -340,7 +340,7 @@ input[type="radio"]:checked + label span {
   width: 224px;
   vertical-align: top;
   margin-top: 10px;
-  padding: 15px; }
+  padding: 10px; }
 
 @media (max-width: 960px) {
   .calendar__month {

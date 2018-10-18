@@ -319,7 +319,7 @@
 		$query = $query . " GROUP BY aikidoka_fk, MONTH(date) ";
 		$query = $query . " ORDER BY beginner, k.lastname, k.firstname, month";
 		$dbconn->dbconnect();
-	//	echo $query;
+		//echo $query;
         $result = $dbconn->qry($query);
         $num = mysql_num_rows($result);
         $mhours = array();

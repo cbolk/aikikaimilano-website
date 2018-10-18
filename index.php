@@ -252,7 +252,7 @@ Proponendosi in primo luogo come via di educazione morale e di mutuo rispetto, l
                 <td >&nbsp;</td>
                 <td >18:00<span class="nomobile">-</span><span class="mobile"> </span>19:00</td>
                 <td >19:00<span class="nomobile">-</span><span class="mobile"> </span>20:00</td>
-                <td >20:00<span class="nomobile">-</span><span class="mobile"> </span>21:00<sup><span class="small icon fa-star-o" aria-hidden="true"></span></sup></td>
+                <td >20:00<span class="nomobile">-</span><span class="mobile"> </span>21:00</td>
               </tr>
               <tr>
                 <td class="tdtitle"><span class="nomobile">marted&igrave;</span><span class="mobile">ma</span></td>
@@ -260,7 +260,7 @@ Proponendosi in primo luogo come via di educazione morale e di mutuo rispetto, l
                 <td >13:00<span class="nomobile">-</span><span class="mobile"> </span>14:00</td>
                 <td >18:00<span class="nomobile">-</span><span class="mobile"> </span>19:00</td>
                 <td >&nbsp;</td>
-                <td >20:00<span class="nomobile">-</span><span class="mobile"> </span>21:00</td>
+                <td >20:00<span class="nomobile">-</span><span class="mobile"> </span>21:00<sup><span class="small icon fa-star-o" aria-hidden="true"></span></sup></td>
               </tr>
               <tr>
                 <td class="tdtitle"><span class="nomobile">mercoled&igrave;</span><span class="mobile">me</span></td>
@@ -284,7 +284,7 @@ Proponendosi in primo luogo come via di educazione morale e di mutuo rispetto, l
                 <td >13:00<span class="nomobile">-</span><span class="mobile"> </span>14:00</td>
                 <td >18:00<span class="nomobile">-</span><span class="mobile"> </span>19:00</td>
                 <td >&nbsp;</td>
-                <td >20:00<span class="nomobile">-</span><span class="mobile"> </span>21:00</td>
+                <td >20:00<span class="nomobile">-</span><span class="mobile"> </span>21:00<sup><span class="small icon fa-map-marker" aria-hidden="true"></span></sup></td>
               </tr>
               <tr>
                 <td class="tdtitle"><span class="nomobile">sabato</span><span class="mobile">sa</span></td>
@@ -295,7 +295,8 @@ Proponendosi in primo luogo come via di educazione morale e di mutuo rispetto, l
                 <td >&nbsp;</td>
               </tr>
               <tr>
-                <td colspan="6"><sup><span class="small icon fa-star-o" aria-hidden="true"></span></sup> JO/BOKKEN da ottobre a maggio</td>
+                <td colspan="3"><sup><span class="small icon fa-star-o" aria-hidden="true"></span></sup> JO/BOKKEN YUDANSHA da ottobre a maggio</td>
+                <td colspan="3"><sup><span class="small icon fa-map-marker" aria-hidden="true"></span></sup> JO/BOKKEN da ottobre a maggio</td>
               </tr>
             </tbody>
             </table>
@@ -331,7 +332,7 @@ Proponendosi in primo luogo come via di educazione morale e di mutuo rispetto, l
               </tr>
               <tr>
                 <td class="tdtitle">venerd&igrave;</td>
-                <td >&nbsp;</td>
+                <td >07:00<span class="nomobile">-</span><span class="mobile"> </span>08:00</td>
                 <td >18:00<span class="nomobile">-</span><span class="mobile"> </span>19:00</td>
                 <td >19:00<span class="nomobile">-</span><span class="mobile"> </span>20:00</td>
                 <td >20:00<span class="nomobile">-</span><span class="mobile"> </span>21:00</td>
@@ -397,7 +398,7 @@ Proponendosi in primo luogo come via di educazione morale e di mutuo rispetto, l
               </tr>
               <tr>
                 <td class="tdtitle">venerd&igrave;</td>
-                <td >&nbsp;</td>
+                <td >07:00<span class="nomobile">-</span><span class="mobile"> </span>08:00</td>
                 <td >18:00<span class="nomobile">-</span><span class="mobile"> </span>19:00</td>
                 <td >19:00<span class="nomobile">-</span><span class="mobile"> </span>20:00</td>
                 <td >20:00<span class="nomobile">-</span><span class="mobile"> </span>21:00</td>
@@ -483,6 +484,14 @@ Proponendosi in primo luogo come via di educazione morale e di mutuo rispetto, l
               <div class="inner">
                 <h4>Galleria fotografica del dojo</h4>
                 <p>Album foto: <a target="_blank" href="./galleria.php"><span class="icon fa-picture-o"></span></a></p>
+              </div>
+            </article>
+
+            <article>
+              <a href="https://www.facebook.com/media/set/?set=a.2065322947084832.1073741851.1670690169881447&type=1&l=0eceaa4a4c" class="image"><img class="thumbnail" src="photos/20180210.jpg" alt=""></a>
+              <div class="inner">
+                <h4>Seminario M&deg; Osawa - Febbraio 2018</h4>
+                <p>Album foto: <a target="_blank" href="https://www.facebook.com/media/set/?set=a.2065322947084832.1073741851.1670690169881447&type=1&l=0eceaa4a4c"><span class="icon fa-picture-o"></span></a></p>
               </div>
             </article>
 

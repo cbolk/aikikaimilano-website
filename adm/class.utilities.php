@@ -64,6 +64,12 @@
 	
 		function medDate($day){
 			$ld = $this->dowInItalian(date('w', strtotime($day)));
+			$ld = $ld . ". " . ltrim(date('d', strtotime($day)), '0') . " " . $this->getMonthMedNameFromNumber(date('m', strtotime($day))) . " " . date('Y', strtotime($day));
+			return $ld;
+		}
+
+		function medDateEn($day){
+			$ld = date('D', strtotime($day));
 			$ld = $ld . " " . ltrim(date('d', strtotime($day)), '0') . " " . $this->getMonthMedNameFromNumber(date('m', strtotime($day))) . " " . date('Y', strtotime($day));
 			return $ld;
 		}

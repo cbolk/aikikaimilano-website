@@ -18,10 +18,10 @@
   $semID = $seminar->getNextStageID($db);
   if($semID != null){
     $seminario = $seminar->get($db,$semID);
-    $from = $u->medDate($seminario->fromdate);
-    $fromMob = $u->medDate($seminario->fromdate);
-    $to = $u->medDate($seminario->todate);
-    $toMob = $u->medDate($seminario->todate);
+    $from = $u->medDateEn($seminario->fromdate);
+    $fromMob = $u->medDateEn($seminario->fromdate);
+    $to = $u->medDateEn($seminario->todate);
+    $toMob = $u->medDateEn($seminario->todate);
     $istruttori = $seminar->getStageInstructors($db,$semID);
   }
 ?>
@@ -246,7 +246,7 @@
                 <td >&nbsp;</td>
                 <td >18:00<span class="nomobile">-</span><span class="mobile"> </span>19:00</td>
                 <td >19:00<span class="nomobile">-</span><span class="mobile"> </span>20:00</td>
-                <td >20:00<span class="nomobile">-</span><span class="mobile"> </span>21:00<sup><span class="small icon fa-star-o" aria-hidden="true"></span></sup></td>
+                <td >20:00<span class="nomobile">-</span><span class="mobile"> </span>21:00</td>
               </tr>
               <tr>
                 <td class="tdtitle"><span class="nomobile">Tuesday</span><span class="mobile">Tu</span></td>
@@ -254,7 +254,7 @@
                 <td >13:00<span class="nomobile">-</span><span class="mobile"> </span>14:00</td>
                 <td >18:00<span class="nomobile">-</span><span class="mobile"> </span>19:00</td>
                 <td >&nbsp;</td>
-                <td >20:00<span class="nomobile">-</span><span class="mobile"> </span>21:00</td>
+                <td >20:00<span class="nomobile">-</span><span class="mobile"> </span>21:00<sup><span class="small icon fa-star-o" aria-hidden="true"></span></sup></td>
               </tr>
               <tr>
                 <td class="tdtitle"><span class="nomobile">Wednesday</span><span class="mobile">We</span></td>
@@ -278,7 +278,7 @@
                 <td >13:00<span class="nomobile">-</span><span class="mobile"> </span>14:00</td>
                 <td >18:00<span class="nomobile">-</span><span class="mobile"> </span>19:00</td>
                 <td >&nbsp;</td>
-                <td >20:00<span class="nomobile">-</span><span class="mobile"> </span>21:00</td>
+                <td >20:00<span class="nomobile">-</span><span class="mobile"> </span>21:00<sup><span class="small icon fa-map-marker" aria-hidden="true"></span></sup></td>
               </tr>
               <tr>
                 <td class="tdtitle"><span class="nomobile">Saturday</span><span class="mobile">Sa</span></td>
@@ -289,7 +289,8 @@
                 <td >&nbsp;</td>
               </tr>
               <tr>
-                <td colspan="6"><sup><span class="small icon fa-star-o" aria-hidden="true"></span></sup> JO/BOKKEN from October to May</td>
+                <td colspan="3"><sup><span class="small icon fa-star-o" aria-hidden="true"></span></sup> JO/BOKKEN YUDANSHA from October to May</td>
+                <td colspan="3"><sup><span class="small icon fa-map-marker" aria-hidden="true"></span></sup> JO/BOKKEN from October to May</td>
               </tr>
             </tbody>
             </table>
@@ -325,7 +326,7 @@
               </tr>
               <tr>
                 <td class="tdtitle">Friday</td>
-                <td >&nbsp;</td>
+                <td >07:00<span class="nomobile">-</span><span class="mobile"> </span>08:00</td>
                 <td >18:00<span class="nomobile">-</span><span class="mobile"> </span>19:00</td>
                 <td >19:00<span class="nomobile">-</span><span class="mobile"> </span>20:00</td>
                 <td >20:00<span class="nomobile">-</span><span class="mobile"> </span>21:00</td>
@@ -391,7 +392,7 @@
               </tr>
               <tr>
                 <td class="tdtitle">Friday</td>
-                <td >&nbsp;</td>
+                <td >07:00<span class="nomobile">-</span><span class="mobile"> </span>08:00</td>
                 <td >18:00<span class="nomobile">-</span><span class="mobile"> </span>19:00</td>
                 <td >19:00<span class="nomobile">-</span><span class="mobile"> </span>20:00</td>
                 <td >20:00<span class="nomobile">-</span><span class="mobile"> </span>21:00</td>

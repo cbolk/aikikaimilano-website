@@ -8,8 +8,8 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
 <head>
-	<link rel="stylesheet" href="../assets/css/presenze.css">   
-	<link rel="stylesheet" href="../assets/css/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="../assets/css/presenze.css" />   
+	<link rel="stylesheet" href="../assets/css/font-awesome/css/font-awesome.min.css" />
 </head>
 <style>
 #aid {display: none;}
@@ -39,7 +39,10 @@
   stroke: green;
   stroke-width: 1px;
 }
+.barlabel{
+  font-size: 8px;
 
+}
 .grid .tick {
     stroke: lightgrey;
     stroke-opacity: 0.7;
@@ -48,8 +51,6 @@
 .grid path {
           stroke-width: 0;
 }
-
-
 </style>
 <body>
 <div id="aid"><?php echo $aid; ?></div>
@@ -124,14 +125,20 @@ d3.json("./datasrc.php?aid=" + myData, function(error, data) {
          function(totals) { return d3.sum(totals, function(d) {return +d.MH;}) }
      )
     .entries(data);
-  var daesame = tot - 668;
+  var daes = d3.nest()
+     .rollup(
+         function(totals) { return d3.sum(totals, function(d) {if (d.YY + "." + d.MM >= nidan) return +d.MH;}) }
+     )
+    .entries(data);
+
+  var daesame = daes;//tot - 668;
 
   var avg = tot / m;
   var firstmonth = d3.min(data, function(d) { return d.label; });
   var lastmonth = d3.max(data, function(d) { return d.label; });
 
   x.domain(data.map(function(d) { return d.label; }));
-  y.domain([0, 55]);
+  y.domain([0, 40]);
 
   svg.append("g")
       .attr("class", "x axis")
@@ -170,10 +177,11 @@ d3.json("./datasrc.php?aid=" + myData, function(error, data) {
 
 
   svg.append("text")
-    .attr("x", x(topmonth)+10)
+    .attr("x", x(topmonth)+7)
     .attr("y", y(tophours)-14)
     .attr('fill', 'steelblue')
     .attr("dy", ".71em")
+    .attr("font-size","10px")
     .style("text-anchor", "middle")
     .text("" + tophours)
 
