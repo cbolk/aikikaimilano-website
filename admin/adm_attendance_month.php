@@ -72,7 +72,7 @@
 		$(function(){
 			//acknowledgement message
 			var message_status = $("#status");
-			$("td[contenteditable=true]").blur(function(){
+			$("div[contenteditable=true]").blur(function(){
 				var field_userid = $(this).attr("id") ;
 				var value = $(this).text();
 				$.ajax({
@@ -142,7 +142,7 @@
 							$nh = $datahrs[$j]['monthhrs'];
 							break;
 						} 
-					echo "<td class='tableicon cntr' id=" . $row['id'] . ":" . date('Y-m-d', $lastdateofmonth) . " contenteditable='true' class='icon'>" . $nh . "</td>";
+					echo "<td class='tableicon cntr'><div id=" . $row['id'] . ":" . date('Y-m-d', $lastdateofmonth) . " contenteditable='true' class='icon'>" . $nh . "</div></td>";
 					if(intval($curmonth) < 9)
 						$y = intval(date('Y', $lastdateofmonth)) - 1;
 					else
